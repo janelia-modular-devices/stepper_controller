@@ -1,0 +1,94 @@
+Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Tue 11 Mar 2014 02:11:58 PM EDT
+
+BeginCmp
+TimeStamp = /52D4298E;
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C1DEA5;
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /531F4A3F;
+Reference = C3;
+ValeurCmp = 0.1uF;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /528CDBDE;
+Reference = P1;
+ValeurCmp = DBNC_INPUT;
+IdModule  = BNC_DOUBLE;
+EndCmp
+
+BeginCmp
+TimeStamp = /528CE023;
+Reference = P2;
+ValeurCmp = DRIVE;
+IdModule  = Header_4_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C1DC9B;
+Reference = P3;
+ValeurCmp = +24VDC;
+IdModule  = TERMINAL_BLOCK_2POS_3.5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C1DB2A;
+Reference = P4;
+ValeurCmp = INT_STEPPER;
+IdModule  = Header_Shrouded_2_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C1DB34;
+Reference = P5;
+ValeurCmp = INT_TONE;
+IdModule  = Header_Shrouded_2_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = /528CE357;
+Reference = R1;
+ValeurCmp = 118;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C1DE60;
+Reference = REG1;
+ValeurCmp = CONV_DC_DC;
+IdModule  = DC_DC_CONV_R78C;
+EndCmp
+
+BeginCmp
+TimeStamp = /504F5474;
+Reference = SHIELD1;
+ValeurCmp = ARDUINO_MEGA_SHIELD_FULL;
+IdModule  = ARDUINO_MEGA_SHIELD;
+EndCmp
+
+BeginCmp
+TimeStamp = /528CE365;
+Reference = SP1;
+ValeurCmp = SPEAKER;
+IdModule  = SMS-1308MS-2-R;
+EndCmp
+
+BeginCmp
+TimeStamp = /531F30FB;
+Reference = U1;
+ValeurCmp = MAX6817;
+IdModule  = MAX6817;
+EndCmp
+
+EndListe

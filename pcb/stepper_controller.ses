@@ -1,0 +1,361 @@
+
+(session stepper_controller.ses
+  (base_design stepper_controller.dsn)
+  (placement
+    (resolution mil 10)
+    (component ARDUINO_MEGA_SHIELD
+      (place SHIELD1 45000 -51500 front 0)
+    )
+    (component SM1210
+      (place R1 80500 -43750 front 270)
+      (place C1 59500 -42750 front 270)
+      (place C2 62000 -47250 front 180)
+    )
+    (component BNC_DOUBLE
+      (place P1 47750 -42750 front 90)
+    )
+    (component Header_4_Pin
+      (place P2 87000 -42750 front 0)
+    )
+    (component "SMS-1308MS-2-R"
+      (place SP1 76500 -44750 front 180)
+    )
+    (component TERMINAL_BLOCK_2POS_3.5mm
+      (place P3 53500 -49500 front 0)
+    )
+    (component Header_Shrouded_2_Pin
+      (place P4 70750 -42750 front 90)
+      (place P5 63750 -42750 front 90)
+    )
+    (component DC_DC_CONV_R78C
+      (place REG1 55250 -42750 front 270)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution mil 10)
+    (parser
+      (host_cad "Kicad's PCBNEW")
+      (host_version "(2011-05-25)-stable")
+    )
+    (library_out 
+      (padstack "Via[0-1]_35:25_mil"
+        (shape
+          (circle Front 350 0 0)
+        )
+        (shape
+          (circle Back 350 0 0)
+        )
+        (attach off)
+      )
+      (padstack "Via[0-1]_35:0_mil"
+        (shape
+          (circle Front 350 0 0)
+        )
+        (shape
+          (circle Back 350 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net +5V
+        (wire
+          (path Front 360
+            83000 -31500
+            82000 -31500
+          )
+        )
+        (wire
+          (path Back 360
+            86500 -42750
+            86500 -35000
+            83000 -31500
+          )
+        )
+      )
+      (net /DIR
+        (wire
+          (path Back 160
+            87500 -42750
+            83750 -46500
+            83000 -46500
+          )
+        )
+      )
+      (net /ENABLE
+        (wire
+          (path Back 160
+            85500 -42750
+            85500 -43000
+            83000 -45500
+          )
+        )
+      )
+      (net /INT_STEPPER
+        (wire
+          (path Front 160
+            68000 -40991
+            68943 -40991
+            70202 -42250
+          )
+        )
+        (wire
+          (path Front 160
+            50250 -42750
+            50250 -41036
+            50295 -40991
+            68000 -40991
+          )
+        )
+        (wire
+          (path Front 160
+            68000 -40991
+            68000 -31500
+          )
+        )
+        (wire
+          (path Front 160
+            70750 -42250
+            70202 -42250
+          )
+        )
+      )
+      (net /INT_TONE
+        (wire
+          (path Front 160
+            63750 -42250
+            63202 -42250
+          )
+        )
+        (wire
+          (path Front 160
+            63202 -42250
+            62207 -41255
+            51021 -41255
+            50734 -41542
+            50734 -42234
+            51250 -42750
+          )
+        )
+        (wire
+          (path Back 160
+            63750 -42250
+            63750 -41702
+          )
+        )
+        (wire
+          (path Back 160
+            63750 -41702
+            67000 -38452
+            67000 -31500
+          )
+        )
+      )
+      (net /SPEAKER
+        (wire
+          (path Front 160
+            80500 -44350
+            81850 -44350
+            82000 -44500
+          )
+        )
+      )
+      (net /STEP
+        (wire
+          (path Back 160
+            88500 -42750
+            83750 -47500
+            83000 -47500
+          )
+        )
+      )
+      (net /VIN
+        (wire
+          (path Front 360
+            62600 -47250
+            62600 -48033
+          )
+        )
+        (wire
+          (path Front 360
+            63000 -50500
+            63000 -48433
+            62600 -48033
+          )
+        )
+        (wire
+          (path Back 360
+            63000 -50500
+            63000 -49717
+          )
+        )
+        (wire
+          (path Back 360
+            55250 -43750
+            57033 -43750
+            63000 -49717
+          )
+        )
+      )
+      (net GND
+        (wire
+          (path Front 360
+            61400 -43350
+            61400 -47250
+          )
+        )
+        (wire
+          (path Front 360
+            63750 -43250
+            61500 -43250
+            61400 -43350
+          )
+        )
+        (wire
+          (path Front 360
+            61400 -43350
+            60283 -43350
+          )
+        )
+        (wire
+          (path Front 360
+            52250 -42750
+            55250 -42750
+          )
+        )
+        (wire
+          (path Front 360
+            51250 -41750
+            52250 -42750
+          )
+        )
+        (wire
+          (path Front 360
+            52250 -42750
+            51250 -43750
+          )
+        )
+        (wire
+          (path Front 360
+            62000 -50500
+            62000 -49717
+          )
+        )
+        (wire
+          (path Front 360
+            62000 -49717
+            61000 -49717
+          )
+        )
+        (wire
+          (path Front 360
+            61400 -47250
+            61400 -48033
+          )
+        )
+        (wire
+          (path Front 360
+            61000 -49500
+            61000 -49717
+          )
+        )
+        (wire
+          (path Front 360
+            61400 -48033
+            61000 -48433
+            61000 -49500
+          )
+        )
+        (wire
+          (path Front 360
+            54189 -49500
+            61000 -49500
+          )
+        )
+        (wire
+          (path Front 360
+            61000 -50500
+            61000 -49717
+          )
+        )
+        (wire
+          (path Front 360
+            70750 -43250
+            63750 -43250
+          )
+        )
+        (wire
+          (path Front 360
+            73473 -43037
+            73260 -43250
+            70750 -43250
+          )
+        )
+        (wire
+          (path Front 360
+            74256 -43037
+            73473 -43037
+          )
+        )
+        (wire
+          (path Front 360
+            59500 -43350
+            60283 -43350
+          )
+        )
+        (wire
+          (path Front 360
+            59500 -43350
+            59500 -42817
+          )
+        )
+        (wire
+          (path Front 360
+            55250 -42750
+            59433 -42750
+            59500 -42817
+          )
+        )
+      )
+      (net "N-000086"
+        (wire
+          (path Front 160
+            80500 -43150
+            79817 -43150
+          )
+        )
+        (wire
+          (path Front 160
+            78744 -43037
+            79704 -43037
+            79817 -43150
+          )
+        )
+      )
+      (net VAA
+        (wire
+          (path Back 360
+            55250 -41750
+            52811 -44189
+            52811 -49500
+          )
+        )
+        (wire
+          (path Front 360
+            59500 -42150
+            58717 -42150
+          )
+        )
+        (wire
+          (path Front 360
+            55250 -41750
+            58317 -41750
+            58717 -42150
+          )
+        )
+      )
+    )
+  )
+)

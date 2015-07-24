@@ -1,0 +1,49 @@
+-*- mode:org -*-
+
+# Opt101.lst
+| ref     | value                    |
+|---------+--------------------------|
+| C1      | 10uF                     |
+| C2      | 10uF                     |
+| C3      | 0.1uF                    |
+| P1      | DBNC_INPUT               |
+| P2      | DRIVE                    |
+| P3      | +24VDC                   |
+| P4      | INT_STEPPER              |
+| P5      | INT_TONE                 |
+| R1      | 118                      |
+| REG1    | CONV_DC_DC               |
+| SHIELD1 | ARDUINO_MEGA_SHIELD_FULL |
+| SP1     | SPEAKER                  |
+| U1      | MAX6817                  |
+|         |                          |
+
+# Bill of Materials
+| ! | part    | description                                                     | vendor             | part number       | quantity |   cost |
+|---+---------+-----------------------------------------------------------------+--------------------+-------------------+----------+--------|
+|   | PCB     | stepper_controller                                              | pcbuniverse        | v1.0              |        1 |   1.00 |
+|   | C1-2    | CAP CER 10UF 50V 10% X7S 1210                                   | digikey            | 445-4536-1-ND     |        3 |   1.24 |
+|   | C3      | CAP CER 0.1UF 50V 10% X7R 1210                                  | digikey            | 478-3586-1-ND     |        1 |   0.39 |
+|   | P1      | CONN BNC JACK R/A 75 OHM PCB                                    | digikey            | ACX1655-ND        |        1 |  11.10 |
+|   | P2      | CONN HEADER 4POS .100 R/A 30AU                                  | digikey            | 609-3312-ND       |        1 |   0.40 |
+|   | P2      | Jumper Wire - 0.1", 4-pin, 12"                                  | sparkfun           | PRT-10374         |        1 |   1.95 |
+|   | P2      | IM483 microstepping driver                                      | schneider-electric | im483             |        1 |   1.00 |
+|   | P3      | POWER SUPPLY SWITCHER 78W 24V                                   | digikey            | 271-2777-ND       |        1 |  63.84 |
+|   | P3      | LINE CORD 3 COND US                                             | digikey            | 993-1039-ND       |        1 |   3.18 |
+|   | P3      | TERMINAL BLOCK 3.5MM 2POS PCB                                   | digikey            | ED1514-ND         |        1 |   0.63 |
+|   | P4-5    | CONN HEADER 2POS .100 VERT GOLD                                 | digikey            | WM4800-ND         |        2 |   0.88 |
+|   | P4-5    | UNSHIELDED 22AWG 2 COND                                         | digikey            | W120-100-ND       |        1 |   0.20 |
+|   | P4-5    | CONN HOUSING 2POS .100 W/LATCH                                  | digikey            | WM2900-ND         |        4 |   0.49 |
+|   | P4-5    | CONN HOUSING MALE 2POS .100                                     | digikey            | WM2533-ND         |        2 |   0.79 |
+|   | P4-5    | CONN TERM FEMALE 22-24AWG GOLD                                  | digikey            | WM2570-ND         |        8 |   0.34 |
+|   | P4-5    | CONN TERM MALE 22-24AWG GOLD                                    | digikey            | WM2567-ND         |        4 |   0.37 |
+|   | P4-5    | Pendant Switch with Cable, Push-Button, 1 NO, 5 Amps at 120V AC | mcmaster           | 6944K11           |        2 |  18.89 |
+|   | R1      | RES 118 OHM 1/2W 1% 1210 SMD                                    | digikey            | P118AACT-ND       |        1 |   0.51 |
+|   | REG1    | CONV DC/DC 1A 12V OUT SIP VERT                                  | digikey            | 945-1392-5-ND     |        1 |   8.79 |
+|   | SHIELD1 | BOARD MCU MEGA2560                                              | digikey            | 1050-1018-ND      |        1 |  51.91 |
+|   | SHIELD1 | CONN HDR VERT 50POS .100" SNGL                                  | digikey            | SAM1055-50-ND     |        2 |   3.42 |
+|   | SP1     | SPEAKER 8OHM .7W 88DB 13MM SMD                                  | digikey            | 668-1259-1-ND     |        1 |   8.18 |
+|   | U1      | IC DEBOUNCER SWITCH DUAL SOT23-6                                | digikey            | MAX6817EUT+TCT-ND |        1 |   5.25 |
+|---+---------+-----------------------------------------------------------------+--------------------+-------------------+----------+--------|
+| # | total   |                                                                 |                    |                   |          | 215.78 |
+#+TBLFM: @25$7=(@I$quantity..@II$quantity)*(@I$cost..@II$cost);%.2f;N

@@ -1,0 +1,171 @@
+# EESchema Netlist Version 1.1 created  Tue 11 Mar 2014 02:11:58 PM EDT
+(
+ ( /52D4298E SM1210 C1 10uF
+  ( 1 VAA )
+  ( 2 GND )
+ )
+ ( /52C1DEA5 SM1210 C2 10uF
+  ( 1 /VIN )
+  ( 2 GND )
+ )
+ ( /531F4A3F SM1210 C3 0.1uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /528CDBDE BNC_DOUBLE P1 DBNC_INPUT
+  ( 1 /INT_STEPPER )
+  ( 2 GND )
+  ( 3 /INT_TONE )
+  ( 4 GND )
+ )
+ ( /528CE023 Header_4_Pin P2 DRIVE
+  ( 1 /STEP )
+  ( 2 /DIR )
+  ( 3 +5V )
+  ( 4 /ENABLE )
+ )
+ ( /52C1DC9B TERMINAL_BLOCK_2POS_3.5mm P3 +24VDC
+  ( 1 VAA )
+  ( 2 GND )
+ )
+ ( /52C1DB2A Header_Shrouded_2_Pin P4 INT_STEPPER
+  ( 1 /INT_STEPPER )
+  ( 2 GND )
+ )
+ ( /52C1DB34 Header_Shrouded_2_Pin P5 INT_TONE
+  ( 1 /INT_TONE )
+  ( 2 GND )
+ )
+ ( /528CE357 SM1210 R1 118
+  ( 1 N-000087 )
+  ( 2 /SPEAKER )
+ )
+ ( /52C1DE60 DC_DC_CONV_R78C REG1 CONV_DC_DC
+  ( 1 VAA )
+  ( 2 GND )
+  ( 3 /VIN )
+ )
+ ( /504F5474 ARDUINO_MEGA_SHIELD SHIELD1 ARDUINO_MEGA_SHIELD_FULL
+  ( 0 ? )
+  ( 1 ? )
+  ( 2 /INT_STEPPER_DEBOUNCED )
+  ( 3 /INT_TONE_DEBOUNCED )
+  ( 3V3 ? )
+  ( 4 ? )
+  ( 5 ? )
+  ( 5V_1 ? )
+  ( 5V_4 +5V )
+  ( 5V_5 +5V )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 ? )
+  ( 16 ? )
+  ( 17 ? )
+  ( 18 ? )
+  ( 19 ? )
+  ( 20 ? )
+  ( 21 ? )
+  ( 22 ? )
+  ( 23 ? )
+  ( 24 ? )
+  ( 25 ? )
+  ( 26 ? )
+  ( 27 ? )
+  ( 28 ? )
+  ( 29 ? )
+  ( 30 ? )
+  ( 31 ? )
+  ( 32 ? )
+  ( 33 ? )
+  ( 34 ? )
+  ( 35 ? )
+  ( 36 ? )
+  ( 37 ? )
+  ( 38 ? )
+  ( 39 ? )
+  ( 40 ? )
+  ( 41 ? )
+  ( 42 ? )
+  ( 43 ? )
+  ( 44 ? )
+  ( 45 ? )
+  ( 46 /SPEAKER )
+  ( 47 ? )
+  ( 48 ? )
+  ( 49 /ENABLE )
+  ( 50 ? )
+  ( 51 /DIR )
+  ( 52 ? )
+  ( 53 /STEP )
+  ( A0 ? )
+  ( A1 ? )
+  ( A2 ? )
+  ( A3 ? )
+  ( A4 ? )
+  ( A5 ? )
+  ( A6 ? )
+  ( A7 ? )
+  ( A8 ? )
+  ( A9 ? )
+  ( A10 ? )
+  ( A11 ? )
+  ( A12 ? )
+  ( A13 ? )
+  ( A14 ? )
+  ( A15 ? )
+  ( AREF ? )
+  ( GND1 GND )
+  ( GND2 GND )
+  ( GND3 ? )
+  ( GND4 ? )
+  ( GND5 ? )
+  ( IREF ? )
+  ( NC ? )
+  ( RST ? )
+  ( V_IN /VIN )
+ )
+ ( /528CE365 SMS-1308MS-2-R SP1 SPEAKER
+  ( 1 N-000087 )
+  ( 2 GND )
+ )
+ ( /531F30FB MAX6817 U1 MAX6817
+  ( 1 /INT_TONE )
+  ( 2 GND )
+  ( 3 /INT_STEPPER )
+  ( 4 /INT_STEPPER_DEBOUNCED )
+  ( 5 +5V )
+  ( 6 /INT_TONE_DEBOUNCED )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component R1
+ R?
+ SM0603
+ SM0805
+ R?-*
+$endlist
+$endfootprintlist
+}
