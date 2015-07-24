@@ -13,7 +13,7 @@
 #include "WProgram.h"
 #endif
 #include <util/atomic.h>
-#include <TimerOne.h>
+#include "TimerOne.h"
 #include "Stepper.h"
 #include "Array.h"
 #include "ModularDevice.h"
