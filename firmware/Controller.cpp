@@ -28,12 +28,12 @@ void Controller::setup()
   EventController::event_controller.setup();
 
   // Pin Setup
-  for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
-  {
-    pinMode(constants::mfc_purge_pins[mfc],INPUT);
-    pinMode(constants::mfc_valve_off_pins[mfc],INPUT);
-  }
-  pinMode(constants::bnc_b_pin,OUTPUT);
+  // for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
+  // {
+  //   pinMode(constants::mfc_purge_pins[mfc],INPUT);
+  //   pinMode(constants::mfc_valve_off_pins[mfc],INPUT);
+  // }
+  // pinMode(constants::bnc_b_pin,OUTPUT);
 
   // Device Info
   modular_device.setName(constants::device_name);
@@ -41,16 +41,19 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
-  modular_device.createSavedVariable(constants::states_name,
-                                     constants::states_array_default,
-                                     constants::STATE_COUNT);
+  modular_device.createSavedVariable(constants::mode_parameter_name,
+                                     constants::mode_default,
+  modular_device.createSavedVariable(constants::waypoint_count_parameter_name,
+                                     constants::waypoint_count_default,
+  modular_device.createSavedVariable(constants::micro_steps_per_step_parameter_name,
+                                     constants::micro_steps_per_step_default,
 
-  int default_state = 0;
-  modular_device.getSavedVariableValue(constants::states_name,flow_settings_array_,default_state);
-  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
-  {
-    setMfcFlow(mfc,flow_settings_array_[mfc]);
-  }
+  // int default_state = 0;
+  // modular_device.getSavedVariableValue(constants::states_name,flow_settings_array_,default_state);
+  // for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  // {
+  //   setMfcFlow(mfc,flow_settings_array_[mfc]);
+  // }
 
   // Parameters
   ModularDevice::Parameter& mfc_parameter = modular_device.createParameter(constants::mfc_parameter_name);

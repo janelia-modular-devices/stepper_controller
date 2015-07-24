@@ -117,7 +117,11 @@ void Stepper::goToNextWaypoint()
 {
   if (!isRunning())
   {
-    long next_waypoint_pos = (long(waypoint_ + 1)*constants::steps_per_rev*savedVariables.getMicroStepsPerStep())/long(savedVariables.getWaypointCount());
+    int waypoint_count;
+    modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+    int micro_steps_per_step;
+    modular_device.getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
+    long next_waypoint_pos = (long(waypoint_ + 1)*constants::steps_per_rev*micro_steps_per_step/long(waypoint_count);
     setTargetPosition(next_waypoint_pos);
     start();
   }

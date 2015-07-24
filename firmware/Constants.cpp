@@ -71,7 +71,9 @@ const int tone_interrupt_duration_default = 250;
 
 CONSTANT_STRING(device_name,"stepper_controller");
 
-CONSTANT_STRING(mfc_parameter_name,"mfc");
+CONSTANT_STRING(mode_parameter_name,"mode");
+CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
+CONSTANT_STRING(micro_steps_per_step_parameter_name,"micro_steps_per_step_count");
 
 // CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 // CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");

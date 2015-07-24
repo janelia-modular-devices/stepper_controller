@@ -75,7 +75,9 @@ extern const int tone_interrupt_duration_default;
 
 extern ConstantString device_name;
 
-extern ConstantString mfc_parameter_name;
+extern ConstantString mode_parameter_name;
+extern ConstantString waypoint_count_parameter_name;
+extern ConstantString micro_steps_per_step_parameter_name;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
