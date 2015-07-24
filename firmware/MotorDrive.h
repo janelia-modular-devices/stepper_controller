@@ -16,8 +16,8 @@
 #include <TimerOne.h>
 #include "Stepper.h"
 #include "Array.h"
+#include "ModularDevice.h"
 #include "Constants.h"
-#include "SavedVariables.h"
 
 class MotorDrive
 {

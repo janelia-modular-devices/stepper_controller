@@ -52,9 +52,9 @@ extern const int micro_steps_per_step_max;
 extern const int waypoint_count_default;
 extern const int waypoint_count_min;
 extern const int waypoint_count_max;
-extern const int waypoint_travel_time_default;
-extern const int waypoint_travel_time_min;
-extern const int waypoint_travel_time_max;
+extern const int waypoint_travel_duration_default;
+extern const int waypoint_travel_duration_min;
+extern const int waypoint_travel_duration_max;
 extern const bool waypoint_repeat_default;
 extern const int waypoint_repeat_period_default;
 extern const int waypoint_repeat_period_min;
@@ -75,9 +75,9 @@ extern const int tone_interrupt_duration_default;
 
 extern ConstantString device_name;
 
-extern ConstantString mode_parameter_name;
 extern ConstantString waypoint_count_parameter_name;
 extern ConstantString micro_steps_per_step_parameter_name;
+extern ConstantString waypoint_travel_duration_parameter_name;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
@@ -87,5 +87,7 @@ extern ConstantString set_mfc_flow_method_name;
 // extern ConstantString frame1_name;
 // extern ConstantString frame2_name;
 // extern const ConstantString frame_name_array[FRAME_COUNT];
+extern ConstantString mode_name;
+extern ConstantString enable_polarity_name;
 }
 #endif

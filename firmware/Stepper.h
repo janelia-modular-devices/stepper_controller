@@ -133,7 +133,7 @@ inline void Stepper::setStepPinLow()
     {
       running_ = false;
       ModeType mode;
-      modular_device.getSavedVariableValue(constants::mode_parameter_name,mode);
+      modular_device.getSavedVariableValue(constants::mode_name,mode);
       if (mode == constants::WAYPOINT)
       {
         waypoint_++;

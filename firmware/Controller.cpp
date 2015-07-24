@@ -41,12 +41,16 @@ void Controller::setup()
   modular_device.setFirmwareNumber(constants::firmware_number);
 
   // Saved Variables
-  modular_device.createSavedVariable(constants::mode_parameter_name,
+  modular_device.createSavedVariable(constants::mode_name,
                                      constants::mode_default,
   modular_device.createSavedVariable(constants::waypoint_count_parameter_name,
                                      constants::waypoint_count_default,
   modular_device.createSavedVariable(constants::micro_steps_per_step_parameter_name,
                                      constants::micro_steps_per_step_default,
+  modular_device.createSavedVariable(constants::waypoint_travel_duration_parameter_name,
+                                     constants::waypoint_travel_duration_default,
+  modular_device.createSavedVariable(constants::enable_polarity_name,
+                                     constants::enable_polarity_default,
 
   // int default_state = 0;
   // modular_device.getSavedVariableValue(constants::states_name,flow_settings_array_,default_state);

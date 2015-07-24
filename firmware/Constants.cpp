@@ -48,9 +48,9 @@ const int micro_steps_per_step_max = 256;
 const int waypoint_count_default = 16;
 const int waypoint_count_min = 1;
 const int waypoint_count_max = 255;
-const int waypoint_travel_time_default = 400;
-const int waypoint_travel_time_min = 1;
-const int waypoint_travel_time_max = 8000;
+const int waypoint_travel_duration_default = 400;
+const int waypoint_travel_duration_min = 1;
+const int waypoint_travel_duration_max = 8000;
 const bool waypoint_repeat_default = false;
 const int waypoint_repeat_period_default = 1000;
 const int waypoint_repeat_period_min = 1;
@@ -71,9 +71,9 @@ const int tone_interrupt_duration_default = 250;
 
 CONSTANT_STRING(device_name,"stepper_controller");
 
-CONSTANT_STRING(mode_parameter_name,"mode");
 CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
 CONSTANT_STRING(micro_steps_per_step_parameter_name,"micro_steps_per_step_count");
+CONSTANT_STRING(waypoint_travel_duration_parameter_name,"waypoint_travel_duration");
 
 // CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 // CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
@@ -88,4 +88,6 @@ CONSTANT_STRING(set_mfc_flow_method_name,"setMfcFlow");
 //     frame1_name,
 //     frame2_name,
 //   };
+CONSTANT_STRING(mode_name,"mode");
+CONSTANT_STRING(enable_polarity_name,"enable_polarity");
 }

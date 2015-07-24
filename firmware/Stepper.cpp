@@ -61,13 +61,13 @@ bool Stepper::isRunning()
 void Stepper::disableOutputs()
 {
   digitalWrite(step_pin_, LOW ^ step_inverted_);
-  digitalWrite(dir_pin_,  LOW ^ dir_inverted_);
+  digitalWrite(dir_pin_, LOW ^ dir_inverted_);
 }
 
 void Stepper::enableOutputs()
 {
   pinMode(step_pin_, OUTPUT);
-  pinMode(dir_pin_,  OUTPUT);
+  pinMode(dir_pin_, OUTPUT);
 }
 
 long Stepper::getTargetPosition()
