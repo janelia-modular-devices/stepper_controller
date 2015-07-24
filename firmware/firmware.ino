@@ -8,14 +8,17 @@
 #include "ConstantVariable.h"
 #include "SavedVariable.h"
 #include "BetterMap.h"
+#include "TimerOne.h"
 #include "ModularDevice.h"
-#include "NewhavenDisplay.h"
-#include "Encoder.h"
+// #include "NewhavenDisplay.h"
+// #include "Encoder.h"
 // #include "StandaloneInterface.h"
 #include "EventController.h"
 #include "Constants.h"
 #include "Callbacks.h"
 #include "Controller.h"
+#include "Stepper.h"
+#include "MotorDrive.h"
 
 
 // See README.md for more information
