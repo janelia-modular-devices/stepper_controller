@@ -58,23 +58,27 @@ const int waypoint_repeat_period_max = 8000;
 
 const int tone_frequency_min = 850;
 const int tone_frequency_max = 20000;
+const int tone_frequency_default = 5000;
 const int tone_duration_min = 1;
 const int tone_duration_max = 10000;
+const int tone_duration_default = 250;
 const bool play_tone_before_waypoint_move_default = true;
 
 const int waypoint_interrupt_number = 0;
 const int waypoint_interrupt_mode_default = FALLING;
 const int tone_interrupt_number = 1;
 const int tone_interrupt_mode_default = FALLING;
-const int tone_interrupt_frequency_default = 5000;
-const int tone_interrupt_duration_default = 250;
 
 CONSTANT_STRING(device_name,"stepper_controller");
+
+CONSTANT_STRING(duration_parameter_units,"ms");
+CONSTANT_STRING(frequency_parameter_units,"ms");
 
 CONSTANT_STRING(micro_steps_per_step_parameter_name,"micro_steps_per_step_count");
 CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
 CONSTANT_STRING(waypoint_travel_duration_parameter_name,"waypoint_travel_duration");
-CONSTANT_STRING(duration_parameter_units,"ms");
+CONSTANT_STRING(tone_frequency_parameter_name,"tone_frequency");
+CONSTANT_STRING(tone_duration_parameter_name,"tone_duration");
 
 // CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 // CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");

@@ -56,6 +56,10 @@ void Controller::setup()
                                      constants::waypoint_travel_duration_default);
   modular_device.createSavedVariable(constants::enable_polarity_name,
                                      constants::enable_polarity_default);
+  modular_device.createSavedVariable(constants::tone_frequency_parameter_name,
+                                     constants::tone_frequency_default);
+  modular_device.createSavedVariable(constants::tone_duration_parameter_name,
+                                     constants::tone_duration_default);
 
   // Parameters
   ModularDevice::Parameter& waypoint_count_parameter = modular_device.createParameter(constants::waypoint_count_parameter_name);
@@ -64,6 +68,14 @@ void Controller::setup()
   ModularDevice::Parameter& waypoint_travel_duration_parameter = modular_device.createParameter(constants::waypoint_travel_duration_parameter_name);
   waypoint_travel_duration_parameter.setRange(constants::waypoint_travel_duration_min,constants::waypoint_travel_duration_max);
   waypoint_travel_duration_parameter.setUnits(constants::duration_parameter_units);
+
+  ModularDevice::Parameter& tone_frequency_parameter = modular_device.createParameter(constants::tone_frequency_parameter_name);
+  tone_frequency_parameter.setRange(constants::tone_frequency_min,constants::tone_frequency_max);
+  tone_frequency_parameter.setUnits(constants::frequency_parameter_units);
+
+  ModularDevice::Parameter& tone_duration_parameter = modular_device.createParameter(constants::tone_duration_parameter_name);
+  tone_duration_parameter.setRange(constants::tone_duration_min,constants::tone_duration_max);
+  tone_duration_parameter.setUnits(constants::duration_parameter_units);
 
   // Methods
   // ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);

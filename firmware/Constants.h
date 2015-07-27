@@ -62,23 +62,27 @@ extern const int waypoint_repeat_period_max;
 
 extern const int tone_frequency_min;
 extern const int tone_frequency_max;
+extern const int tone_frequency_default;
 extern const int tone_duration_min;
 extern const int tone_duration_max;
+extern const int tone_duration_default;
 extern const bool play_tone_before_waypoint_move_default;
 
 extern const int waypoint_interrupt_number;
 extern const int waypoint_interrupt_mode_default;
 extern const int tone_interrupt_number;
 extern const int tone_interrupt_mode_default;
-extern const int tone_interrupt_frequency_default;
-extern const int tone_interrupt_duration_default;
 
 extern ConstantString device_name;
+
+extern ConstantString duration_parameter_units;
+extern ConstantString frequency_parameter_units;
 
 extern ConstantString micro_steps_per_step_parameter_name;
 extern ConstantString waypoint_count_parameter_name;
 extern ConstantString waypoint_travel_duration_parameter_name;
-extern ConstantString duration_parameter_units;
+extern ConstantString tone_frequency_parameter_name;
+extern ConstantString tone_duration_parameter_name;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
