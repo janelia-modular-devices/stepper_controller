@@ -26,8 +26,9 @@ Controller::Controller()
 void Controller::setup()
 {
   EventController::event_controller.setup();
-  motor_drive_.setup();
   Timer1.initialize();
+  motor_drive_.setup();
+  Timer1.attachInterrupt(timerUpdate);
   attachWaypointInterrupt();
   attachToneInterrupt();
 
@@ -57,8 +58,12 @@ void Controller::setup()
                                      constants::enable_polarity_default);
 
   // Parameters
-  // ModularDevice::Parameter& mfc_parameter = modular_device.createParameter(constants::mfc_parameter_name);
-  // mfc_parameter.setRange(0,constants::MFC_COUNT-1);
+  ModularDevice::Parameter& waypoint_count_parameter = modular_device.createParameter(constants::waypoint_count_parameter_name);
+  waypoint_count_parameter.setRange(constants::waypoint_count_min,constants::waypoint_count_max);
+
+  ModularDevice::Parameter& waypoint_travel_duration_parameter = modular_device.createParameter(constants::waypoint_travel_duration_parameter_name);
+  waypoint_travel_duration_parameter.setRange(constants::waypoint_travel_duration_min,constants::waypoint_travel_duration_max);
+  waypoint_travel_duration_parameter.setUnits(constants::duration_parameter_units);
 
   // Methods
   // ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -67,10 +72,28 @@ void Controller::setup()
   // ModularDevice::Method& get_leds_powered_method = modular_device.createMethod(constants::get_leds_powered_method_name);
   // get_leds_powered_method.attachCallback(callbacks::getLedsPoweredCallback);
 
-  // ModularDevice::Method& set_mfc_flow_method = modular_device.createMethod(constants::set_mfc_flow_method_name);
-  // set_mfc_flow_method.attachCallback(callbacks::setMfcFlowCallback);
-  // set_mfc_flow_method.addParameter(mfc_parameter);
-  // set_mfc_flow_method.addParameter(percent_parameter);
+  ModularDevice::Method& enable_method = modular_device.createMethod(constants::enable_method_name);
+  enable_method.attachCallback(callbacks::enableCallback);
+
+  ModularDevice::Method& disable_method = modular_device.createMethod(constants::disable_method_name);
+  disable_method.attachCallback(callbacks::disableCallback);
+
+  ModularDevice::Method& stop_method = modular_device.createMethod(constants::stop_method_name);
+  stop_method.attachCallback(callbacks::stopCallback);
+
+  ModularDevice::Method& get_status_method = modular_device.createMethod(constants::get_status_method_name);
+  get_status_method.attachCallback(callbacks::getStatusCallback);
+
+  ModularDevice::Method& go_to_next_waypoint_method = modular_device.createMethod(constants::go_to_next_waypoint_method_name);
+  go_to_next_waypoint_method.attachCallback(callbacks::goToNextWaypointCallback);
+
+  ModularDevice::Method& set_waypoint_count_method = modular_device.createMethod(constants::set_waypoint_count_method_name);
+  set_waypoint_count_method.addParameter(waypoint_count_parameter);
+  set_waypoint_count_method.attachCallback(callbacks::setWaypointCountCallback);
+
+  ModularDevice::Method& set_waypoint_travel_duration_method = modular_device.createMethod(constants::set_waypoint_travel_duration_method_name);
+  set_waypoint_travel_duration_method.addParameter(waypoint_travel_duration_parameter);
+  set_waypoint_travel_duration_method.attachCallback(callbacks::setWaypointTravelDurationCallback);
 
   // Start Server
   modular_device.startServer(constants::baudrate);
@@ -95,6 +118,7 @@ void Controller::setup()
 
   // Enable Standalone Interface
   // standalone_interface_.enable();
+}
 
 void Controller::update()
 {
@@ -104,7 +128,17 @@ void Controller::update()
   // {
   //   updateDisplayVariables();
   // }
- }
+}
+
+void Controller::motorDriveUpdate()
+{
+  motor_drive_.update();
+}
+
+void Controller::handleWaypointInterrupt()
+{
+  goToNextWaypoint();
+}
 
 // void Controller::executeStandaloneCallback()
 // {
@@ -116,17 +150,84 @@ void Controller::update()
 //   return digitalRead(constants::led_pwr_pin) == HIGH;
 // }
 
-void SystemState::attachWaypointInterrupt()
+void Controller::enable()
+{
+  motor_drive_.enable();
+}
+
+void Controller::disable()
+{
+  motor_drive_.disable();
+}
+
+bool Controller::isEnabled()
+{
+  return motor_drive_.isEnabled();
+}
+
+void Controller::stop()
+{
+  motor_drive_.stopAll();
+}
+
+Array<bool,constants::MOTOR_COUNT> Controller::isRunning()
+{
+  return motor_drive_.isRunningAll();
+}
+
+Array<long,constants::MOTOR_COUNT> Controller::getCurrentPosition()
+{
+  return motor_drive_.getCurrentPositionAll();
+}
+
+Array<long,constants::MOTOR_COUNT> Controller::getTargetPosition()
+{
+  return motor_drive_.getTargetPositionAll();
+}
+
+void Controller::goToNextWaypoint()
+{
+  if (!isEnabled())
+  {
+    enable();
+  }
+  motor_drive_.goToNextWaypoint(0);
+}
+
+void Controller::setWaypointCount(int waypoint_count)
+{
+  motor_drive_.stopAll();
+  motor_drive_.zeroAll();
+  modular_device.setSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+  motor_drive_.setSpeed();
+}
+
+void Controller::setWaypointTravelDuration(int waypoint_travel_duration)
+{
+  motor_drive_.stopAll();
+  motor_drive_.zeroAll();
+  modular_device.setSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
+  motor_drive_.setSpeed();
+}
+
+void Controller::playTone()
+{
+  
+}
+
+void Controller::attachWaypointInterrupt()
 {
   pinMode(constants::waypoint_interrupt_pin, INPUT);
   digitalWrite(constants::waypoint_interrupt_pin, HIGH);
-  attachInterrupt(constants::waypoint_interrupt_number,waypointISR,savedVariables.getWaypointInterruptMode());
+  int waypoint_interrupt_mode = constants::waypoint_interrupt_mode_default;
+  attachInterrupt(constants::waypoint_interrupt_number,waypointISR,waypoint_interrupt_mode);
 }
 
-void SystemState::attachToneInterrupt() {
-  pinMode(constants::toneInterruptPin, INPUT);
-  digitalWrite(constants::toneInterruptPin, HIGH);
-  attachInterrupt(constants::toneInterruptNumber,toneISR,savedVariables.getToneInterruptMode());
+void Controller::attachToneInterrupt() {
+  pinMode(constants::tone_interrupt_pin, INPUT);
+  digitalWrite(constants::tone_interrupt_pin, HIGH);
+  int tone_interrupt_mode = constants::tone_interrupt_mode_default;
+  attachInterrupt(constants::tone_interrupt_number,toneISR,tone_interrupt_mode);
 }
 
 Controller controller;

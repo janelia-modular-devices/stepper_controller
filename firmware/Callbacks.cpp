@@ -27,175 +27,110 @@ namespace callbacks
 // modular_device.setSavedVariableValue type must match the saved variable default type
 
 
-void getLedsPoweredCallback()
+// void getLedsPoweredCallback()
+// {
+//   boolean leds_powered = controller.getLedsPowered();
+//   modular_device.addBooleanToResponse("leds_powered",leds_powered);
+// }
+
+void enableCallback()
 {
-  boolean leds_powered = controller.getLedsPowered();
-  modular_device.addBooleanToResponse("leds_powered",leds_powered);
+  // long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
+  // long percent = modular_device.getParameterValue(constants::percent_parameter_name);
+  controller.enable();
 }
 
-void setMfcFlowCallback()
+void disableCallback()
 {
-  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
-  long percent = modular_device.getParameterValue(constants::percent_parameter_name);
-  controller.setMfcFlow(mfc,percent);
+  controller.disable();
 }
 
-void setMfcFlowsCallback()
+void stopCallback()
 {
-  JsonArray percents_array = modular_device.getParameterValue(constants::percents_parameter_name);
-  int mfc = 0;
-  for (JsonArrayIterator percents_it=percents_array.begin();
-       percents_it != percents_array.end();
-       ++percents_it)
-  {
-    long percent = *percents_it;
-    controller.setMfcFlow(mfc,percent);
-    mfc++;
-  }
+  controller.stop();
 }
 
-void getMfcFlowSettingCallback()
+void getStatusCallback()
 {
-  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
-  uint8_t percent = controller.getMfcFlowSetting(mfc);
-  modular_device.addToResponse("percent",percent);
-}
+  modular_device.addKeyToResponse("status");
+  modular_device.startResponseObject();
 
-void getMfcFlowSettingsCallback()
-{
-  modular_device.addKeyToResponse("percents");
+  int motor_count = constants::MOTOR_COUNT;
+  modular_device.addToResponse("motor_count",motor_count);
+
+  bool is_enabled = controller.isEnabled();
+  modular_device.addBooleanToResponse("is_enabled",is_enabled);
+
+  Array<bool,constants::MOTOR_COUNT> is_running = controller.isRunning();
+  modular_device.addKeyToResponse("is_running");
   modular_device.startResponseArray();
-  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    uint8_t percent = controller.getMfcFlowSetting(mfc);
-    modular_device.addToResponse(percent);
+    modular_device.addBooleanToResponse(is_running[motor_index]);
   }
   modular_device.stopResponseArray();
-}
 
-void getMfcFlowMeasureCallback()
-{
-  long mfc = modular_device.getParameterValue(constants::mfc_parameter_name);
-  uint8_t percent = controller.getMfcFlowMeasure(mfc);
-  modular_device.addToResponse("percent",percent);
-}
-
-void getMfcFlowMeasuresCallback()
-{
-  modular_device.addKeyToResponse("percents");
+  Array<long,constants::MOTOR_COUNT> current_position = controller.getCurrentPosition();
+  modular_device.addKeyToResponse("current_position");
   modular_device.startResponseArray();
-  for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    uint8_t percent = controller.getMfcFlowMeasure(mfc);
-    modular_device.addToResponse(percent);
+    modular_device.addToResponse(current_position[motor_index]);
   }
   modular_device.stopResponseArray();
-}
 
-void getAnalogInputCallback()
-{
-  long ain = modular_device.getParameterValue(constants::ain_parameter_name);
-  uint8_t percent = controller.getAnalogInput(ain);
-  modular_device.addToResponse("percent",percent);
-}
-
-void getAnalogInputsCallback()
-{
-  modular_device.addKeyToResponse("percents");
+  Array<long,constants::MOTOR_COUNT> target_position = controller.getTargetPosition();
+  modular_device.addKeyToResponse("target_position");
   modular_device.startResponseArray();
-  for (int ain=0; ain<constants::AIN_COUNT; ain++)
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    uint8_t percent = controller.getAnalogInput(ain);
-    modular_device.addToResponse(percent);
+    modular_device.addToResponse(target_position[motor_index]);
   }
   modular_device.stopResponseArray();
-}
 
-void saveStateCallback()
-{
-  long state = modular_device.getParameterValue(constants::state_parameter_name);
-  controller.saveState(state);
-}
-
-void recallStateCallback()
-{
-  long state = modular_device.getParameterValue(constants::state_parameter_name);
-  controller.recallState(state);
-}
-
-void getSavedStatesCallback()
-{
-  uint8_t states_array[constants::STATE_COUNT][constants::MFC_COUNT];
-  controller.getStatesArray(states_array);
-  modular_device.addKeyToResponse("saved_states");
-  modular_device.startResponseArray();
-  for (int state=0; state<constants::STATE_COUNT; state++)
+  constants::ModeType mode;
+  modular_device.getSavedVariableValue(constants::mode_name,mode);
+  if (mode == constants::WAYPOINT)
   {
-    modular_device.startResponseArray();
-    for (int mfc=0; mfc<constants::MFC_COUNT; mfc++)
-    {
-      modular_device.addToResponse(states_array[state][mfc]);
-    }
-    modular_device.stopResponseArray();
+    modular_device.addToResponse("mode","waypoint");
+
+    modular_device.addKeyToResponse("waypoint_info");
+    modular_device.startResponseObject();
+    int waypoint_count;
+    modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+    modular_device.addToResponse("waypoint_count",waypoint_count);
+    int waypoint_travel_duration;
+    modular_device.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
+    modular_device.addToResponse("waypoint_travel_duration",waypoint_travel_duration);
+    modular_device.stopResponseObject();
   }
-  modular_device.stopResponseArray();
+
+  modular_device.stopResponseObject();
 }
 
-void pulseBncBCallback()
+void goToNextWaypointCallback()
 {
-  long duration = modular_device.getParameterValue(constants::duration_parameter_name);
-  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setBncBHighCallback,
-                                                                     setBncBLowCallback,
-                                                                     5,
-                                                                     1,
-                                                                     duration,
-                                                                     1,
-                                                                     0,
-                                                                     NULL,
-                                                                     NULL);
+  controller.goToNextWaypoint();
+}
+
+void setWaypointCountCallback()
+{
+  long waypoint_count = modular_device.getParameterValue(constants::waypoint_count_parameter_name);
+  controller.setWaypointCount(waypoint_count);
+}
+
+void setWaypointTravelDurationCallback()
+{
+  long waypoint_travel_duration = modular_device.getParameterValue(constants::waypoint_travel_duration_parameter_name);
+  controller.setWaypointTravelDuration(waypoint_travel_duration);
 }
 
 // Standalone Callbacks
-void executeStandaloneCallbackCallback()
-{
-  controller.executeStandaloneCallback();
-}
-
-void saveStateStandaloneCallback()
-{
-  uint8_t state = controller.getStateIntVar();
-  controller.saveState(state);
-}
-
-void recallStateStandaloneCallback()
-{
-  uint8_t state = controller.getStateIntVar();
-  controller.recallState(state);
-}
-
-void pulseBncBStandaloneCallback()
-{
-  uint16_t duration = controller.getDurationIntVar();
-  EventController::event_controller.addPwmUsingDelayPeriodOnDuration(setBncBHighCallback,
-                                                                     setBncBLowCallback,
-                                                                     5,
-                                                                     1,
-                                                                     duration,
-                                                                     1,
-                                                                     0,
-                                                                     NULL,
-                                                                     NULL);
-}
+// void executeStandaloneCallbackCallback()
+// {
+//   controller.executeStandaloneCallback();
+// }
 
 // EventController Callbacks
 
-void setBncBHighCallback(int index)
-{
-  digitalWrite(constants::bnc_b_pin,HIGH);
-}
-
-void setBncBLowCallback(int index)
-{
-  digitalWrite(constants::bnc_b_pin,LOW);
-}
 }

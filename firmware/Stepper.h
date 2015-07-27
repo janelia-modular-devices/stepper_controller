@@ -132,7 +132,7 @@ inline void Stepper::setStepPinLow()
     if (current_pos_ == target_pos_)
     {
       running_ = false;
-      ModeType mode;
+      constants::ModeType mode;
       modular_device.getSavedVariableValue(constants::mode_name,mode);
       if (mode == constants::WAYPOINT)
       {

@@ -22,7 +22,6 @@ MotorDrive::~MotorDrive()
 void MotorDrive::setup()
 {
   pinMode(enable_pin_, OUTPUT);
-  enable();
 
   // Assign pins (step, dir) to motors
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
@@ -31,13 +30,12 @@ void MotorDrive::setup()
     steppers_[motor_index].setup(constants::step_pins[motor_index],
                                  constants::dir_pins[motor_index]);
   }
-
-  // Initialize timer and set default speed
-  setSpeed();
 }
 
 void MotorDrive::enable()
 {
+  setSpeed();
+
   uint8_t enable_polarity;
   modular_device.getSavedVariableValue(constants::enable_polarity_name,enable_polarity);
   digitalWrite(enable_pin_,enable_polarity);
@@ -102,7 +100,7 @@ void MotorDrive::startAll()
   }
 }
 
-bool MotorDrive::isRunning()
+bool MotorDrive::areAnyRunning()
 {
   bool flag = false;
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
@@ -118,6 +116,19 @@ bool MotorDrive::isRunning()
 bool MotorDrive::isRunning(unsigned int motor_index)
 {
   return steppers_[motor_index].isRunning();
+}
+
+Array<bool, constants::MOTOR_COUNT> MotorDrive::isRunningAll()
+{
+  Array<bool, constants::MOTOR_COUNT> is_running;
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
+  {
+    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+    {
+      is_running[motor_index] = isRunning(motor_index);
+    }
+  }
+  return is_running;
 }
 
 // void MotorDrive::setSpeed(unsigned int v)
@@ -266,7 +277,7 @@ Array<int, constants::MOTOR_COUNT> MotorDrive::getCurrentWaypointAll()
 
 void MotorDrive::setSpeed()
 {
-  ModeType mode;
+  constants::ModeType mode;
   modular_device.getSavedVariableValue(constants::mode_name,mode);
   if (mode == constants::WAYPOINT)
   {
@@ -276,7 +287,7 @@ void MotorDrive::setSpeed()
     modular_device.getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
     int waypoint_count;
     modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
-    long timer_period = (waypoint_travel_duration*waypoint_count*1000)/(constants::steps_per_rev*long(micro_steps_per_step));
+    long timer_period = ((long)waypoint_travel_duration*waypoint_count*1000)/(constants::steps_per_rev*long(micro_steps_per_step));
     Timer1.setPeriod(timer_period);
   }
 }

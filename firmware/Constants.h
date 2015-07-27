@@ -75,13 +75,20 @@ extern const int tone_interrupt_duration_default;
 
 extern ConstantString device_name;
 
-extern ConstantString waypoint_count_parameter_name;
 extern ConstantString micro_steps_per_step_parameter_name;
+extern ConstantString waypoint_count_parameter_name;
 extern ConstantString waypoint_travel_duration_parameter_name;
+extern ConstantString duration_parameter_units;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
-extern ConstantString set_mfc_flow_method_name;
+extern ConstantString enable_method_name;
+extern ConstantString disable_method_name;
+extern ConstantString stop_method_name;
+extern ConstantString get_status_method_name;
+extern ConstantString go_to_next_waypoint_method_name;
+extern ConstantString set_waypoint_count_method_name;
+extern ConstantString set_waypoint_travel_duration_method_name;
 
 // extern ConstantString frame0_name;
 // extern ConstantString frame1_name;

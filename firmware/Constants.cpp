@@ -71,13 +71,20 @@ const int tone_interrupt_duration_default = 250;
 
 CONSTANT_STRING(device_name,"stepper_controller");
 
-CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
 CONSTANT_STRING(micro_steps_per_step_parameter_name,"micro_steps_per_step_count");
+CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
 CONSTANT_STRING(waypoint_travel_duration_parameter_name,"waypoint_travel_duration");
+CONSTANT_STRING(duration_parameter_units,"ms");
 
 // CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 // CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
-CONSTANT_STRING(set_mfc_flow_method_name,"setMfcFlow");
+CONSTANT_STRING(enable_method_name,"enable");
+CONSTANT_STRING(disable_method_name,"disable");
+CONSTANT_STRING(stop_method_name,"stop");
+CONSTANT_STRING(get_status_method_name,"getStatus");
+CONSTANT_STRING(go_to_next_waypoint_method_name,"goToNextWaypoint");
+CONSTANT_STRING(set_waypoint_count_method_name,"setWaypointCount");
+CONSTANT_STRING(set_waypoint_travel_duration_method_name,"setWaypointTravelDuration");
 
 // CONSTANT_STRING(frame0_name,"setMfcFlows %");
 // CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");

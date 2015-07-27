@@ -15,44 +15,25 @@
 
 namespace callbacks
 {
-void getLedsPoweredCallback();
+// void getLedsPoweredCallback();
 
-void setMfcFlowCallback();
+void enableCallback();
 
-void setMfcFlowsCallback();
+void disableCallback();
 
-void getMfcFlowSettingCallback();
+void stopCallback();
 
-void getMfcFlowSettingsCallback();
+void getStatusCallback();
 
-void getMfcFlowMeasureCallback();
+void goToNextWaypointCallback();
 
-void getMfcFlowMeasuresCallback();
+void setWaypointCountCallback();
 
-void getAnalogInputCallback();
-
-void getAnalogInputsCallback();
-
-void saveStateCallback();
-
-void recallStateCallback();
-
-void getSavedStatesCallback();
-
-void pulseBncBCallback();
+void setWaypointTravelDurationCallback();
 
 // Standalone Callbacks
-void executeStandaloneCallbackCallback();
-
-void saveStateStandaloneCallback();
-
-void recallStateStandaloneCallback();
-
-void pulseBncBStandaloneCallback();
+// void executeStandaloneCallbackCallback();
 
 // EventController Callbacks
-void setBncBHighCallback(int index);
-
-void setBncBLowCallback(int index);
 }
 #endif

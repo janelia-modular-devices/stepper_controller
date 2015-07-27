@@ -19,6 +19,7 @@
 #include "ModularDevice.h"
 #include "Constants.h"
 
+
 class MotorDrive
 {
 public:
@@ -36,8 +37,9 @@ public:
   void start(unsigned int motor_index);
   void stopAll();
   void startAll();
-  bool isRunning();
+  bool areAnyRunning();
   bool isRunning(unsigned int motor_index);
+  Array<bool,constants::MOTOR_COUNT> isRunningAll();
 
   void setSpeed();
 
