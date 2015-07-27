@@ -105,6 +105,14 @@ void getStatusCallback()
     modular_device.stopResponseObject();
   }
 
+  int tone_frequency;
+  modular_device.getSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
+  modular_device.addToResponse("tone_frequency",tone_frequency);
+
+  int tone_duration;
+  modular_device.getSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
+  modular_device.addToResponse("tone_duration",tone_duration);
+
   modular_device.stopResponseObject();
 }
 
@@ -123,6 +131,23 @@ void setWaypointTravelDurationCallback()
 {
   long waypoint_travel_duration = modular_device.getParameterValue(constants::waypoint_travel_duration_parameter_name);
   controller.setWaypointTravelDuration(waypoint_travel_duration);
+}
+
+void playToneCallback()
+{
+  controller.playTone();
+}
+
+void setToneFrequencyCallback()
+{
+  long tone_frequency = modular_device.getParameterValue(constants::tone_frequency_parameter_name);
+  modular_device.setSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
+}
+
+void setToneDurationCallback()
+{
+  long tone_duration = modular_device.getParameterValue(constants::tone_duration_parameter_name);
+  modular_device.setSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
 }
 
 // Standalone Callbacks

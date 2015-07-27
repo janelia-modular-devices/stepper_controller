@@ -107,6 +107,17 @@ void Controller::setup()
   set_waypoint_travel_duration_method.addParameter(waypoint_travel_duration_parameter);
   set_waypoint_travel_duration_method.attachCallback(callbacks::setWaypointTravelDurationCallback);
 
+  ModularDevice::Method& play_tone_method = modular_device.createMethod(constants::play_tone_method_name);
+  play_tone_method.attachCallback(callbacks::playToneCallback);
+
+  ModularDevice::Method& set_tone_frequency_method = modular_device.createMethod(constants::set_tone_frequency_method_name);
+  set_tone_frequency_method.addParameter(tone_frequency_parameter);
+  set_tone_frequency_method.attachCallback(callbacks::setToneFrequencyCallback);
+
+  ModularDevice::Method& set_tone_duration_method = modular_device.createMethod(constants::set_tone_duration_method_name);
+  set_tone_duration_method.addParameter(tone_duration_parameter);
+  set_tone_duration_method.attachCallback(callbacks::setToneDurationCallback);
+
   // Start Server
   modular_device.startServer(constants::baudrate);
 
@@ -224,7 +235,13 @@ void Controller::setWaypointTravelDuration(int waypoint_travel_duration)
 
 void Controller::playTone()
 {
-  
+  int tone_frequency;
+  modular_device.getSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
+
+  int tone_duration;
+  modular_device.getSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
+
+  tone(constants::speaker_pin,tone_frequency,tone_duration);
 }
 
 void Controller::attachWaypointInterrupt()

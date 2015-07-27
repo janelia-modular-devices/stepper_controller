@@ -93,6 +93,9 @@ extern ConstantString get_status_method_name;
 extern ConstantString go_to_next_waypoint_method_name;
 extern ConstantString set_waypoint_count_method_name;
 extern ConstantString set_waypoint_travel_duration_method_name;
+extern ConstantString play_tone_method_name;
+extern ConstantString set_tone_frequency_method_name;
+extern ConstantString set_tone_duration_method_name;
 
 // extern ConstantString frame0_name;
 // extern ConstantString frame1_name;

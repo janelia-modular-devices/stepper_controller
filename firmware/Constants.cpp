@@ -89,6 +89,9 @@ CONSTANT_STRING(get_status_method_name,"getStatus");
 CONSTANT_STRING(go_to_next_waypoint_method_name,"goToNextWaypoint");
 CONSTANT_STRING(set_waypoint_count_method_name,"setWaypointCount");
 CONSTANT_STRING(set_waypoint_travel_duration_method_name,"setWaypointTravelDuration");
+CONSTANT_STRING(play_tone_method_name,"playTone");
+CONSTANT_STRING(set_tone_frequency_method_name,"setToneFrequency");
+CONSTANT_STRING(set_tone_duration_method_name,"setToneDuration");
 
 // CONSTANT_STRING(frame0_name,"setMfcFlows %");
 // CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");

@@ -31,6 +31,12 @@ void setWaypointCountCallback();
 
 void setWaypointTravelDurationCallback();
 
+void playToneCallback();
+
+void setToneFrequencyCallback();
+
+void setToneDurationCallback();
+
 // Standalone Callbacks
 // void executeStandaloneCallbackCallback();
 
