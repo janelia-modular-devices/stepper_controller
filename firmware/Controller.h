@@ -24,32 +24,32 @@ public:
   void setup();
   void update();
   void motorDriveUpdate();
-  void handleWaypointInterrupt();
+  void handleMotionInterrupt();
   // void executeStandaloneCallback();
   // bool getLedsPowered();
   void enable();
   void disable();
   bool isEnabled();
   void stop();
+  void move();
   Array<bool,constants::MOTOR_COUNT> isRunning();
   Array<long,constants::MOTOR_COUNT> getCurrentPosition();
   Array<long,constants::MOTOR_COUNT> getTargetPosition();
+  void playTone();
   void goToNextWaypoint();
   void setWaypointCount(int waypoint_count);
   void setWaypointTravelDuration(int waypoint_travel_duration);
-  void playTone();
+  void startWaypointRepeat();
+  void stopWaypointRepeat();
 private:
   // Standalone::StandaloneInterface standalone_interface_;
   MotorDrive motor_drive_;
-  void attachWaypointInterrupt();
-  void attachToneInterrupt();
+  EventController::EventId waypoint_repeat_event_id_;
+  bool waypoint_repeating_;
+  void attachMotionInterrupt();
+  void attachSoundInterrupt();
 };
 
 extern Controller controller;
-
-inline void timerUpdate() {controller.motorDriveUpdate();}
-inline void waypointISR() {controller.handleWaypointInterrupt();}
-inline void toneISR() {controller.playTone();}
-// inline void inlineGoToNextWaypoint(int dummy) {systemState.goToNextWaypoint();}
 
 #endif

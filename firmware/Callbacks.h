@@ -25,11 +25,7 @@ void stopCallback();
 
 void getStatusCallback();
 
-void goToNextWaypointCallback();
-
-void setWaypointCountCallback();
-
-void setWaypointTravelDurationCallback();
+void moveCallback();
 
 void playToneCallback();
 
@@ -37,11 +33,27 @@ void setToneFrequencyCallback();
 
 void setToneDurationCallback();
 
+void setWaypointCountCallback();
+
+void setWaypointTravelDurationCallback();
+
 void setPlayToneBeforeMoveCallback();
+
+void setWaypointRepeatCallback();
+
+void setWaypointRepeatPeriodCallback();
 
 // Standalone Callbacks
 // void executeStandaloneCallbackCallback();
 
 // EventController Callbacks
+void waypointRepeatCallback(int index);
+
+// ISR Callbacks
+void motorDriveCallback();
+
+void motionCallback();
+
+void soundCallback();
 }
 #endif

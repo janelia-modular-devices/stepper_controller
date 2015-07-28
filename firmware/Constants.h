@@ -9,6 +9,7 @@
 #define CONSTANTS_H
 #include "ConstantVariable.h"
 
+
 namespace constants
 {
 enum ModeType {WAYPOINT};
@@ -35,8 +36,8 @@ extern const int speaker_pin;
 extern const int drive_enable_pin;
 extern const int step_pins[MOTOR_COUNT];
 extern const int dir_pins[MOTOR_COUNT];
-extern const int waypoint_interrupt_pin;
-extern const int tone_interrupt_pin;
+extern const int motion_interrupt_pin;
+extern const int sound_interrupt_pin;
 
 extern const ModeType mode_default;
 
@@ -68,10 +69,10 @@ extern const int tone_duration_max;
 extern const int tone_duration_default;
 extern const bool play_tone_before_move_default;
 
-extern const int waypoint_interrupt_number;
-extern const int waypoint_interrupt_mode_default;
-extern const int tone_interrupt_number;
-extern const int tone_interrupt_mode_default;
+extern const int motion_interrupt_number;
+extern const int motion_interrupt_mode_default;
+extern const int sound_interrupt_number;
+extern const int sound_interrupt_mode_default;
 
 extern ConstantString device_name;
 
@@ -79,11 +80,13 @@ extern ConstantString duration_parameter_units;
 extern ConstantString frequency_parameter_units;
 
 extern ConstantString micro_steps_per_step_parameter_name;
-extern ConstantString waypoint_count_parameter_name;
-extern ConstantString waypoint_travel_duration_parameter_name;
 extern ConstantString tone_frequency_parameter_name;
 extern ConstantString tone_duration_parameter_name;
 extern ConstantString play_tone_before_move_parameter_name;
+extern ConstantString waypoint_count_parameter_name;
+extern ConstantString waypoint_travel_duration_parameter_name;
+extern ConstantString waypoint_repeat_parameter_name;
+extern ConstantString waypoint_repeat_period_parameter_name;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
@@ -91,13 +94,15 @@ extern ConstantString enable_method_name;
 extern ConstantString disable_method_name;
 extern ConstantString stop_method_name;
 extern ConstantString get_status_method_name;
-extern ConstantString go_to_next_waypoint_method_name;
-extern ConstantString set_waypoint_count_method_name;
-extern ConstantString set_waypoint_travel_duration_method_name;
+extern ConstantString move_method_name;
 extern ConstantString play_tone_method_name;
 extern ConstantString set_tone_frequency_method_name;
 extern ConstantString set_tone_duration_method_name;
 extern ConstantString set_play_tone_before_move_method_name;
+extern ConstantString set_waypoint_count_method_name;
+extern ConstantString set_waypoint_travel_duration_method_name;
+extern ConstantString set_waypoint_repeat_method_name;
+extern ConstantString set_waypoint_repeat_period_method_name;
 
 // extern ConstantString frame0_name;
 // extern ConstantString frame1_name;
@@ -105,5 +110,7 @@ extern ConstantString set_play_tone_before_move_method_name;
 // extern const ConstantString frame_name_array[FRAME_COUNT];
 extern ConstantString mode_name;
 extern ConstantString enable_polarity_name;
+
+extern ConstantString waypoint_parameter_error;
 }
 #endif

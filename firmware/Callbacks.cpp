@@ -88,6 +88,18 @@ void getStatusCallback()
   }
   modular_device.stopResponseArray();
 
+  int tone_frequency;
+  modular_device.getSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
+  modular_device.addToResponse("tone_frequency",tone_frequency);
+
+  int tone_duration;
+  modular_device.getSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
+  modular_device.addToResponse("tone_duration",tone_duration);
+
+  bool play_tone_before_move;
+  modular_device.getSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
+  modular_device.addToResponse("play_tone_before_move",play_tone_before_move);
+
   constants::ModeType mode;
   modular_device.getSavedVariableValue(constants::mode_name,mode);
   if (mode == constants::WAYPOINT)
@@ -102,39 +114,21 @@ void getStatusCallback()
     int waypoint_travel_duration;
     modular_device.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
     modular_device.addToResponse("waypoint_travel_duration",waypoint_travel_duration);
+    bool waypoint_repeat;
+    modular_device.getSavedVariableValue(constants::waypoint_repeat_parameter_name,waypoint_repeat);
+    modular_device.addToResponse("waypoint_repeat",waypoint_repeat);
+    int waypoint_repeat_period;
+    modular_device.getSavedVariableValue(constants::waypoint_repeat_period_parameter_name,waypoint_repeat_period);
+    modular_device.addToResponse("waypoint_repeat_period",waypoint_repeat_period);
     modular_device.stopResponseObject();
   }
-
-  int tone_frequency;
-  modular_device.getSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
-  modular_device.addToResponse("tone_frequency",tone_frequency);
-
-  int tone_duration;
-  modular_device.getSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
-  modular_device.addToResponse("tone_duration",tone_duration);
-
-  bool play_tone_before_move;
-  modular_device.getSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
-  modular_device.addToResponse("play_tone_before_move",play_tone_before_move);
 
   modular_device.stopResponseObject();
 }
 
-void goToNextWaypointCallback()
+void moveCallback()
 {
-  controller.goToNextWaypoint();
-}
-
-void setWaypointCountCallback()
-{
-  long waypoint_count = modular_device.getParameterValue(constants::waypoint_count_parameter_name);
-  controller.setWaypointCount(waypoint_count);
-}
-
-void setWaypointTravelDurationCallback()
-{
-  long waypoint_travel_duration = modular_device.getParameterValue(constants::waypoint_travel_duration_parameter_name);
-  controller.setWaypointTravelDuration(waypoint_travel_duration);
+  controller.move();
 }
 
 void playToneCallback()
@@ -160,6 +154,66 @@ void setPlayToneBeforeMoveCallback()
   modular_device.setSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
 }
 
+void setWaypointCountCallback()
+{
+  long waypoint_count = modular_device.getParameterValue(constants::waypoint_count_parameter_name);
+  controller.setWaypointCount(waypoint_count);
+}
+
+void setWaypointTravelDurationCallback()
+{
+  long waypoint_travel_duration = modular_device.getParameterValue(constants::waypoint_travel_duration_parameter_name);
+  bool waypoint_repeat;
+  modular_device.getSavedVariableValue(constants::waypoint_repeat_parameter_name,waypoint_repeat);
+  if (waypoint_repeat)
+  {
+    int waypoint_repeat_period;
+    modular_device.getSavedVariableValue(constants::waypoint_repeat_period_parameter_name,waypoint_repeat_period);
+    if (waypoint_travel_duration > waypoint_repeat_period)
+    {
+      modular_device.sendErrorResponse(constants::waypoint_parameter_error);
+      return;
+    }
+  }
+  controller.setWaypointTravelDuration(waypoint_travel_duration);
+}
+
+void setWaypointRepeatCallback()
+{
+  bool waypoint_repeat = modular_device.getParameterValue(constants::waypoint_repeat_parameter_name);
+  if (waypoint_repeat)
+  {
+    int waypoint_travel_duration;
+    modular_device.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
+    int waypoint_repeat_period;
+    modular_device.getSavedVariableValue(constants::waypoint_repeat_period_parameter_name,waypoint_repeat_period);
+    if (waypoint_travel_duration > waypoint_repeat_period)
+    {
+      modular_device.sendErrorResponse(constants::waypoint_parameter_error);
+      return;
+    }
+  }
+  modular_device.setSavedVariableValue(constants::waypoint_repeat_parameter_name,waypoint_repeat);
+}
+
+void setWaypointRepeatPeriodCallback()
+{
+  long waypoint_repeat_period = modular_device.getParameterValue(constants::waypoint_repeat_period_parameter_name);
+  bool waypoint_repeat;
+  modular_device.getSavedVariableValue(constants::waypoint_repeat_parameter_name,waypoint_repeat);
+  if (waypoint_repeat)
+  {
+    int waypoint_travel_duration;
+    modular_device.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
+    if (waypoint_travel_duration > waypoint_repeat_period)
+    {
+      modular_device.sendErrorResponse(constants::waypoint_parameter_error);
+      return;
+    }
+  }
+  modular_device.setSavedVariableValue(constants::waypoint_repeat_period_parameter_name,(int)waypoint_repeat_period);
+}
+
 // Standalone Callbacks
 // void executeStandaloneCallbackCallback()
 // {
@@ -167,5 +221,25 @@ void setPlayToneBeforeMoveCallback()
 // }
 
 // EventController Callbacks
+void waypointRepeatCallback(int index)
+{
+  controller.goToNextWaypoint();
+}
+
+// ISR Callbacks
+void motorDriveCallback()
+{
+  controller.motorDriveUpdate();
+}
+
+void motionCallback()
+{
+  controller.handleMotionInterrupt();
+}
+
+void soundCallback()
+{
+  controller.playTone();
+}
 
 }
