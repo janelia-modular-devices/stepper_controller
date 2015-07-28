@@ -29,8 +29,8 @@ namespace callbacks
 
 // void getLedsPoweredCallback()
 // {
-//   boolean leds_powered = controller.getLedsPowered();
-//   modular_device.addBooleanToResponse("leds_powered",leds_powered);
+//   bool leds_powered = controller.getLedsPowered();
+//   modular_device.addBoolToResponse("leds_powered",leds_powered);
 // }
 
 void enableCallback()
@@ -59,14 +59,14 @@ void getStatusCallback()
   modular_device.addToResponse("motor_count",motor_count);
 
   bool is_enabled = controller.isEnabled();
-  modular_device.addBooleanToResponse("is_enabled",is_enabled);
+  modular_device.addBoolToResponse("is_enabled",is_enabled);
 
   Array<bool,constants::MOTOR_COUNT> is_running = controller.isRunning();
   modular_device.addKeyToResponse("is_running");
   modular_device.startResponseArray();
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    modular_device.addBooleanToResponse(is_running[motor_index]);
+    modular_device.addBoolToResponse(is_running[motor_index]);
   }
   modular_device.stopResponseArray();
 
@@ -113,6 +113,10 @@ void getStatusCallback()
   modular_device.getSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
   modular_device.addToResponse("tone_duration",tone_duration);
 
+  bool play_tone_before_move;
+  modular_device.getSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
+  modular_device.addToResponse("play_tone_before_move",play_tone_before_move);
+
   modular_device.stopResponseObject();
 }
 
@@ -141,13 +145,19 @@ void playToneCallback()
 void setToneFrequencyCallback()
 {
   long tone_frequency = modular_device.getParameterValue(constants::tone_frequency_parameter_name);
-  modular_device.setSavedVariableValue(constants::tone_frequency_parameter_name,tone_frequency);
+  modular_device.setSavedVariableValue(constants::tone_frequency_parameter_name,(int)tone_frequency);
 }
 
 void setToneDurationCallback()
 {
   long tone_duration = modular_device.getParameterValue(constants::tone_duration_parameter_name);
-  modular_device.setSavedVariableValue(constants::tone_duration_parameter_name,tone_duration);
+  modular_device.setSavedVariableValue(constants::tone_duration_parameter_name,(int)tone_duration);
+}
+
+void setPlayToneBeforeMoveCallback()
+{
+  bool play_tone_before_move = modular_device.getParameterValue(constants::play_tone_before_move_parameter_name);
+  modular_device.setSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
 }
 
 // Standalone Callbacks

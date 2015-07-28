@@ -60,6 +60,8 @@ void Controller::setup()
                                      constants::tone_frequency_default);
   modular_device.createSavedVariable(constants::tone_duration_parameter_name,
                                      constants::tone_duration_default);
+  modular_device.createSavedVariable(constants::play_tone_before_move_parameter_name,
+                                     constants::play_tone_before_move_default);
 
   // Parameters
   ModularDevice::Parameter& waypoint_count_parameter = modular_device.createParameter(constants::waypoint_count_parameter_name);
@@ -76,6 +78,9 @@ void Controller::setup()
   ModularDevice::Parameter& tone_duration_parameter = modular_device.createParameter(constants::tone_duration_parameter_name);
   tone_duration_parameter.setRange(constants::tone_duration_min,constants::tone_duration_max);
   tone_duration_parameter.setUnits(constants::duration_parameter_units);
+
+  ModularDevice::Parameter& play_tone_before_move_parameter = modular_device.createParameter(constants::play_tone_before_move_parameter_name);
+  play_tone_before_move_parameter.setTypeBool();
 
   // Methods
   // ModularDevice::Method& execute_standalone_callback_method = modular_device.createMethod(constants::execute_standalone_callback_method_name);
@@ -118,6 +123,10 @@ void Controller::setup()
   set_tone_duration_method.addParameter(tone_duration_parameter);
   set_tone_duration_method.attachCallback(callbacks::setToneDurationCallback);
 
+  ModularDevice::Method& set_play_tone_before_move_method = modular_device.createMethod(constants::set_play_tone_before_move_method_name);
+  set_play_tone_before_move_method.addParameter(play_tone_before_move_parameter);
+  set_play_tone_before_move_method.attachCallback(callbacks::setPlayToneBeforeMoveCallback);
+
   // Start Server
   modular_device.startServer(constants::baudrate);
 
@@ -146,7 +155,7 @@ void Controller::setup()
 void Controller::update()
 {
   modular_device.handleServerRequests();
-  // boolean updated = standalone_interface_.update();
+  // bool updated = standalone_interface_.update();
   // if (updated)
   // {
   //   updateDisplayVariables();
@@ -213,6 +222,12 @@ void Controller::goToNextWaypoint()
   if (!isEnabled())
   {
     enable();
+  }
+  bool play_tone_before_move;
+  modular_device.getSavedVariableValue(constants::play_tone_before_move_parameter_name,play_tone_before_move);
+  if (play_tone_before_move)
+  {
+    playTone();
   }
   motor_drive_.goToNextWaypoint(0);
 }

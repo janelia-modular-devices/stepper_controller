@@ -37,6 +37,8 @@ void setToneFrequencyCallback();
 
 void setToneDurationCallback();
 
+void setPlayToneBeforeMoveCallback();
+
 // Standalone Callbacks
 // void executeStandaloneCallbackCallback();
 

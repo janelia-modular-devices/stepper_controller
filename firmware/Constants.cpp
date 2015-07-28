@@ -62,7 +62,7 @@ const int tone_frequency_default = 5000;
 const int tone_duration_min = 1;
 const int tone_duration_max = 10000;
 const int tone_duration_default = 250;
-const bool play_tone_before_waypoint_move_default = true;
+const bool play_tone_before_move_default = true;
 
 const int waypoint_interrupt_number = 0;
 const int waypoint_interrupt_mode_default = FALLING;
@@ -79,6 +79,7 @@ CONSTANT_STRING(waypoint_count_parameter_name,"waypoint_count");
 CONSTANT_STRING(waypoint_travel_duration_parameter_name,"waypoint_travel_duration");
 CONSTANT_STRING(tone_frequency_parameter_name,"tone_frequency");
 CONSTANT_STRING(tone_duration_parameter_name,"tone_duration");
+CONSTANT_STRING(play_tone_before_move_parameter_name,"play_tone_before_move");
 
 // CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
 // CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
@@ -92,6 +93,7 @@ CONSTANT_STRING(set_waypoint_travel_duration_method_name,"setWaypointTravelDurat
 CONSTANT_STRING(play_tone_method_name,"playTone");
 CONSTANT_STRING(set_tone_frequency_method_name,"setToneFrequency");
 CONSTANT_STRING(set_tone_duration_method_name,"setToneDuration");
+CONSTANT_STRING(set_play_tone_before_move_method_name,"setPlayToneBeforeMove");
 
 // CONSTANT_STRING(frame0_name,"setMfcFlows %");
 // CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");

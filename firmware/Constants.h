@@ -66,7 +66,7 @@ extern const int tone_frequency_default;
 extern const int tone_duration_min;
 extern const int tone_duration_max;
 extern const int tone_duration_default;
-extern const bool play_tone_before_waypoint_move_default;
+extern const bool play_tone_before_move_default;
 
 extern const int waypoint_interrupt_number;
 extern const int waypoint_interrupt_mode_default;
@@ -83,6 +83,7 @@ extern ConstantString waypoint_count_parameter_name;
 extern ConstantString waypoint_travel_duration_parameter_name;
 extern ConstantString tone_frequency_parameter_name;
 extern ConstantString tone_duration_parameter_name;
+extern ConstantString play_tone_before_move_parameter_name;
 
 // extern ConstantString execute_standalone_callback_method_name;
 // extern ConstantString get_leds_powered_method_name;
@@ -96,6 +97,7 @@ extern ConstantString set_waypoint_travel_duration_method_name;
 extern ConstantString play_tone_method_name;
 extern ConstantString set_tone_frequency_method_name;
 extern ConstantString set_tone_duration_method_name;
+extern ConstantString set_play_tone_before_move_method_name;
 
 // extern ConstantString frame0_name;
 // extern ConstantString frame1_name;
