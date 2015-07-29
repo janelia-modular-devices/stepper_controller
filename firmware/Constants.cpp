@@ -95,7 +95,7 @@ CONSTANT_STRING(waypoint_repeat_period_parameter_name,"waypoint_repeat_period");
 CONSTANT_STRING(enable_method_name,"enable");
 CONSTANT_STRING(disable_method_name,"disable");
 CONSTANT_STRING(stop_method_name,"stop");
-CONSTANT_STRING(get_status_method_name,"getStatus");
+CONSTANT_STRING(get_controller_info_method_name,"getControllerInfo");
 CONSTANT_STRING(move_method_name,"move");
 CONSTANT_STRING(play_tone_method_name,"playTone");
 CONSTANT_STRING(set_tone_frequency_method_name,"setToneFrequency");

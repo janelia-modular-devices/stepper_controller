@@ -23,7 +23,7 @@ void disableCallback();
 
 void stopCallback();
 
-void getStatusCallback();
+void getControllerInfoCallback();
 
 void moveCallback();
 

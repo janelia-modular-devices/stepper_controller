@@ -31,7 +31,7 @@ License:
     "enable",
     "disable",
     "stop",
-    "getStatus",
+    "getControllerInfo",
     "move",
     "playTone",
     "setToneFrequency",

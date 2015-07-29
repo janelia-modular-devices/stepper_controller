@@ -50,9 +50,9 @@ void stopCallback()
   controller.stop();
 }
 
-void getStatusCallback()
+void getControllerInfoCallback()
 {
-  modular_device.addKeyToResponse("status");
+  modular_device.addKeyToResponse("controller_info");
   modular_device.startResponseObject();
 
   int motor_count = constants::MOTOR_COUNT;

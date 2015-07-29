@@ -100,7 +100,7 @@ extern ConstantString waypoint_repeat_period_parameter_name;
 extern ConstantString enable_method_name;
 extern ConstantString disable_method_name;
 extern ConstantString stop_method_name;
-extern ConstantString get_status_method_name;
+extern ConstantString get_controller_info_method_name;
 extern ConstantString move_method_name;
 extern ConstantString play_tone_method_name;
 extern ConstantString set_tone_frequency_method_name;

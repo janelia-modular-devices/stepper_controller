@@ -110,8 +110,8 @@ void Controller::setup()
   ModularDevice::Method& stop_method = modular_device.createMethod(constants::stop_method_name);
   stop_method.attachCallback(callbacks::stopCallback);
 
-  ModularDevice::Method& get_status_method = modular_device.createMethod(constants::get_status_method_name);
-  get_status_method.attachCallback(callbacks::getStatusCallback);
+  ModularDevice::Method& get_controller_info_method = modular_device.createMethod(constants::get_controller_info_method_name);
+  get_controller_info_method.attachCallback(callbacks::getControllerInfoCallback);
 
   ModularDevice::Method& move_method = modular_device.createMethod(constants::move_method_name);
   move_method.attachCallback(callbacks::moveCallback);
