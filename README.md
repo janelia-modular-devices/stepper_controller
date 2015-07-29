@@ -15,5 +15,37 @@ License:
 
 ##Device Information
 
+```shell
+{
+  "method":"?",
+  "device_info":{
+    "name":"stepper_controller",
+    "model_number":1140,
+    "serial_number":0,
+    "firmware_number":1
+  },
+  "methods":[
+    "getMemoryFree",
+    "resetDefaults",
+    "setSerialNumber",
+    "enable",
+    "disable",
+    "stop",
+    "getStatus",
+    "move",
+    "playTone",
+    "setToneFrequency",
+    "setToneDuration",
+    "setPlayToneBeforeMove",
+    "setWaypointCount",
+    "setWaypointTravelDuration",
+    "setWaypointRepeat",
+    "setWaypointRepeatPeriod"
+  ],
+  "status":success
+}
+```
 ##Verbose Device Information
 
+```shell
+```
