@@ -31,8 +31,8 @@ const int speaker_pin = 46;
 const int drive_enable_pin = 49;
 const int step_pins[MOTOR_COUNT] = {53};
 const int dir_pins[MOTOR_COUNT] = {51};
-const int motion_interrupt_pin = 2;
-const int sound_interrupt_pin = 3;
+const int motion_switch_interrupt_pin = 2;
+const int sound_switch_interrupt_pin = 3;
 
 const ModeType mode_default = WAYPOINT;
 
@@ -64,10 +64,10 @@ const int tone_duration_max = 10000;
 const int tone_duration_default = 250;
 const bool play_tone_before_move_default = true;
 
-const int motion_interrupt_number = 0;
-const int motion_interrupt_mode_default = FALLING;
-const int sound_interrupt_number = 1;
-const int sound_interrupt_mode_default = FALLING;
+const int motion_switch_interrupt_number = 0;
+const int motion_switch_interrupt_mode_default = FALLING;
+const int sound_switch_interrupt_number = 1;
+const int sound_switch_interrupt_mode_default = FALLING;
 
 CONSTANT_STRING(device_name,"stepper_controller");
 

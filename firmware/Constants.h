@@ -36,8 +36,8 @@ extern const int speaker_pin;
 extern const int drive_enable_pin;
 extern const int step_pins[MOTOR_COUNT];
 extern const int dir_pins[MOTOR_COUNT];
-extern const int motion_interrupt_pin;
-extern const int sound_interrupt_pin;
+extern const int motion_switch_interrupt_pin;
+extern const int sound_switch_interrupt_pin;
 
 extern const ModeType mode_default;
 
@@ -69,10 +69,10 @@ extern const int tone_duration_max;
 extern const int tone_duration_default;
 extern const bool play_tone_before_move_default;
 
-extern const int motion_interrupt_number;
-extern const int motion_interrupt_mode_default;
-extern const int sound_interrupt_number;
-extern const int sound_interrupt_mode_default;
+extern const int motion_switch_interrupt_number;
+extern const int motion_switch_interrupt_mode_default;
+extern const int sound_switch_interrupt_number;
+extern const int sound_switch_interrupt_mode_default;
 
 extern ConstantString device_name;
 

@@ -343,18 +343,18 @@ void Controller::stopWaypointRepeat()
 
 void Controller::attachMotionInterrupt()
 {
-  pinMode(constants::motion_interrupt_pin, INPUT);
-  digitalWrite(constants::motion_interrupt_pin, HIGH);
-  int motion_interrupt_mode = constants::motion_interrupt_mode_default;
-  attachInterrupt(constants::motion_interrupt_number,callbacks::motionCallback,motion_interrupt_mode);
+  pinMode(constants::motion_switch_interrupt_pin, INPUT);
+  digitalWrite(constants::motion_switch_interrupt_pin, HIGH);
+  int motion_switch_interrupt_mode = constants::motion_switch_interrupt_mode_default;
+  attachInterrupt(constants::motion_switch_interrupt_number,callbacks::motionCallback,motion_switch_interrupt_mode);
 }
 
 void Controller::attachSoundInterrupt()
 {
-  pinMode(constants::sound_interrupt_pin, INPUT);
-  digitalWrite(constants::sound_interrupt_pin, HIGH);
-  int sound_interrupt_mode = constants::sound_interrupt_mode_default;
-  attachInterrupt(constants::sound_interrupt_number,callbacks::soundCallback,sound_interrupt_mode);
+  pinMode(constants::sound_switch_interrupt_pin, INPUT);
+  digitalWrite(constants::sound_switch_interrupt_pin, HIGH);
+  int sound_switch_interrupt_mode = constants::sound_switch_interrupt_mode_default;
+  attachInterrupt(constants::sound_switch_interrupt_number,callbacks::soundCallback,sound_switch_interrupt_mode);
 }
 
 Controller controller;
