@@ -30,8 +30,8 @@ void Controller::setup()
   Timer1.initialize();
   motor_drive_.setup();
   Timer1.attachInterrupt(callbacks::motorDriveCallback);
-  attachMotionInterrupt();
-  attachSoundInterrupt();
+  attachMotionInterrupts();
+  attachSoundInterrupts();
 
   // Pin Setup
   // for (int mfc = 0; mfc < constants::MFC_COUNT; mfc++)
@@ -341,20 +341,30 @@ void Controller::stopWaypointRepeat()
   }
 }
 
-void Controller::attachMotionInterrupt()
+void Controller::attachMotionInterrupts()
 {
   pinMode(constants::motion_switch_interrupt_pin, INPUT);
   digitalWrite(constants::motion_switch_interrupt_pin, HIGH);
   int motion_switch_interrupt_mode = constants::motion_switch_interrupt_mode_default;
   attachInterrupt(constants::motion_switch_interrupt_number,callbacks::motionCallback,motion_switch_interrupt_mode);
+
+  pinMode(constants::motion_bnc_interrupt_pin, INPUT);
+  digitalWrite(constants::motion_bnc_interrupt_pin, HIGH);
+  int motion_bnc_interrupt_mode = constants::motion_bnc_interrupt_mode_default;
+  attachInterrupt(constants::motion_bnc_interrupt_number,callbacks::motionCallback,motion_bnc_interrupt_mode);
 }
 
-void Controller::attachSoundInterrupt()
+void Controller::attachSoundInterrupts()
 {
   pinMode(constants::sound_switch_interrupt_pin, INPUT);
   digitalWrite(constants::sound_switch_interrupt_pin, HIGH);
   int sound_switch_interrupt_mode = constants::sound_switch_interrupt_mode_default;
   attachInterrupt(constants::sound_switch_interrupt_number,callbacks::soundCallback,sound_switch_interrupt_mode);
+
+  pinMode(constants::sound_bnc_interrupt_pin, INPUT);
+  digitalWrite(constants::sound_bnc_interrupt_pin, HIGH);
+  int sound_bnc_interrupt_mode = constants::sound_bnc_interrupt_mode_default;
+  attachInterrupt(constants::sound_bnc_interrupt_number,callbacks::soundCallback,sound_bnc_interrupt_mode);
 }
 
 Controller controller;

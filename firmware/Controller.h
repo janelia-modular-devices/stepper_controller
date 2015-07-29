@@ -46,8 +46,8 @@ private:
   MotorDrive motor_drive_;
   EventController::EventId waypoint_repeat_event_id_;
   bool waypoint_repeating_;
-  void attachMotionInterrupt();
-  void attachSoundInterrupt();
+  void attachMotionInterrupts();
+  void attachSoundInterrupts();
 };
 
 extern Controller controller;

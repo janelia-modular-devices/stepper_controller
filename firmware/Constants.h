@@ -38,6 +38,8 @@ extern const int step_pins[MOTOR_COUNT];
 extern const int dir_pins[MOTOR_COUNT];
 extern const int motion_switch_interrupt_pin;
 extern const int sound_switch_interrupt_pin;
+extern const int motion_bnc_interrupt_pin;
+extern const int sound_bnc_interrupt_pin;
 
 extern const ModeType mode_default;
 
@@ -73,6 +75,11 @@ extern const int motion_switch_interrupt_number;
 extern const int motion_switch_interrupt_mode_default;
 extern const int sound_switch_interrupt_number;
 extern const int sound_switch_interrupt_mode_default;
+
+extern const int motion_bnc_interrupt_number;
+extern const int motion_bnc_interrupt_mode_default;
+extern const int sound_bnc_interrupt_number;
+extern const int sound_bnc_interrupt_mode_default;
 
 extern ConstantString device_name;
 

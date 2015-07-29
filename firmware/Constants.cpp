@@ -33,6 +33,8 @@ const int step_pins[MOTOR_COUNT] = {53};
 const int dir_pins[MOTOR_COUNT] = {51};
 const int motion_switch_interrupt_pin = 2;
 const int sound_switch_interrupt_pin = 3;
+const int motion_bnc_interrupt_pin = 21;
+const int sound_bnc_interrupt_pin = 20;
 
 const ModeType mode_default = WAYPOINT;
 
@@ -45,7 +47,7 @@ const int micro_steps_per_step_default = 256;
 const int micro_steps_per_step_min = 1;
 const int micro_steps_per_step_max = 256;
 
-const int waypoint_count_default = 16;
+const int waypoint_count_default = 30;
 const int waypoint_count_min = 1;
 const int waypoint_count_max = 255;
 const int waypoint_travel_duration_default = 400;
@@ -62,12 +64,17 @@ const int tone_frequency_default = 5000;
 const int tone_duration_min = 1;
 const int tone_duration_max = 10000;
 const int tone_duration_default = 250;
-const bool play_tone_before_move_default = true;
+const bool play_tone_before_move_default = false;
 
 const int motion_switch_interrupt_number = 0;
 const int motion_switch_interrupt_mode_default = FALLING;
 const int sound_switch_interrupt_number = 1;
 const int sound_switch_interrupt_mode_default = FALLING;
+
+const int motion_bnc_interrupt_number = 2;
+const int motion_bnc_interrupt_mode_default = RISING;
+const int sound_bnc_interrupt_number = 3;
+const int sound_bnc_interrupt_mode_default = RISING;
 
 CONSTANT_STRING(device_name,"stepper_controller");
 
