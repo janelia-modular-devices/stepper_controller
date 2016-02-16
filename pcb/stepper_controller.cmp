@@ -1,94 +1,323 @@
-Cmp-Mod V01 Created by CvPCB (2011-05-25)-stable date = Tue 11 Mar 2014 02:11:58 PM EDT
+Cmp-Mod V01 Created by PcbNew   date = Mon 08 Feb 2016 10:02:00 AM EST
 
 BeginCmp
-TimeStamp = /52D4298E;
-Reference = C1;
-ValeurCmp = 10uF;
-IdModule  = SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C1DEA5;
-Reference = C2;
-ValeurCmp = 10uF;
-IdModule  = SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /531F4A3F;
-Reference = C3;
-ValeurCmp = 0.1uF;
-IdModule  = SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /528CDBDE;
-Reference = P1;
-ValeurCmp = DBNC_INPUT;
-IdModule  = BNC_DOUBLE;
-EndCmp
-
-BeginCmp
-TimeStamp = /528CE023;
+TimeStamp = 54B9B559
+Path = /54B9E074
 Reference = P2;
-ValeurCmp = DRIVE;
-IdModule  = Header_4_Pin;
+ValeurCmp = HEADER_01X03;
+IdModule  = stepper_controller:Header_3_Pin;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C1DC9B;
-Reference = P3;
-ValeurCmp = +24VDC;
-IdModule  = TERMINAL_BLOCK_2POS_3.5mm;
+TimeStamp = 54B97532
+Path = /54B9B96B
+Reference = SW2;
+ValeurCmp = KT_SWITCH;
+IdModule  = stepper_controller:KT_SWITCH;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C1DB2A;
-Reference = P4;
-ValeurCmp = INT_STEPPER;
-IdModule  = Header_Shrouded_2_Pin;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C1DB34;
-Reference = P5;
-ValeurCmp = INT_TONE;
-IdModule  = Header_Shrouded_2_Pin;
-EndCmp
-
-BeginCmp
-TimeStamp = /528CE357;
-Reference = R1;
-ValeurCmp = 118;
-IdModule  = SM1210;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C1DE60;
-Reference = REG1;
-ValeurCmp = CONV_DC_DC;
-IdModule  = DC_DC_CONV_R78C;
-EndCmp
-
-BeginCmp
-TimeStamp = /504F5474;
-Reference = SHIELD1;
-ValeurCmp = ARDUINO_MEGA_SHIELD_FULL;
-IdModule  = ARDUINO_MEGA_SHIELD;
-EndCmp
-
-BeginCmp
-TimeStamp = /528CE365;
-Reference = SP1;
-ValeurCmp = SPEAKER;
-IdModule  = SMS-1308MS-2-R;
-EndCmp
-
-BeginCmp
-TimeStamp = /531F30FB;
+TimeStamp = 5480CAD6
+Path = /5489DAE1
 Reference = U1;
 ValeurCmp = MAX6817;
-IdModule  = MAX6817;
+IdModule  = stepper_controller:MAX6817;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B9701F
+Path = /54B95605
+Reference = U2;
+ValeurCmp = MAX6817;
+IdModule  = stepper_controller:MAX6817;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C5FC
+Path = /56B14635
+Reference = R4;
+ValeurCmp = 150;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA26
+Path = /54893F36
+Reference = R2;
+ValeurCmp = 5.11k;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA1A
+Path = /54893E85
+Reference = R1;
+ValeurCmp = 5.11k;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C99F
+Path = /56B0E7AF
+Reference = C6;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C993
+Path = /54B955FC
+Reference = C5;
+ValeurCmp = 0.1uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C987
+Path = /5489352B
+Reference = C4;
+ValeurCmp = 0.1uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C97B
+Path = /5489288F
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C96F
+Path = /54892682
+Reference = C2;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C963
+Path = /548925C4
+Reference = C1;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9FD
+Path = /5488FCDE
+Reference = P1;
+ValeurCmp = PWR_JACK_2.5x5.5;
+IdModule  = stepper_controller:DCJACK_2PIN_HIGHCURRENT;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480CA49
+Path = /5489CB72
+Reference = REG1;
+ValeurCmp = CONV_DC_DC_12V_1A;
+IdModule  = stepper_controller:DC_DC_CONV_R78C;
+EndCmp
+
+BeginCmp
+TimeStamp = 54AF04BB
+Path = /56B1504C
+Reference = R5;
+ValeurCmp = 150;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C98D
+Path = /54AEFE62
+Reference = ARDUINO1;
+ValeurCmp = ARDUINO_MEGA;
+IdModule  = stepper_controller:ARDUINO_MEGA_SHIELD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B448E0
+Path = /56B14609
+Reference = C7;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9BE
+Path = /548B59E0
+Reference = E1;
+ValeurCmp = ENCODER_C14;
+IdModule  = stepper_controller:Micro-MaTch_6_SMD;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B96FF2
+Path = /56B15020
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 54B97002
+Path = /54BEC0BB
+Reference = S1;
+ValeurCmp = HEADER_01X02_SHR;
+IdModule  = stepper_controller:Header_Shrouded_2_Pin;
+EndCmp
+
+BeginCmp
+TimeStamp = 54EB8E86
+Path = /54EB8C82
+Reference = P3;
+ValeurCmp = BNC_DOUBLE_RA;
+IdModule  = stepper_controller:BNC_DOUBLE;
+EndCmp
+
+BeginCmp
+TimeStamp = 55C8D5E2
+Path = /55C8DAA5
+Reference = SW1;
+ValeurCmp = DPST_SERIES_M;
+IdModule  = stepper_controller:DPST_SERIES_M;
+EndCmp
+
+BeginCmp
+TimeStamp = 5480C9AB
+Path = /54891A64
+Reference = D1;
+ValeurCmp = LED_24V;
+IdModule  = stepper_controller:LED_555-3XXX;
+EndCmp
+
+BeginCmp
+TimeStamp = 5488C999
+Path = /56B118CF
+Reference = R3;
+ValeurCmp = 150;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12807
+Path = /56B15079
+Reference = C9;
+ValeurCmp = 10uF;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12813
+Path = /56B150A5
+Reference = R6;
+ValeurCmp = 150;
+IdModule  = stepper_controller:SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12855
+Path = /56B12908
+Reference = T1;
+ValeurCmp = TERM_BLK_ANG_2_PIN;
+IdModule  = stepper_controller:TERM_BLK_ANG_2_PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B1285F
+Path = /56B14641
+Reference = T2;
+ValeurCmp = TERM_BLK_ANG_2_PIN;
+IdModule  = stepper_controller:TERM_BLK_ANG_2_PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12869
+Path = /56B15058
+Reference = T3;
+ValeurCmp = TERM_BLK_ANG_2_PIN;
+IdModule  = stepper_controller:TERM_BLK_ANG_2_PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12873
+Path = /56B150B1
+Reference = T4;
+ValeurCmp = TERM_BLK_ANG_2_PIN;
+IdModule  = stepper_controller:TERM_BLK_ANG_2_PIN;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B1284B
+Path = /56B15065
+Reference = RCD4;
+ValeurCmp = RCD-24;
+IdModule  = stepper_controller:RCD-24;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B1283D
+Path = /56B1500C
+Reference = RCD3;
+ValeurCmp = RCD-24;
+IdModule  = stepper_controller:RCD-24;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B1282F
+Path = /56B145F5
+Reference = RCD2;
+ValeurCmp = RCD-24;
+IdModule  = stepper_controller:RCD-24;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12821
+Path = /56B0D8A0
+Reference = RCD1;
+ValeurCmp = RCD-24;
+IdModule  = stepper_controller:RCD-24;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12882
+Path = /56B0E482
+Reference = U3;
+ValeurCmp = SSR_DC_6PIN;
+IdModule  = stepper_controller:ASSR-1611;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B12891
+Path = /56B145FE
+Reference = U4;
+ValeurCmp = SSR_DC_6PIN;
+IdModule  = stepper_controller:ASSR-1611;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B128A0
+Path = /56B15015
+Reference = U5;
+ValeurCmp = SSR_DC_6PIN;
+IdModule  = stepper_controller:ASSR-1611;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B128AF
+Path = /56B1506E
+Reference = U6;
+ValeurCmp = SSR_DC_6PIN;
+IdModule  = stepper_controller:ASSR-1611;
+EndCmp
+
+BeginCmp
+TimeStamp = 56B513B2
+Path = /56B52A00
+Reference = P4;
+ValeurCmp = HEADER_01X03_SMD_RA;
+IdModule  = stepper_controller:Header_3_Pin_SMD_RA;
 EndCmp
 
 EndListe

@@ -1,5 +1,4 @@
-stepper_controller
-==================
+#stepper_controller
 
 Authors:
 
@@ -15,37 +14,10 @@ License:
 
 ##Device Information
 
-```shell
-{
-  "method":"?",
-  "device_info":{
-    "name":"stepper_controller",
-    "model_number":1140,
-    "serial_number":0,
-    "firmware_number":1
-  },
-  "methods":[
-    "getMemoryFree",
-    "resetDefaults",
-    "setSerialNumber",
-    "enable",
-    "disable",
-    "stop",
-    "getControllerInfo",
-    "move",
-    "playTone",
-    "setToneFrequency",
-    "setToneDuration",
-    "setPlayToneBeforeMove",
-    "setWaypointCount",
-    "setWaypointTravelDuration",
-    "setWaypointRepeat",
-    "setWaypointRepeatPeriod"
-  ],
-  "status":success
-}
+```json
 ```
+
 ##Verbose Device Information
 
-```shell
+```json
 ```
