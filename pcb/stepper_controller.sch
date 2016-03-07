@@ -696,4 +696,18 @@ Wire Wire Line
 	1350 5150 1000 5150
 Text Label 1000 5150 0    60   ~ 0
 RESET
+$Comp
+L IM483H IM?
+U 1 1 56DE1C59
+P 7850 2250
+F 0 "IM?" H 8200 3000 60  0000 C CNN
+F 1 "IM483H" H 7850 3000 60  0000 C CNN
+F 2 "stepper_controller:IM483H_IM805H_PR-22" H 7850 3300 60  0001 C CNN
+F 3 "" H 8150 3000 60  0000 C CNN
+F 4 "schneider" H 7850 3400 60  0001 C CNN "Vendor"
+F 5 "IM483H_Plus" H 7850 3500 60  0001 C CNN "PartNumber"
+F 6 "Microstepping driver 12-48 VDC 3.0 amps RMS" H 7850 3600 60  0001 C CNN "Description"
+	1    7850 2250
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
