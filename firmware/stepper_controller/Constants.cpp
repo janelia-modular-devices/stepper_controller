@@ -13,19 +13,11 @@ namespace constants
 const int baudrate = 9600;
 
 const int model_number = 1140;
-const int firmware_number = 1;
 
-// HardwareSerial& display_serial = Serial3;
-
-// const int enc_a_pin = 18;
-// const int enc_b_pin = 2;
-// const int enc_btn_pin = 19;
-// const int enc_btn_int = 4;
-// const int btn_pin = 21;
-// const int btn_int = 2;
-// const int led_pwr_pin = 17;
-// const int bnc_b_pin = 3;
-// const int standalone_update_period = 300;
+// Use semantic versioning http://semver.org/
+const unsigned char firmware_major = 0;
+const unsigned char firmware_minor = 1;
+const unsigned char firmware_patch = 0;
 
 const int speaker_pin = 46;
 const int drive_enable_pin = 49;
@@ -79,7 +71,7 @@ const int sound_bnc_interrupt_mode_default = RISING;
 CONSTANT_STRING(device_name,"stepper_controller");
 
 CONSTANT_STRING(duration_parameter_units,"ms");
-CONSTANT_STRING(frequency_parameter_units,"ms");
+CONSTANT_STRING(frequency_parameter_units,"Hz");
 
 CONSTANT_STRING(micro_steps_per_step_parameter_name,"micro_steps_per_step_count");
 CONSTANT_STRING(tone_frequency_parameter_name,"tone_frequency");
@@ -90,8 +82,6 @@ CONSTANT_STRING(waypoint_travel_duration_parameter_name,"waypoint_travel_duratio
 CONSTANT_STRING(waypoint_repeat_parameter_name,"waypoint_repeat");
 CONSTANT_STRING(waypoint_repeat_period_parameter_name,"waypoint_repeat_period");
 
-// CONSTANT_STRING(execute_standalone_callback_method_name,"executeStandaloneCallback");
-// CONSTANT_STRING(get_leds_powered_method_name,"getLedsPowered");
 CONSTANT_STRING(enable_method_name,"enable");
 CONSTANT_STRING(disable_method_name,"disable");
 CONSTANT_STRING(stop_method_name,"stop");
@@ -106,15 +96,6 @@ CONSTANT_STRING(set_waypoint_travel_duration_method_name,"setWaypointTravelDurat
 CONSTANT_STRING(set_waypoint_repeat_method_name,"setWaypointRepeat");
 CONSTANT_STRING(set_waypoint_repeat_period_method_name,"setWaypointRepeatPeriod");
 
-// CONSTANT_STRING(frame0_name,"setMfcFlows %");
-// CONSTANT_STRING(frame1_name,"getMfcFlowMeasures %");
-// CONSTANT_STRING(frame2_name,"getAnalogInputs %");
-// const ConstantString frame_name_array[] =
-//   {
-//     frame0_name,
-//     frame1_name,
-//     frame2_name,
-//   };
 CONSTANT_STRING(mode_name,"mode");
 CONSTANT_STRING(enable_polarity_name,"enable_polarity");
 

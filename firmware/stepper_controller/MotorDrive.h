@@ -12,11 +12,10 @@
 #else
 #include "WProgram.h"
 #endif
-#include <util/atomic.h>
+#include "ModularServer.h"
 #include "TimerOne.h"
 #include "Stepper.h"
 #include "Array.h"
-#include "ModularDevice.h"
 #include "Constants.h"
 
 
@@ -67,7 +66,6 @@ private:
   Array<Stepper,constants::MOTOR_COUNT> steppers_;
   int enable_pin_;
   bool enabled_flag_;
-
 };
 
 

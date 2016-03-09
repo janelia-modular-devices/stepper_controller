@@ -9,6 +9,7 @@
 
 Stepper::Stepper()
 {
+  modular_server_ptr_ = &controller.getModularServer();
 }
 
 Stepper::~Stepper()
@@ -77,10 +78,9 @@ long Stepper::getTargetPosition()
 
 void Stepper::setTargetPosition(long position)
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-  {
-    target_pos_ = position;
-  }
+  noInterrupts();
+  target_pos_ = position;
+  interrupts();
 }
 
 long Stepper::getCurrentPosition()
@@ -90,11 +90,10 @@ long Stepper::getCurrentPosition()
 
 void Stepper::setCurrentPosition(long position)
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-  {
-    target_pos_ = position;
-    current_pos_ = position;
-  }
+  noInterrupts();
+  target_pos_ = position;
+  current_pos_ = position;
+  interrupts();
 }
 
 void Stepper::setPinsInverted(bool direction, bool step)
@@ -118,9 +117,9 @@ void Stepper::goToNextWaypoint()
   if (!isRunning())
   {
     int waypoint_count;
-    modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+    modular_server_ptr_->getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
     int micro_steps_per_step;
-    modular_device.getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
+    modular_server_ptr_->getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
     long next_waypoint_pos = (long(waypoint_ + 1)*constants::steps_per_rev*micro_steps_per_step)/long(waypoint_count);
     setTargetPosition(next_waypoint_pos);
     start();
@@ -134,19 +133,17 @@ int Stepper::getCurrentWaypoint()
 
 void Stepper::setCurrentWaypoint(int waypoint)
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-  {
-    waypoint_ = waypoint;
-  }
+  noInterrupts();
+  waypoint_ = waypoint;
+  interrupts();
 }
 
 void Stepper::zero()
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-  {
-    stop();
-    setCurrentPosition(0);
-    setTargetPosition(0);
-    setCurrentWaypoint(0);
-  }
+  noInterrupts();
+  stop();
+  setCurrentPosition(0);
+  setTargetPosition(0);
+  setCurrentWaypoint(0);
+  interrupts();
 }

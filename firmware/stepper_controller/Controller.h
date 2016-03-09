@@ -7,8 +7,7 @@
 
 #ifndef CONTROLLER_H
 #define CONTROLLER_H
-#include "ModularDevice.h"
-// #include "StandaloneInterface.h"
+#include "ModularServer.h"
 #include "EventController.h"
 #include "BetterMap.h"
 #include "TimerOne.h"
@@ -23,10 +22,10 @@ public:
   Controller();
   void setup();
   void update();
+  ModularDevice::ModularServer& getModularServer();
+
   void motorDriveUpdate();
   void handleMotionInterrupt();
-  // void executeStandaloneCallback();
-  // bool getLedsPowered();
   void enable();
   void disable();
   bool isEnabled();
@@ -42,7 +41,11 @@ public:
   void startWaypointRepeat();
   void stopWaypointRepeat();
 private:
-  // Standalone::StandaloneInterface standalone_interface_;
+  ModularDevice::ModularServer modular_server_;
+  SavedVariable saved_variables_[constants::SAVED_VARIABLE_COUNT_MAX];
+  ModularDevice::Parameter parameters_[constants::PARAMETER_COUNT_MAX];
+  ModularDevice::Method methods_[constants::METHOD_COUNT_MAX];
+
   MotorDrive motor_drive_;
   EventController::EventId waypoint_repeat_event_id_;
   bool waypoint_repeating_;

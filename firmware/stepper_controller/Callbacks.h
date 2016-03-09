@@ -7,16 +7,14 @@
 // ----------------------------------------------------------------------------
 #ifndef CALLBACKS_H
 #define CALLBACKS_H
-#include "JsonParser.h"
-#include "ModularDevice.h"
+#include "ArduinoJson.h"
+#include "ModularServer.h"
 #include "Constants.h"
 #include "Controller.h"
 
 
 namespace callbacks
 {
-// void getLedsPoweredCallback();
-
 void enableCallback();
 
 void disableCallback();
@@ -42,9 +40,6 @@ void setPlayToneBeforeMoveCallback();
 void setWaypointRepeatCallback();
 
 void setWaypointRepeatPeriodCallback();
-
-// Standalone Callbacks
-// void executeStandaloneCallbackCallback();
 
 // EventController Callbacks
 void waypointRepeatCallback(int index);

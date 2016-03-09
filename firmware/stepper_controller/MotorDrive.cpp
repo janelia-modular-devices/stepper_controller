@@ -8,6 +8,8 @@
 #include "MotorDrive.h"
 
 
+ModularDevice::ModularServer& modular_server = controller.getModularServer();
+
 MotorDrive::MotorDrive()
 {
   enabled_flag_ = false;
@@ -37,7 +39,7 @@ void MotorDrive::enable()
   setSpeed();
 
   uint8_t enable_polarity;
-  modular_device.getSavedVariableValue(constants::enable_polarity_name,enable_polarity);
+  modular_server.getSavedVariableValue(constants::enable_polarity_name,enable_polarity);
   digitalWrite(enable_pin_,enable_polarity);
   enabled_flag_ = true;
 }
@@ -46,7 +48,7 @@ void MotorDrive::disable()
 {
   enabled_flag_ = false;
   uint8_t enable_polarity;
-  modular_device.getSavedVariableValue(constants::enable_polarity_name,enable_polarity);
+  modular_server.getSavedVariableValue(constants::enable_polarity_name,enable_polarity);
   digitalWrite(enable_pin_,(HIGH ^ enable_polarity));
   stopAll();
 }
@@ -60,10 +62,9 @@ void MotorDrive::stop(unsigned int motor_index)
 {
   if (motor_index<constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      steppers_[motor_index].stop();
-    }
+    noInterrupts();
+    steppers_[motor_index].stop();
+    interrupts();
   }
 }
 
@@ -71,33 +72,30 @@ void MotorDrive::start(unsigned int motor_index)
 {
   if (motor_index<constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      steppers_[motor_index].start();
-    }
+    noInterrupts();
+    steppers_[motor_index].start();
+    interrupts();
   }
 }
 
 void MotorDrive::stopAll()
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+  noInterrupts();
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
-    {
-      steppers_[motor_index].stop();
-    }
+    steppers_[motor_index].stop();
   }
+  interrupts();
 }
 
 void MotorDrive::startAll()
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+  noInterrupts();
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
-    {
-      steppers_[motor_index].start();
-    }
+    steppers_[motor_index].start();
   }
+  interrupts();
 }
 
 bool MotorDrive::areAnyRunning()
@@ -123,10 +121,9 @@ Array<bool, constants::MOTOR_COUNT> MotorDrive::isRunningAll()
   Array<bool, constants::MOTOR_COUNT> is_running;
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      is_running[motor_index] = isRunning(motor_index);
-    }
+    noInterrupts();
+    is_running[motor_index] = isRunning(motor_index);
+    interrupts();
   }
   return is_running;
 }
@@ -164,10 +161,9 @@ long MotorDrive::getCurrentPosition(unsigned int motor_index)
   long rtn_val = 0;
   if (motor_index < constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      rtn_val = steppers_[motor_index].getCurrentPosition();
-    }
+    noInterrupts();
+    rtn_val = steppers_[motor_index].getCurrentPosition();
+    interrupts();
   }
   return rtn_val;
 }
@@ -177,10 +173,9 @@ Array<long, constants::MOTOR_COUNT> MotorDrive::getCurrentPositionAll()
   Array<long, constants::MOTOR_COUNT> position;
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      position[motor_index] = steppers_[motor_index].getCurrentPosition();
-    }
+    noInterrupts();
+    position[motor_index] = steppers_[motor_index].getCurrentPosition();
+    interrupts();
   }
   return position;
 }
@@ -206,10 +201,9 @@ long MotorDrive::getTargetPosition(unsigned int motor_index)
   long rtn_val = 0;
   if (motor_index < constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      rtn_val = steppers_[motor_index].getTargetPosition();
-    }
+    noInterrupts();
+    rtn_val = steppers_[motor_index].getTargetPosition();
+    interrupts();
   }
   return rtn_val;
 }
@@ -219,10 +213,9 @@ Array<long, constants::MOTOR_COUNT> MotorDrive::getTargetPositionAll()
   Array<long, constants::MOTOR_COUNT> position;
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      position[motor_index] = steppers_[motor_index].getTargetPosition();
-    }
+    noInterrupts();
+    position[motor_index] = steppers_[motor_index].getTargetPosition();
+    interrupts();
   }
   return position;
 }
@@ -231,22 +224,20 @@ void MotorDrive::setTargetPosition(unsigned int motor_index, long pos)
 {
   if (motor_index < constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      steppers_[motor_index].setTargetPosition(pos);
-    }
+    noInterrupts();
+    steppers_[motor_index].setTargetPosition(pos);
+    interrupts();
   }
 }
 
 void MotorDrive::setTargetPositionAll(Array<long,constants::MOTOR_COUNT> pos)
 {
-  ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
+  noInterrupts();
+  for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
-    {
-      steppers_[motor_index].setTargetPosition(pos[motor_index]);
-    }
+    steppers_[motor_index].setTargetPosition(pos[motor_index]);
   }
+  interrupts();
 }
 
 int MotorDrive::getCurrentWaypoint(unsigned int motor_index)
@@ -254,10 +245,9 @@ int MotorDrive::getCurrentWaypoint(unsigned int motor_index)
   int rtn_val = 0;
   if (motor_index < constants::MOTOR_COUNT)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      rtn_val = steppers_[motor_index].getCurrentWaypoint();
-    }
+    noInterrupts();
+    rtn_val = steppers_[motor_index].getCurrentWaypoint();
+    interrupts();
   }
   return rtn_val;
 }
@@ -267,10 +257,9 @@ Array<int, constants::MOTOR_COUNT> MotorDrive::getCurrentWaypointAll()
   Array<int, constants::MOTOR_COUNT> waypoint;
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
   {
-    ATOMIC_BLOCK(ATOMIC_RESTORESTATE)
-    {
-      waypoint[motor_index] = steppers_[motor_index].getCurrentWaypoint();
-    }
+    noInterrupts();
+    waypoint[motor_index] = steppers_[motor_index].getCurrentWaypoint();
+    interrupts();
   }
   return waypoint;
 }
@@ -278,15 +267,15 @@ Array<int, constants::MOTOR_COUNT> MotorDrive::getCurrentWaypointAll()
 void MotorDrive::setSpeed()
 {
   constants::ModeType mode;
-  modular_device.getSavedVariableValue(constants::mode_name,mode);
+  modular_server.getSavedVariableValue(constants::mode_name,mode);
   if (mode == constants::WAYPOINT)
   {
     int waypoint_travel_duration;
-    modular_device.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
+    modular_server.getSavedVariableValue(constants::waypoint_travel_duration_parameter_name,waypoint_travel_duration);
     int micro_steps_per_step;
-    modular_device.getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
+    modular_server.getSavedVariableValue(constants::micro_steps_per_step_parameter_name,micro_steps_per_step);
     int waypoint_count;
-    modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+    modular_server.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
     long timer_period = ((long)waypoint_travel_duration*waypoint_count*1000)/(constants::steps_per_rev*long(micro_steps_per_step));
     Timer1.setPeriod(timer_period);
   }

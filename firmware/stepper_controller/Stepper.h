@@ -13,8 +13,8 @@
 #include <WProgram.h>
 #include <wiring.h>
 #endif
-#include <util/atomic.h>
-#include "ModularDevice.h"
+#include "ModularServer.h"
+#include "Controller.h"
 #include "Constants.h"
 
 
@@ -70,6 +70,7 @@ private:
   volatile long target_pos_;    // Steps
   volatile int waypoint_;
 
+  ModularDevice::ModularServer* modular_server_ptr_;
 };
 
 inline void Stepper::updateDirPin()
@@ -133,12 +134,12 @@ inline void Stepper::setStepPinLow()
     {
       running_ = false;
       constants::ModeType mode;
-      modular_device.getSavedVariableValue(constants::mode_name,mode);
+      modular_server_ptr_->getSavedVariableValue(constants::mode_name,mode);
       if (mode == constants::WAYPOINT)
       {
         waypoint_++;
         int waypoint_count;
-        modular_device.getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
+        modular_server_ptr_->getSavedVariableValue(constants::waypoint_count_parameter_name,waypoint_count);
         if (waypoint_ == waypoint_count)
         {
           waypoint_ = 0;

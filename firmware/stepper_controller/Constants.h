@@ -12,25 +12,21 @@
 
 namespace constants
 {
+//MAX values must be >= 1, >= created/copied count, < RAM limit
+enum{SAVED_VARIABLE_COUNT_MAX=10};
+enum{PARAMETER_COUNT_MAX=15};
+enum{METHOD_COUNT_MAX=30};
+
 enum ModeType {WAYPOINT};
 enum {MOTOR_COUNT=1};
 
 extern const int baudrate;
 
 extern const int model_number;
-extern const int firmware_number;
 
-// extern HardwareSerial& display_serial;
-
-// extern const int enc_a_pin;
-// extern const int enc_b_pin;
-// extern const int enc_btn_pin;
-// extern const int enc_btn_int;
-// extern const int btn_pin;
-// extern const int btn_int;
-// extern const int led_pwr_pin;
-// extern const int bnc_b_pin;
-// extern const int standalone_update_period;
+extern const unsigned char firmware_major;
+extern const unsigned char firmware_minor;
+extern const unsigned char firmware_patch;
 
 extern const int speaker_pin;
 extern const int drive_enable_pin;
@@ -95,8 +91,6 @@ extern ConstantString waypoint_travel_duration_parameter_name;
 extern ConstantString waypoint_repeat_parameter_name;
 extern ConstantString waypoint_repeat_period_parameter_name;
 
-// extern ConstantString execute_standalone_callback_method_name;
-// extern ConstantString get_leds_powered_method_name;
 extern ConstantString enable_method_name;
 extern ConstantString disable_method_name;
 extern ConstantString stop_method_name;
@@ -111,10 +105,6 @@ extern ConstantString set_waypoint_travel_duration_method_name;
 extern ConstantString set_waypoint_repeat_method_name;
 extern ConstantString set_waypoint_repeat_period_method_name;
 
-// extern ConstantString frame0_name;
-// extern ConstantString frame1_name;
-// extern ConstantString frame2_name;
-// extern const ConstantString frame_name_array[FRAME_COUNT];
 extern ConstantString mode_name;
 extern ConstantString enable_polarity_name;
 
