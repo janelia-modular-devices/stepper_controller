@@ -11,6 +11,7 @@
 #include "SavedVariable.h"
 #include "ModularServer.h"
 
+#include "Globals.h"
 #include "Constants.h"
 #include "Callbacks.h"
 #include "Controller.h"

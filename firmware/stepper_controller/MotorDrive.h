@@ -12,10 +12,10 @@
 #else
 #include "WProgram.h"
 #endif
-#include "ModularServer.h"
 #include "TimerOne.h"
 #include "Stepper.h"
 #include "Array.h"
+#include "Globals.h"
 #include "Constants.h"
 
 

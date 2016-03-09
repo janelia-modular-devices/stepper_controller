@@ -11,6 +11,7 @@
 #include "EventController.h"
 #include "BetterMap.h"
 #include "TimerOne.h"
+#include "Globals.h"
 #include "Constants.h"
 #include "Callbacks.h"
 #include "MotorDrive.h"
@@ -22,7 +23,6 @@ public:
   Controller();
   void setup();
   void update();
-  ModularDevice::ModularServer& getModularServer();
 
   void motorDriveUpdate();
   void handleMotionInterrupt();
@@ -41,7 +41,6 @@ public:
   void startWaypointRepeat();
   void stopWaypointRepeat();
 private:
-  ModularDevice::ModularServer modular_server_;
   SavedVariable saved_variables_[constants::SAVED_VARIABLE_COUNT_MAX];
   ModularDevice::Parameter parameters_[constants::PARAMETER_COUNT_MAX];
   ModularDevice::Method methods_[constants::METHOD_COUNT_MAX];
@@ -53,6 +52,6 @@ private:
   void attachSoundInterrupts();
 };
 
-extern Controller controller;
+// extern Controller controller;
 
 #endif

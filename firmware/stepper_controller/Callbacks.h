@@ -10,7 +10,7 @@
 #include "ArduinoJson.h"
 #include "ModularServer.h"
 #include "Constants.h"
-#include "Controller.h"
+#include "Globals.h"
 
 
 namespace callbacks
