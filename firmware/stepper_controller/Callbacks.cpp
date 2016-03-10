@@ -28,17 +28,17 @@ namespace callbacks
 
 void enableCallback()
 {
-  globals::controller.enable();
+  controller.enable();
 }
 
 void disableCallback()
 {
-  globals::controller.disable();
+  controller.disable();
 }
 
 void stopCallback()
 {
-  globals::controller.stop();
+  controller.stop();
 }
 
 void getControllerInfoCallback()
@@ -49,10 +49,10 @@ void getControllerInfoCallback()
   int motor_count = constants::MOTOR_COUNT;
   globals::modular_server.writeToResponse("motor_count",motor_count);
 
-  bool is_enabled = globals::controller.isEnabled();
+  bool is_enabled = controller.isEnabled();
   globals::modular_server.writeToResponse("is_enabled",is_enabled);
 
-  Array<bool,constants::MOTOR_COUNT> is_running = globals::controller.isRunning();
+  Array<bool,constants::MOTOR_COUNT> is_running = controller.isRunning();
   globals::modular_server.writeKeyToResponse("is_running");
   globals::modular_server.beginResponseArray();
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; ++motor_index)
@@ -61,7 +61,7 @@ void getControllerInfoCallback()
   }
   globals::modular_server.endResponseArray();
 
-  Array<long,constants::MOTOR_COUNT> current_position = globals::controller.getCurrentPosition();
+  Array<long,constants::MOTOR_COUNT> current_position = controller.getCurrentPosition();
   globals::modular_server.writeKeyToResponse("current_position");
   globals::modular_server.beginResponseArray();
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
@@ -70,7 +70,7 @@ void getControllerInfoCallback()
   }
   globals::modular_server.endResponseArray();
 
-  Array<long,constants::MOTOR_COUNT> target_position = globals::controller.getTargetPosition();
+  Array<long,constants::MOTOR_COUNT> target_position = controller.getTargetPosition();
   globals::modular_server.writeKeyToResponse("target_position");
   globals::modular_server.beginResponseArray();
   for (int motor_index=0; motor_index<constants::MOTOR_COUNT; motor_index++)
@@ -119,12 +119,12 @@ void getControllerInfoCallback()
 
 void moveCallback()
 {
-  globals::controller.move();
+  controller.move();
 }
 
 void playToneCallback()
 {
-  globals::controller.playTone();
+  controller.playTone();
 }
 
 void setToneFrequencyCallback()
@@ -148,7 +148,7 @@ void setPlayToneBeforeMoveCallback()
 void setWaypointCountCallback()
 {
   long waypoint_count = globals::modular_server.getParameterValue(constants::waypoint_count_parameter_name);
-  globals::controller.setWaypointCount(waypoint_count);
+  controller.setWaypointCount(waypoint_count);
 }
 
 void setWaypointTravelDurationCallback()
@@ -166,7 +166,7 @@ void setWaypointTravelDurationCallback()
       return;
     }
   }
-  globals::controller.setWaypointTravelDuration(waypoint_travel_duration);
+  controller.setWaypointTravelDuration(waypoint_travel_duration);
 }
 
 void setWaypointRepeatCallback()
@@ -208,23 +208,23 @@ void setWaypointRepeatPeriodCallback()
 // EventController Callbacks
 void waypointRepeatCallback(int index)
 {
-  globals::controller.goToNextWaypoint();
+  controller.goToNextWaypoint();
 }
 
 // ISR Callbacks
 void motorDriveCallback()
 {
-  globals::controller.motorDriveUpdate();
+  controller.motorDriveUpdate();
 }
 
 void motionCallback()
 {
-  globals::controller.handleMotionInterrupt();
+  controller.handleMotionInterrupt();
 }
 
 void soundCallback()
 {
-  globals::controller.playTone();
+  controller.playTone();
 }
 
 }

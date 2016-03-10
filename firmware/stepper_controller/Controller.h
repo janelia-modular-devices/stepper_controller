@@ -52,6 +52,6 @@ private:
   void attachSoundInterrupts();
 };
 
-// extern Controller controller;
+extern Controller controller;
 
 #endif

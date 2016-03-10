@@ -318,4 +318,4 @@ void Controller::attachSoundInterrupts()
   attachInterrupt(constants::sound_bnc_interrupt_number,callbacks::soundCallback,sound_bnc_interrupt_mode);
 }
 
-// Controller controller;
+Controller controller;
