@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller.sch</source>
+    <source>/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller_mega.sch</source>
     <date>Thu 03 Mar 2016 05:37:12 PM EST</date>
     <tool>Eeschema 0.201602281447+6595~42~ubuntu14.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
-        <title>stepper_controller</title>
+        <title>stepper_controller_mega</title>
         <company>Janelia</company>
         <rev>1.5</rev>
         <date/>
-        <source>stepper_controller.sch</source>
+        <source>stepper_controller_mega.sch</source>
         <comment number="1" value=""/>
         <comment number="2" value=""/>
         <comment number="3" value=""/>
@@ -21,703 +21,703 @@
   <components>
     <comp ref="P1">
       <value>PWR_JACK_2.5x5.5</value>
-      <footprint>stepper_controller:DCJACK_2PIN_HIGHCURRENT</footprint>
+      <footprint>stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
         <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
       </fields>
-      <libsource lib="stepper_controller" part="PWR_JACK_2.5x5.5"/>
+      <libsource lib="stepper_controller_mega" part="PWR_JACK_2.5x5.5"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5488FCDE</tstamp>
     </comp>
     <comp ref="D1">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54891A64</tstamp>
     </comp>
     <comp ref="C2">
       <value>10uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="10uF"/>
+      <libsource lib="stepper_controller_mega" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548925C4</tstamp>
     </comp>
     <comp ref="C3">
       <value>10uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="10uF"/>
+      <libsource lib="stepper_controller_mega" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54892682</tstamp>
     </comp>
     <comp ref="REG1">
       <value>CONV_DC_DC_12V_1A</value>
-      <footprint>stepper_controller:DC_DC_CONV_R78C</footprint>
+      <footprint>stepper_controller_mega:DC_DC_CONV_R78C</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">945-1392-5-ND</field>
         <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
       </fields>
-      <libsource lib="stepper_controller" part="CONV_DC_DC_12V_1A"/>
+      <libsource lib="stepper_controller_mega" part="CONV_DC_DC_12V_1A"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5489CB72</tstamp>
     </comp>
     <comp ref="C6">
       <value>0.1uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="0.1uF"/>
+      <libsource lib="stepper_controller_mega" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>548B293B</tstamp>
     </comp>
     <comp ref="C7">
       <value>0.1uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="0.1uF"/>
+      <libsource lib="stepper_controller_mega" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AADA2E</tstamp>
     </comp>
     <comp ref="D33">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AAFFE6</tstamp>
     </comp>
     <comp ref="D32">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB05E3</tstamp>
     </comp>
     <comp ref="D31">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0663</tstamp>
     </comp>
     <comp ref="D30">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB066F</tstamp>
     </comp>
     <comp ref="D29">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0797</tstamp>
     </comp>
     <comp ref="D28">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07A3</tstamp>
     </comp>
     <comp ref="D27">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07AF</tstamp>
     </comp>
     <comp ref="D26">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB07BB</tstamp>
     </comp>
     <comp ref="D25">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B65</tstamp>
     </comp>
     <comp ref="D24">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B71</tstamp>
     </comp>
     <comp ref="D23">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B7D</tstamp>
     </comp>
     <comp ref="D22">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B89</tstamp>
     </comp>
     <comp ref="D21">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0B95</tstamp>
     </comp>
     <comp ref="D20">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BA1</tstamp>
     </comp>
     <comp ref="D19">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BAD</tstamp>
     </comp>
     <comp ref="D18">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AB0BB9</tstamp>
     </comp>
     <comp ref="ARDUINO1">
       <value>ARDUINO_MEGA</value>
-      <footprint>stepper_controller:ARDUINO_MEGA_SHIELD</footprint>
+      <footprint>stepper_controller_mega:ARDUINO_MEGA_SHIELD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">1050-1018-ND</field>
         <field name="Description">BOARD MCU MEGA2560</field>
       </fields>
-      <libsource lib="stepper_controller" part="ARDUINO_MEGA"/>
+      <libsource lib="stepper_controller_mega" part="ARDUINO_MEGA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54AD3990</tstamp>
     </comp>
     <comp ref="P7">
       <value>BNC_DOUBLE_RA</value>
-      <footprint>stepper_controller:BNC_DOUBLE</footprint>
+      <footprint>stepper_controller_mega:BNC_DOUBLE</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">ACX1655-ND</field>
         <field name="Description">CONN BNC JACK R/A 75 OHM PCB</field>
       </fields>
-      <libsource lib="stepper_controller" part="BNC_DOUBLE_RA"/>
+      <libsource lib="stepper_controller_mega" part="BNC_DOUBLE_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54ADBC63</tstamp>
     </comp>
     <comp ref="D17">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B37</tstamp>
     </comp>
     <comp ref="D16">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B43</tstamp>
     </comp>
     <comp ref="D15">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B4F</tstamp>
     </comp>
     <comp ref="D14">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B5B</tstamp>
     </comp>
     <comp ref="D13">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B67</tstamp>
     </comp>
     <comp ref="D12">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B73</tstamp>
     </comp>
     <comp ref="D11">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B7F</tstamp>
     </comp>
     <comp ref="D10">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B8B</tstamp>
     </comp>
     <comp ref="D9">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4B97</tstamp>
     </comp>
     <comp ref="D8">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BA3</tstamp>
     </comp>
     <comp ref="D7">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BAF</tstamp>
     </comp>
     <comp ref="D6">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BBB</tstamp>
     </comp>
     <comp ref="D5">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BC7</tstamp>
     </comp>
     <comp ref="D4">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BD3</tstamp>
     </comp>
     <comp ref="D3">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BDF</tstamp>
     </comp>
     <comp ref="D2">
       <value>LED_24V</value>
-      <footprint>stepper_controller:LED_555-3XXX</footprint>
+      <footprint>stepper_controller_mega:LED_555-3XXX</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
       </fields>
-      <libsource lib="stepper_controller" part="LED_24V"/>
+      <libsource lib="stepper_controller_mega" part="LED_24V"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF4BEB</tstamp>
     </comp>
     <comp ref="C4">
       <value>0.1uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="0.1uF"/>
+      <libsource lib="stepper_controller_mega" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF6DED</tstamp>
     </comp>
     <comp ref="C5">
       <value>0.1uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="0.1uF"/>
+      <libsource lib="stepper_controller_mega" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>54BF6E3E</tstamp>
     </comp>
     <comp ref="P2">
       <value>HEADER_01X03_SMD_RA</value>
-      <footprint>stepper_controller:Header_3_Pin_SMD_RA</footprint>
+      <footprint>stepper_controller_mega:Header_3_Pin_SMD_RA</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100890CT-ND</field>
         <field name="Description">CONN HEADER 3POS R/A SMD GOLD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_01X03_SMD_RA"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_01X03_SMD_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CE8FE8</tstamp>
     </comp>
     <comp ref="P3">
       <value>HEADER_01X03_SMD_RA</value>
-      <footprint>stepper_controller:Header_3_Pin_SMD_RA</footprint>
+      <footprint>stepper_controller_mega:Header_3_Pin_SMD_RA</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100890CT-ND</field>
         <field name="Description">CONN HEADER 3POS R/A SMD GOLD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_01X03_SMD_RA"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_01X03_SMD_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CEA77A</tstamp>
     </comp>
     <comp ref="P4">
       <value>HEADER_01X03_SMD_RA</value>
-      <footprint>stepper_controller:Header_3_Pin_SMD_RA</footprint>
+      <footprint>stepper_controller_mega:Header_3_Pin_SMD_RA</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100890CT-ND</field>
         <field name="Description">CONN HEADER 3POS R/A SMD GOLD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_01X03_SMD_RA"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_01X03_SMD_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CEA9F2</tstamp>
     </comp>
     <comp ref="P5">
       <value>HEADER_01X03_SMD_RA</value>
-      <footprint>stepper_controller:Header_3_Pin_SMD_RA</footprint>
+      <footprint>stepper_controller_mega:Header_3_Pin_SMD_RA</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100890CT-ND</field>
         <field name="Description">CONN HEADER 3POS R/A SMD GOLD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_01X03_SMD_RA"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_01X03_SMD_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CEAAE8</tstamp>
     </comp>
     <comp ref="P6">
       <value>HEADER_01X02_SMD_RA</value>
-      <footprint>stepper_controller:Header_2_Pin_SMD_RA</footprint>
+      <footprint>stepper_controller_mega:Header_2_Pin_SMD_RA</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100903CT-ND</field>
         <field name="Description">CONN HEADER 2POS R/A SMD GOLD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_01X02_SMD_RA"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_01X02_SMD_RA"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CF00ED</tstamp>
     </comp>
     <comp ref="SW1">
       <value>SPST_SLIDE_AS</value>
-      <footprint>stepper_controller:SPST_SLIDE_AS</footprint>
+      <footprint>stepper_controller_mega:SPST_SLIDE_AS</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2610-ND</field>
         <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
       </fields>
-      <libsource lib="stepper_controller" part="SPST_SLIDE_AS"/>
+      <libsource lib="stepper_controller_mega" part="SPST_SLIDE_AS"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56CFEB9B</tstamp>
     </comp>
     <comp ref="C1">
       <value>10uF</value>
-      <footprint>stepper_controller:SM1210</footprint>
+      <footprint>stepper_controller_mega:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
       </fields>
-      <libsource lib="stepper_controller" part="10uF"/>
+      <libsource lib="stepper_controller_mega" part="10uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D083E8</tstamp>
     </comp>
     <comp ref="U1">
       <value>TLE7230R</value>
-      <footprint>stepper_controller:PG-DSO-36</footprint>
+      <footprint>stepper_controller_mega:PG-DSO-36</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
       </fields>
-      <libsource lib="stepper_controller" part="TLE7230R"/>
+      <libsource lib="stepper_controller_mega" part="TLE7230R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D86640</tstamp>
     </comp>
     <comp ref="U2">
       <value>TLE7230R</value>
-      <footprint>stepper_controller:PG-DSO-36</footprint>
+      <footprint>stepper_controller_mega:PG-DSO-36</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
       </fields>
-      <libsource lib="stepper_controller" part="TLE7230R"/>
+      <libsource lib="stepper_controller_mega" part="TLE7230R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D86715</tstamp>
     </comp>
     <comp ref="U3">
       <value>TLE7230R</value>
-      <footprint>stepper_controller:PG-DSO-36</footprint>
+      <footprint>stepper_controller_mega:PG-DSO-36</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
       </fields>
-      <libsource lib="stepper_controller" part="TLE7230R"/>
+      <libsource lib="stepper_controller_mega" part="TLE7230R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D867C2</tstamp>
     </comp>
     <comp ref="U4">
       <value>TLE7230R</value>
-      <footprint>stepper_controller:PG-DSO-36</footprint>
+      <footprint>stepper_controller_mega:PG-DSO-36</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
       </fields>
-      <libsource lib="stepper_controller" part="TLE7230R"/>
+      <libsource lib="stepper_controller_mega" part="TLE7230R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D86879</tstamp>
     </comp>
     <comp ref="P8">
       <value>HEADER_02X08_SMD</value>
-      <footprint>stepper_controller:HEADER_02x08_SMD</footprint>
+      <footprint>stepper_controller_mega:HEADER_02x08_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_02X08_SMD"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_02X08_SMD"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D96A90</tstamp>
     </comp>
     <comp ref="P9">
       <value>HEADER_02X08_SMD</value>
-      <footprint>stepper_controller:HEADER_02x08_SMD</footprint>
+      <footprint>stepper_controller_mega:HEADER_02x08_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_02X08_SMD"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_02X08_SMD"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D96E95</tstamp>
     </comp>
     <comp ref="P10">
       <value>HEADER_02X08_SMD</value>
-      <footprint>stepper_controller:HEADER_02x08_SMD</footprint>
+      <footprint>stepper_controller_mega:HEADER_02x08_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_02X08_SMD"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_02X08_SMD"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D970C5</tstamp>
     </comp>
     <comp ref="P11">
       <value>HEADER_02X08_SMD</value>
-      <footprint>stepper_controller:HEADER_02x08_SMD</footprint>
+      <footprint>stepper_controller_mega:HEADER_02x08_SMD</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
       </fields>
-      <libsource lib="stepper_controller" part="HEADER_02X08_SMD"/>
+      <libsource lib="stepper_controller_mega" part="HEADER_02X08_SMD"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>56D971A8</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="stepper_controller" part="0.1uF">
+    <libpart lib="stepper_controller_mega" part="0.1uF">
       <footprints>
         <fp>SM*</fp>
         <fp>C?</fp>
@@ -726,7 +726,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">0.1uF</field>
-        <field name="Footprint">stepper_controller:SM1210</field>
+        <field name="Footprint">stepper_controller_mega:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
@@ -736,7 +736,7 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="10uF">
+    <libpart lib="stepper_controller_mega" part="10uF">
       <footprints>
         <fp>SM*</fp>
         <fp>C?</fp>
@@ -745,7 +745,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">10uF</field>
-        <field name="Footprint">stepper_controller:SM1210</field>
+        <field name="Footprint">stepper_controller_mega:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">445-4536-1-ND</field>
         <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
@@ -755,11 +755,11 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="ARDUINO_MEGA">
+    <libpart lib="stepper_controller_mega" part="ARDUINO_MEGA">
       <fields>
         <field name="Reference">ARDUINO</field>
         <field name="Value">ARDUINO_MEGA</field>
-        <field name="Footprint">stepper_controller:ARDUINO_MEGA_SHIELD</field>
+        <field name="Footprint">stepper_controller_mega:ARDUINO_MEGA_SHIELD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">1050-1018-ND</field>
         <field name="Description">BOARD MCU MEGA2560</field>
@@ -853,7 +853,7 @@
         <pin num="V_IN" name="V_IN" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="BNC_DOUBLE_RA">
+    <libpart lib="stepper_controller_mega" part="BNC_DOUBLE_RA">
       <footprints>
         <fp>Pin_Header_Straight_2X02</fp>
         <fp>Pin_Header_Angled_2X02</fp>
@@ -863,7 +863,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">BNC_DOUBLE_RA</field>
-        <field name="Footprint">stepper_controller:BNC_DOUBLE</field>
+        <field name="Footprint">stepper_controller_mega:BNC_DOUBLE</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">ACX1655-ND</field>
         <field name="Description">CONN BNC JACK R/A 75 OHM PCB</field>
@@ -875,11 +875,11 @@
         <pin num="4" name="P4" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="CONV_DC_DC_12V_1A">
+    <libpart lib="stepper_controller_mega" part="CONV_DC_DC_12V_1A">
       <fields>
         <field name="Reference">REG</field>
         <field name="Value">CONV_DC_DC_12V_1A</field>
-        <field name="Footprint">stepper_controller:DC_DC_CONV_R78C</field>
+        <field name="Footprint">stepper_controller_mega:DC_DC_CONV_R78C</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">945-1392-5-ND</field>
         <field name="Description">CONV DC/DC 1A 12V OUT SIP VERT</field>
@@ -890,7 +890,7 @@
         <pin num="3" name="+VOUT" type="power_out"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="HEADER_01X02_SMD_RA">
+    <libpart lib="stepper_controller_mega" part="HEADER_01X02_SMD_RA">
       <description>Connector 01x02</description>
       <footprints>
         <fp>Pin_Header_Straight_1X02</fp>
@@ -901,7 +901,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">HEADER_01X02_SMD_RA</field>
-        <field name="Footprint">stepper_controller:Header_2_Pin_SMD_RA</field>
+        <field name="Footprint">stepper_controller_mega:Header_2_Pin_SMD_RA</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100903CT-ND</field>
         <field name="Description">CONN HEADER 2POS R/A SMD GOLD</field>
@@ -911,7 +911,7 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="HEADER_01X03_SMD_RA">
+    <libpart lib="stepper_controller_mega" part="HEADER_01X03_SMD_RA">
       <footprints>
         <fp>Pin_Header_Straight_1X03</fp>
         <fp>Pin_Header_Angled_1X03</fp>
@@ -921,7 +921,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">HEADER_01X03_SMD_RA</field>
-        <field name="Footprint">stepper_controller:Header_3_Pin_SMD_RA</field>
+        <field name="Footprint">stepper_controller_mega:Header_3_Pin_SMD_RA</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A100890CT-ND</field>
         <field name="Description">CONN HEADER 3POS R/A SMD GOLD</field>
@@ -932,7 +932,7 @@
         <pin num="3" name="P3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="HEADER_02X08_SMD">
+    <libpart lib="stepper_controller_mega" part="HEADER_02X08_SMD">
       <footprints>
         <fp>Pin_Header_Straight_2X08</fp>
         <fp>Pin_Header_Angled_2X08</fp>
@@ -942,7 +942,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">HEADER_02X08_SMD</field>
-        <field name="Footprint">stepper_controller:HEADER_02x08_SMD</field>
+        <field name="Footprint">stepper_controller_mega:HEADER_02x08_SMD</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S9187-ND</field>
         <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
@@ -966,7 +966,7 @@
         <pin num="16" name="P16" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="LED_24V">
+    <libpart lib="stepper_controller_mega" part="LED_24V">
       <footprints>
         <fp>LED-3MM</fp>
         <fp>LED-5MM</fp>
@@ -979,7 +979,7 @@
       <fields>
         <field name="Reference">D</field>
         <field name="Value">LED_24V</field>
-        <field name="Footprint">stepper_controller:LED_555-3XXX</field>
+        <field name="Footprint">stepper_controller_mega:LED_555-3XXX</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">350-1723-ND</field>
         <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
@@ -989,7 +989,7 @@
         <pin num="2" name="K" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="PWR_JACK_2.5x5.5">
+    <libpart lib="stepper_controller_mega" part="PWR_JACK_2.5x5.5">
       <footprints>
         <fp>Pin_Header_Straight_1X02</fp>
         <fp>Pin_Header_Angled_1X02</fp>
@@ -999,7 +999,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">PWR_JACK_2.5x5.5</field>
-        <field name="Footprint">stepper_controller:DCJACK_2PIN_HIGHCURRENT</field>
+        <field name="Footprint">stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
         <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
@@ -1009,11 +1009,11 @@
         <pin num="2" name="P2" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="SPST_SLIDE_AS">
+    <libpart lib="stepper_controller_mega" part="SPST_SLIDE_AS">
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_SLIDE_AS</field>
-        <field name="Footprint">stepper_controller:SPST_SLIDE_AS</field>
+        <field name="Footprint">stepper_controller_mega:SPST_SLIDE_AS</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2610-ND</field>
         <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
@@ -1023,11 +1023,11 @@
         <pin num="3" name="3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="stepper_controller" part="TLE7230R">
+    <libpart lib="stepper_controller_mega" part="TLE7230R">
       <fields>
         <field name="Reference">U</field>
         <field name="Value">TLE7230R</field>
-        <field name="Footprint">stepper_controller:PG-DSO-36</field>
+        <field name="Footprint">stepper_controller_mega:PG-DSO-36</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">TLE7230RCT-ND</field>
         <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
@@ -1062,8 +1062,8 @@
     </libpart>
   </libparts>
   <libraries>
-    <library logical="stepper_controller">
-      <uri>/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller.lib</uri>
+    <library logical="stepper_controller_mega">
+      <uri>/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller_mega.lib</uri>
     </library>
   </libraries>
   <nets>

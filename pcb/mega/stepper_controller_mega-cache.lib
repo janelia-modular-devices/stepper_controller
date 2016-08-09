@@ -36,7 +36,7 @@ ENDDEF
 DEF 1.69k R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
 F1 "1.69k" 7 1 40 V V C CNN
-F2 "stepper_controller:SM1210" -70 0 30 V I C CNN
+F2 "stepper_controller_mega:SM1210" -70 0 30 V I C CNN
 F3 "" 80 0 30 V V C CNN
 F4 "digikey" 180 100 60 V I C CNN "Vendor"
 F5 "P1.69KAACT-ND" 280 200 60 V I C CNN "PartNumber"
@@ -60,7 +60,7 @@ ENDDEF
 DEF 10uF C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
 F1 "10uF" 6 -85 40 H V L CNN
-F2 "stepper_controller:SM1210" 38 -150 30 H I C CNN
+F2 "stepper_controller_mega:SM1210" 38 -150 30 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "445-4536-1-ND" 200 300 60 H I C CNN "PartNumber"
@@ -83,7 +83,7 @@ ENDDEF
 DEF 316 R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
 F1 "316" 7 1 40 V V C CNN
-F2 "stepper_controller:SM1210" -70 0 30 V I C CNN
+F2 "stepper_controller_mega:SM1210" -70 0 30 V I C CNN
 F3 "" 80 0 30 V V C CNN
 F4 "digikey" 180 100 60 V I C CNN "Vendor"
 F5 "P316AACT-ND" 280 200 60 V I C CNN "PartNumber"
@@ -107,7 +107,7 @@ ENDDEF
 DEF ARDUINO_MEGA ARDUINO 0 40 Y Y 1 F N
 F0 "ARDUINO" 50 2750 60 H V C CNN
 F1 "ARDUINO_MEGA" 0 -2700 60 H V C CNN
-F2 "stepper_controller:ARDUINO_MEGA_SHIELD" -50 2650 60 H I C CNN
+F2 "stepper_controller_mega:ARDUINO_MEGA_SHIELD" -50 2650 60 H I C CNN
 F3 "" 50 2750 60 H V C CNN
 F4 "digikey" 150 2850 60 H I C CNN "Vendor"
 F5 "1050-1018-ND" 250 2950 60 H I C CNN "PartNumber"
@@ -211,7 +211,7 @@ ENDDEF
 DEF BNC_DOUBLE_RA P 0 1 Y N 1 F N
 F0 "P" 0 150 50 H V C CNN
 F1 "BNC_DOUBLE_RA" 0 -150 50 H V C CNN
-F2 "stepper_controller:BNC_DOUBLE" 0 -1200 60 H I C CNN
+F2 "stepper_controller_mega:BNC_DOUBLE" 0 -1200 60 H I C CNN
 F3 "" 0 -1200 60 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "ACX1655-ND" 200 350 60 H I C CNN "PartNumber"
@@ -247,7 +247,7 @@ ENDDEF
 DEF CONV_DC_DC_12V_1A REG 0 40 Y Y 1 F N
 F0 "REG" 200 -300 60 H V C CNN
 F1 "CONV_DC_DC_12V_1A" 0 100 60 H V C CNN
-F2 "stepper_controller:DC_DC_CONV_R78C" 100 -400 60 H I C CNN
+F2 "stepper_controller_mega:DC_DC_CONV_R78C" 100 -400 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 0 -200 60 H I C CNN "Vendor"
 F5 "945-1392-5-ND" 0 -100 60 H I C CNN "PartNumber"
@@ -278,7 +278,7 @@ ENDDEF
 DEF HEADER_01X02_SMD_RA P 0 40 Y N 1 F N
 F0 "P" 0 150 50 H V C CNN
 F1 "HEADER_01X02_SMD_RA" 100 0 50 V V C CNN
-F2 "stepper_controller:Header_2_Pin_SMD_RA" -100 50 50 H I C CNN
+F2 "stepper_controller_mega:Header_2_Pin_SMD_RA" -100 50 50 H I C CNN
 F3 "" 0 150 50 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "A100903CT-ND" 200 350 60 H I C CNN "PartNumber"
@@ -303,7 +303,7 @@ ENDDEF
 DEF HEADER_01X03_SMD_RA P 0 40 Y N 1 F N
 F0 "P" 0 200 50 H V C CNN
 F1 "HEADER_01X03_SMD_RA" 100 0 50 V V C CNN
-F2 "stepper_controller:Header_3_Pin_SMD_RA" -100 100 60 H I C CNN
+F2 "stepper_controller_mega:Header_3_Pin_SMD_RA" -100 100 60 H I C CNN
 F3 "" 0 200 60 H V C CNN
 F4 "digikey" 100 300 60 H I C CNN "Vendor"
 F5 "A100890CT-ND" 200 400 60 H I C CNN "PartNumber"
@@ -330,7 +330,7 @@ ENDDEF
 DEF IM483H IM 0 40 Y Y 1 F N
 F0 "IM" 300 750 60 H V C CNN
 F1 "IM483H" 0 750 60 H V C CNN
-F2 "stepper_controller:IM483H_IM805H_PR-22" 0 1050 60 H I C CNN
+F2 "stepper_controller_mega:IM483H_IM805H_PR-22" 0 1050 60 H I C CNN
 F3 "" 300 750 60 H V C CNN
 F4 "schneider" 0 1150 60 H I C CNN "Vendor"
 F5 "IM483H_Plus" 0 1250 60 H I C CNN "PartNumber"
@@ -368,7 +368,7 @@ ENDDEF
 DEF LED_24V D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
 F1 "LED_24V" 0 -100 50 H V C CNN
-F2 "stepper_controller:LED_555-3XXX" -100 0 60 H I C CNN
+F2 "stepper_controller_mega:LED_555-3XXX" -100 0 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "350-1723-ND" 200 300 60 H I C CNN "PartNumber"
@@ -410,7 +410,7 @@ ENDDEF
 DEF PWR_JACK_2.5x5.5 P 0 40 Y N 1 F N
 F0 "P" 0 150 50 H V C CNN
 F1 "PWR_JACK_2.5x5.5" 100 0 50 V V C CNN
-F2 "stepper_controller:DCJACK_2PIN_HIGHCURRENT" -100 50 60 H I C CNN
+F2 "stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT" -100 50 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "CP-063BH-ND" 200 350 60 H I C CNN "PartNumber"
@@ -435,7 +435,7 @@ ENDDEF
 DEF SPST_SLIDE_AS SW 0 0 N Y 1 F N
 F0 "SW" 0 -50 40 H V C CNN
 F1 "SPST_SLIDE_AS" 0 100 40 H V C CNN
-F2 "stepper_controller:SPST_SLIDE_AS" -100 -200 60 H I C CNN
+F2 "stepper_controller_mega:SPST_SLIDE_AS" -100 -200 60 H I C CNN
 F3 "" 0 -50 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "360-2610-ND" 200 300 60 H I C CNN "PartNumber"

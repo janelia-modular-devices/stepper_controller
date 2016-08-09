@@ -1,12 +1,12 @@
 EESchema-LIBRARY Version 2.3
 #encoding utf-8
 #
-# MAX6817-RESCUE-stepper_controller
+# MAX6817-RESCUE-stepper_controller_mega
 #
-DEF MAX6817-RESCUE-stepper_controller U 0 40 Y Y 1 F N
+DEF MAX6817-RESCUE-stepper_controller_mega U 0 40 Y Y 1 F N
 F0 "U" 250 -250 60 H V C CNN
-F1 "MAX6817-RESCUE-stepper_controller" 0 600 60 H V C CNN
-F2 "stepper_controller:MAX6817" 150 -350 60 H I C CNN
+F1 "MAX6817-RESCUE-stepper_controller_mega" 0 600 60 H V C CNN
+F2 "stepper_controller_mega:MAX6817" 150 -350 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 350 -150 60 H I C CNN "Vendor"
 F5 "MAX6817EUT+TCT-ND" 450 -50 60 H I C CNN "PartNumber"

@@ -1,9 +1,9 @@
 
-(session stepper_controller.ses
-  (base_design stepper_controller.dsn)
+(session stepper_controller_mega.ses
+  (base_design stepper_controller_mega.dsn)
   (placement
     (resolution um 10)
-    (component "stepper_controller:LED_555-3XXX"
+    (component "stepper_controller_mega:LED_555-3XXX"
       (place D33 1181100 -1212850 front 180)
       (place D32 1206500 -1212850 front 180)
       (place D31 1231900 -1212850 front 180)
@@ -38,7 +38,7 @@
       (place D2 1714500 -984250 front 180)
       (place D1 2019300 -939800 front 270)
     )
-    (component stepper_controller:SM1210
+    (component stepper_controller_mega:SM1210
       (place C7 1447800 -1231900 back 180)
       (place C1 2006600 -1085850 back 180)
       (place C2 1047750 -1085850 back 0)
@@ -47,37 +47,37 @@
       (place C4 1803400 -1003300 back 180)
       (place C5 1447800 -1003300 back 180)
     )
-    (component stepper_controller:DC_DC_CONV_R78C
+    (component stepper_controller_mega:DC_DC_CONV_R78C
       (place REG1 1035050 -1130300 front 180)
     )
-    (component stepper_controller:DCJACK_2PIN_HIGHCURRENT
+    (component stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT
       (place P1 2114550 -1028700 front 270)
     )
-    (component stepper_controller:BNC_DOUBLE
+    (component stepper_controller_mega:BNC_DOUBLE
       (place P7 990600 -1028700 front 90)
     )
-    (component stepper_controller:HEADER_02x08_SMD
+    (component stepper_controller_mega:HEADER_02x08_SMD
       (place P8 1625600 -889000 front 0)
       (place P9 1270000 -889000 front 0)
       (place P10 1625600 -1117600 front 0)
       (place P11 1270000 -1117600 front 0)
     )
-    (component stepper_controller:ARDUINO_MEGA_SHIELD
+    (component stepper_controller_mega:ARDUINO_MEGA_SHIELD
       (place ARDUINO1 977900 -1295400 front 0)
     )
-    (component stepper_controller:SPST_SLIDE_AS
+    (component stepper_controller_mega:SPST_SLIDE_AS
       (place SW1 2032000 -1123950 front 90)
     )
-    (component stepper_controller:Header_3_Pin_SMD_RA
+    (component stepper_controller_mega:Header_3_Pin_SMD_RA
       (place P2 961390 -852170 front 90)
       (place P3 2038350 -793750 back 0)
       (place P4 2089150 -850900 front 270)
       (place P5 2038350 -1263650 back 180)
     )
-    (component stepper_controller:Header_2_Pin_SMD_RA
+    (component stepper_controller_mega:Header_2_Pin_SMD_RA
       (place P6 2038350 -1276350 front 180)
     )
-    (component "stepper_controller:PG-DSO-36"
+    (component "stepper_controller_mega:PG-DSO-36"
       (place U4 1447800 -1117600 back 90)
       (place U3 1803400 -1117600 back 90)
       (place U2 1447800 -889000 back 90)

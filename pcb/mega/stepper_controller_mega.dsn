@@ -1,4 +1,4 @@
-(pcb "/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller.dsn"
+(pcb "/home/polidorop/git/modular-devices/stepper_controller/pcb/stepper_controller_mega.dsn"
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -33,7 +33,7 @@
     )
   )
   (placement
-    (component "stepper_controller:LED_555-3XXX"
+    (component "stepper_controller_mega:LED_555-3XXX"
       (place D33 118110 -121285 front 180 (PN LED_24V))
       (place D32 120650 -121285 front 180 (PN LED_24V))
       (place D31 123190 -121285 front 180 (PN LED_24V))
@@ -68,7 +68,7 @@
       (place D2 171450 -98425 front 180 (PN LED_24V))
       (place D1 201930 -93980 front 270 (PN LED_24V))
     )
-    (component stepper_controller:SM1210
+    (component stepper_controller_mega:SM1210
       (place C7 144780 -123190 back 180 (PN 0.1uF))
       (place C1 200660 -108585 back 180 (PN 10uF))
       (place C2 104775 -108585 back 0 (PN 10uF))
@@ -77,37 +77,37 @@
       (place C4 180340 -100330 back 180 (PN 0.1uF))
       (place C5 144780 -100330 back 180 (PN 0.1uF))
     )
-    (component stepper_controller:DC_DC_CONV_R78C
+    (component stepper_controller_mega:DC_DC_CONV_R78C
       (place REG1 103505 -113030 front 180 (PN CONV_DC_DC_12V_1A))
     )
-    (component stepper_controller:DCJACK_2PIN_HIGHCURRENT
+    (component stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT
       (place P1 211455 -102870 front 270 (PN PWR_JACK_2.5x5.5))
     )
-    (component stepper_controller:BNC_DOUBLE
+    (component stepper_controller_mega:BNC_DOUBLE
       (place P7 99060 -102870 front 90 (PN BNC_DOUBLE_RA))
     )
-    (component stepper_controller:HEADER_02x08_SMD
+    (component stepper_controller_mega:HEADER_02x08_SMD
       (place P8 162560 -88900 front 0 (PN HEADER_02X08_SMD))
       (place P9 127000 -88900 front 0 (PN HEADER_02X08_SMD))
       (place P10 162560 -111760 front 0 (PN HEADER_02X08_SMD))
       (place P11 127000 -111760 front 0 (PN HEADER_02X08_SMD))
     )
-    (component stepper_controller:ARDUINO_MEGA_SHIELD
+    (component stepper_controller_mega:ARDUINO_MEGA_SHIELD
       (place ARDUINO1 97790 -129540 front 0 (PN ARDUINO_MEGA))
     )
-    (component stepper_controller:SPST_SLIDE_AS
+    (component stepper_controller_mega:SPST_SLIDE_AS
       (place SW1 203200 -112395 front 90 (PN SPST_SLIDE_AS))
     )
-    (component stepper_controller:Header_3_Pin_SMD_RA
+    (component stepper_controller_mega:Header_3_Pin_SMD_RA
       (place P2 96139 -85217 front 90 (PN HEADER_01X03_SMD_RA))
       (place P3 203835 -79375 back 0 (PN HEADER_01X03_SMD_RA))
       (place P4 208915 -85090 front 270 (PN HEADER_01X03_SMD_RA))
       (place P5 203835 -126365 back 180 (PN HEADER_01X03_SMD_RA))
     )
-    (component stepper_controller:Header_2_Pin_SMD_RA
+    (component stepper_controller_mega:Header_2_Pin_SMD_RA
       (place P6 203835 -127635 front 180 (PN HEADER_01X02_SMD_RA))
     )
-    (component "stepper_controller:PG-DSO-36"
+    (component "stepper_controller_mega:PG-DSO-36"
       (place U4 144780 -111760 back 90 (PN TLE7230R))
       (place U3 180340 -111760 back 90 (PN TLE7230R))
       (place U2 144780 -88900 back 90 (PN TLE7230R))
@@ -115,7 +115,7 @@
     )
   )
   (library
-    (image "stepper_controller:LED_555-3XXX"
+    (image "stepper_controller_mega:LED_555-3XXX"
       (outline (path signal 228.6  -508 508  508 508))
       (outline (path signal 228.6  0 0  0 1016))
       (outline (path signal 228.6  -1270 3810  1270 3810))
@@ -125,7 +125,7 @@
       (pin Oval[A]Pad_1524x2032_um 1 0 2540)
       (pin Oval[A]Pad_1524x2032_um 2 0 -2540)
     )
-    (image stepper_controller:SM1210
+    (image stepper_controller_mega:SM1210
       (outline (path signal 127  -762 1397  -2286 1397))
       (outline (path signal 127  -2286 1397  -2286 -1397))
       (outline (path signal 127  -2286 -1397  -762 -1397))
@@ -135,7 +135,7 @@
       (pin Rect[T]Pad_1270x2540_um 1 -1524 0)
       (pin Rect[T]Pad_1270x2540_um 2 1524 0)
     )
-    (image stepper_controller:DC_DC_CONV_R78C
+    (image stepper_controller_mega:DC_DC_CONV_R78C
       (outline (path signal 381  5715 -1905  5715 6350))
       (outline (path signal 381  5715 6350  -5715 6350))
       (outline (path signal 381  -5715 6350  -5715 -1905))
@@ -144,7 +144,7 @@
       (pin Oval[A]Pad_1524x2540_um 3 2540 0)
       (pin Oval[A]Pad_1524x2540_um 1 -2540 0)
     )
-    (image stepper_controller:DCJACK_2PIN_HIGHCURRENT
+    (image stepper_controller_mega:DCJACK_2PIN_HIGHCURRENT
       (outline (path signal 381  -5080 -13335  5080 -13335))
       (outline (path signal 381  5080 -13335  5080 0))
       (outline (path signal 381  -5080 -13335  -5080 0))
@@ -155,7 +155,7 @@
       (pin Oval[A]Pad_3556x5080_um @2 -4495.8 -5003.8)
       (pin Oval[A]Pad_3556x5080_um @3 4495.8 -5003.8)
     )
-    (image stepper_controller:BNC_DOUBLE
+    (image stepper_controller_mega:BNC_DOUBLE
       (outline (path signal 381  2540 -6350  3302 -5588))
       (outline (path signal 381  -1270 -7620  -2286 -6096))
       (outline (path signal 381  -6350 5715  -6350 6350))
@@ -174,7 +174,7 @@
       (pin Oval[A][254,0]Pad_2032x1524_um 2 2540 -8890)
       (pin "Oval[A][-254,0]Pad_2032x1524_um" 4 -2540 -8890)
     )
-    (image stepper_controller:HEADER_02x08_SMD
+    (image stepper_controller_mega:HEADER_02x08_SMD
       (outline (path signal 381  13970 4572  -13970 4572))
       (outline (path signal 381  -13970 4572  -13970 -4572))
       (outline (path signal 381  -13970 -4572  13970 -4572))
@@ -199,7 +199,7 @@
       (pin Rect[T]Pad_1016x4495.8_um 15 -8890 2997.2)
       (pin Rect[T]Pad_1016x4495.8_um 16 -8890 -2997.2)
     )
-    (image stepper_controller:ARDUINO_MEGA_SHIELD
+    (image stepper_controller_mega:ARDUINO_MEGA_SHIELD
       (outline (path signal 381  67945 7620  67851.8 7031.32  67581.2 6500.27  67159.7 6078.82
             66628.7 5808.24  66040 5715  65451.3 5808.24  64920.3 6078.82
             64498.8 6500.27  64228.2 7031.32  64135 7620  64228.2 8208.68
@@ -337,7 +337,7 @@
       (pin Oval[A][0,508]Pad_1524x2540_um (rotate 90) GND4 93980 7620)
       (pin "Oval[A][0,-508]Pad_1524x2540_um" (rotate 90) GND5 96520 7620)
     )
-    (image stepper_controller:SPST_SLIDE_AS
+    (image stepper_controller_mega:SPST_SLIDE_AS
       (outline (path signal 381  -2540 5080  2540 5080))
       (outline (path signal 381  2540 5080  2540 -5080))
       (outline (path signal 381  2540 -5080  -2540 -5080))
@@ -345,7 +345,7 @@
       (pin Oval[A]Pad_2159x1651_um 1 -990.6 2540)
       (pin Oval[A]Pad_2159x1651_um 3 -990.6 -2540)
     )
-    (image stepper_controller:Header_3_Pin_SMD_RA
+    (image stepper_controller_mega:Header_3_Pin_SMD_RA
       (outline (path signal 381  -6350 8255  6350 8255))
       (outline (path signal 381  6350 8255  6350 -5715))
       (outline (path signal 381  -6350 8255  -6350 -5715))
@@ -358,7 +358,7 @@
       (pin Rect[T]Pad_2794x4826_um @3 -5994.4 0)
       (pin Rect[T]Pad_2794x4826_um @4 5994.4 0)
     )
-    (image stepper_controller:Header_2_Pin_SMD_RA
+    (image stepper_controller_mega:Header_2_Pin_SMD_RA
       (outline (path signal 381  -5080 8255  5080 8255))
       (outline (path signal 381  5080 8255  5080 -5715))
       (outline (path signal 381  -5080 8255  -5080 -5715))
@@ -370,7 +370,7 @@
       (pin Rect[T]Pad_2794x4826_um @3 -4724.4 0)
       (pin Rect[T]Pad_2794x4826_um @4 4724.4 0)
     )
-    (image "stepper_controller:PG-DSO-36"
+    (image "stepper_controller_mega:PG-DSO-36"
       (outline (path signal 381  -5750 -4000  -5786.71 -4231.76  -5893.24 -4440.84  -6059.16 -4606.76
             -6268.24 -4713.29  -6500 -4750  -6731.76 -4713.29  -6940.84 -4606.76
             -7106.76 -4440.84  -7213.29 -4231.76  -7250 -4000  -7213.29 -3768.24
