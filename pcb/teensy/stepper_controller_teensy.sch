@@ -110,7 +110,6 @@ NoConn ~ 3850 850
 NoConn ~ 3850 1050
 NoConn ~ 3850 1150
 NoConn ~ 1350 1050
-NoConn ~ 1350 1450
 NoConn ~ 1350 1550
 NoConn ~ 1350 1650
 NoConn ~ 1350 1750
@@ -136,7 +135,7 @@ Wire Wire Line
 Text Label 1050 1250 0    60   ~ 0
 RESET
 Text Label 1050 1350 0    60   ~ 0
-PWM
+FLAG
 $Comp
 L LED_24V L1
 U 1 1 578D4B9A
@@ -296,4 +295,133 @@ F 7 "2" H 3900 2850 60  0001 C CNN "PartCount"
 	1    2600 1600
 	1    0    0    -1  
 $EndComp
+$Comp
+L L6470 U?
+U 1 1 57AA1BBB
+P 7200 3200
+F 0 "U?" H 7700 2300 60  0000 C CNN
+F 1 "L6470" H 6800 2300 60  0000 C CNN
+F 2 "footprints:POWERSO-36" H 7200 4850 60  0001 C CNN
+F 3 "" H 7600 3700 60  0000 C CNN
+F 4 "digikey" H 7200 4750 60  0001 C CNN "Vendor"
+F 5 "497-16432-1-ND" H 7200 4950 60  0001 C CNN "PartNumber"
+F 6 "Bipolar Motor Driver DMOS SPI PowerSO-36" H 7200 5050 60  0001 C CNN "Description"
+	1    7200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3250 6250 3250
+Wire Wire Line
+	6550 3350 6250 3350
+Wire Wire Line
+	6550 3450 6250 3450
+Wire Wire Line
+	6550 3550 6250 3550
+Text Label 6250 3450 0    60   ~ 0
+MISO
+Text Label 6250 3550 0    60   ~ 0
+MOSI
+Text Label 6250 3350 0    60   ~ 0
+SCK
+Text Label 6250 3250 0    60   ~ 0
+CS
+NoConn ~ 7850 3750
+NoConn ~ 6550 3750
+$Comp
+L GND #PWR?
+U 1 1 57AA211F
+P 7250 4300
+F 0 "#PWR?" H 7250 4050 50  0001 C CNN
+F 1 "GND" H 7255 4127 50  0000 C CNN
+F 2 "" H 7250 4300 50  0000 C CNN
+F 3 "" H 7250 4300 50  0000 C CNN
+	1    7250 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4150 7050 4200
+Wire Wire Line
+	7050 4200 7450 4200
+Wire Wire Line
+	7450 4200 7450 4150
+Wire Wire Line
+	7150 4150 7150 4200
+Connection ~ 7150 4200
+Wire Wire Line
+	7250 4150 7250 4300
+Connection ~ 7250 4200
+Wire Wire Line
+	7350 4150 7350 4200
+Connection ~ 7350 4200
+Wire Wire Line
+	7850 2950 7950 2950
+Wire Wire Line
+	7850 3150 7950 3150
+Wire Wire Line
+	7850 3350 7950 3350
+Wire Wire Line
+	7850 3550 7950 3550
+Wire Wire Line
+	7850 3050 7900 3050
+Wire Wire Line
+	7900 3050 7900 2950
+Connection ~ 7900 2950
+Wire Wire Line
+	7850 3250 7900 3250
+Wire Wire Line
+	7900 3250 7900 3150
+Connection ~ 7900 3150
+Wire Wire Line
+	7850 3450 7900 3450
+Wire Wire Line
+	7900 3450 7900 3350
+Connection ~ 7900 3350
+Wire Wire Line
+	7850 3650 7900 3650
+Wire Wire Line
+	7900 3650 7900 3550
+Connection ~ 7900 3550
+Text Label 7950 2950 0    60   ~ 0
+OUT1A
+Text Label 7950 3150 0    60   ~ 0
+OUT2A
+Text Label 7950 3350 0    60   ~ 0
+OUT1B
+Text Label 7950 3550 0    60   ~ 0
+OUT2B
+Wire Wire Line
+	6550 3150 6250 3150
+Text Label 6250 3150 0    60   ~ 0
+RESET
+$Comp
+L GND #PWR?
+U 1 1 57AA2829
+P 6050 3100
+F 0 "#PWR?" H 6050 2850 50  0001 C CNN
+F 1 "GND" H 6055 2927 50  0000 C CNN
+F 2 "" H 6050 3100 50  0000 C CNN
+F 3 "" H 6050 3100 50  0000 C CNN
+	1    6050 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 3050 6050 3050
+Wire Wire Line
+	6050 3050 6050 3100
+Wire Wire Line
+	6550 2950 6250 2950
+Text Label 6250 2950 0    60   ~ 0
+BUSY
+Wire Wire Line
+	6550 2850 6250 2850
+Text Label 6250 2850 0    60   ~ 0
+FLAG
+Wire Wire Line
+	1350 1450 1050 1450
+Text Label 1050 1450 0    60   ~ 0
+BUSY
+Wire Wire Line
+	6550 3650 6250 3650
+Text Label 6250 3650 0    60   ~ 0
+SW
 $EndSCHEMATC
