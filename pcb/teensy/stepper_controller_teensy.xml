@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>/home/polidorop/git/modular-devices/stepper_controller/pcb/teensy/stepper_controller_teensy.sch</source>
+    <date>Mon 08 Aug 2016 02:53:56 PM EDT</date>
+    <tool>Eeschema 4.1.0-alpha+201608010716+6997~46~ubuntu16.04.1-product</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>stepper_controller_teensy</title>
+        <company>Janelia</company>
+        <rev>1.1</rev>
+        <date/>
+        <source>stepper_controller_teensy.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="P1">
+      <value>HEADER_02X08_SMD</value>
+      <footprint>stepper_controller_teensy:HEADER_02x08_SMD</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">S9187-ND</field>
+        <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
+      </fields>
+      <libsource lib="components" part="HEADER_02X08_SMD"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D30F0</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>TLE7230R</value>
+      <footprint>stepper_controller_teensy:PG-DSO-36</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">TLE7230RCT-ND</field>
+        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
+      </fields>
+      <libsource lib="components" part="TLE7230R"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D35FA</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="components" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D3F4C</tstamp>
+    </comp>
+    <comp ref="L2">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D474F</tstamp>
+    </comp>
+    <comp ref="L3">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D495D</tstamp>
+    </comp>
+    <comp ref="L4">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D49BB</tstamp>
+    </comp>
+    <comp ref="L5">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D49F0</tstamp>
+    </comp>
+    <comp ref="L6">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4A30</tstamp>
+    </comp>
+    <comp ref="L7">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4A73</tstamp>
+    </comp>
+    <comp ref="L8">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4AB5</tstamp>
+    </comp>
+    <comp ref="L9">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4AF6</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>LED_24V</value>
+      <footprint>stepper_controller_teensy:LED_555-3XXX</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <libsource lib="components" part="LED_24V"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4B9A</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>SPST_SLIDE_AS</value>
+      <footprint>stepper_controller_teensy:SPST_SLIDE_AS</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">360-2610-ND</field>
+        <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
+      </fields>
+      <libsource lib="components" part="SPST_SLIDE_AS"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578D4BFB</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <libsource lib="components" part="10uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>578FA17B</tstamp>
+    </comp>
+    <comp ref="MDT1">
+      <value>MODULAR_DEVICE_TEENSY_MALE</value>
+      <footprint>stepper_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">S1011E-16-ND</field>
+        <field name="Description">16 Position Header Through Hole Male Pins</field>
+        <field name="PartCount">2</field>
+      </fields>
+      <libsource lib="components" part="MODULAR_DEVICE_TEENSY_MALE"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57A8C92C</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="components" part="0.1uF">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0.1uF</field>
+        <field name="Footprint">stepper_controller_teensy:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="10uF">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF</field>
+        <field name="Footprint">stepper_controller_teensy:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">445-4536-1-ND</field>
+        <field name="Description">CAP CER 10UF 50V 10% X7S 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="HEADER_02X08_SMD">
+      <footprints>
+        <fp>Pin_Header_Straight_2X08</fp>
+        <fp>Pin_Header_Angled_2X08</fp>
+        <fp>Socket_Strip_Straight_2X08</fp>
+        <fp>Socket_Strip_Angled_2X08</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">HEADER_02X08_SMD</field>
+        <field name="Footprint">stepper_controller_teensy:HEADER_02x08_SMD</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">S9187-ND</field>
+        <field name="Description">CONN HEADR 2.54MM 16POS GOLD SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="P1" type="passive"/>
+        <pin num="2" name="P2" type="passive"/>
+        <pin num="3" name="P3" type="passive"/>
+        <pin num="4" name="P4" type="passive"/>
+        <pin num="5" name="P5" type="passive"/>
+        <pin num="6" name="P6" type="passive"/>
+        <pin num="7" name="P7" type="passive"/>
+        <pin num="8" name="P8" type="passive"/>
+        <pin num="9" name="P9" type="passive"/>
+        <pin num="10" name="P10" type="passive"/>
+        <pin num="11" name="P11" type="passive"/>
+        <pin num="12" name="P12" type="passive"/>
+        <pin num="13" name="P13" type="passive"/>
+        <pin num="14" name="P14" type="passive"/>
+        <pin num="15" name="P15" type="passive"/>
+        <pin num="16" name="P16" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="LED_24V">
+      <footprints>
+        <fp>LED-3MM</fp>
+        <fp>LED-5MM</fp>
+        <fp>LED-10MM</fp>
+        <fp>LED-0603</fp>
+        <fp>LED-0805</fp>
+        <fp>LED-1206</fp>
+        <fp>LEDV</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">LED_24V</field>
+        <field name="Footprint">stepper_controller_teensy:LED_555-3XXX</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">350-1723-ND</field>
+        <field name="Description">LED 2MM 24V VERTICAL RED PC MNT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="K" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="MODULAR_DEVICE_TEENSY_MALE">
+      <fields>
+        <field name="Reference">MDT</field>
+        <field name="Value">MODULAR_DEVICE_TEENSY_MALE</field>
+        <field name="Footprint">stepper_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">S1011E-16-ND</field>
+        <field name="Description">16 Position Header Through Hole Male Pins</field>
+        <field name="PartCount">2</field>
+      </fields>
+      <pins>
+        <pin num="2" name="D2" type="BiDi"/>
+        <pin num="3" name="D3/PWM/CANTX" type="BiDi"/>
+        <pin num="4" name="D4/PWM/CANRX" type="BiDi"/>
+        <pin num="5" name="D5/PWM/TX1B" type="BiDi"/>
+        <pin num="6" name="D6/PWM" type="BiDi"/>
+        <pin num="9" name="D9/RX2/PWM/ICP/CSB/I2SBCLK" type="BiDi"/>
+        <pin num="10" name="D10/TX2/CS/PWM/ICP" type="BiDi"/>
+        <pin num="11" name="D11/DOUT/I2SMCLK" type="BiDi"/>
+        <pin num="12" name="D12/DIN" type="BiDi"/>
+        <pin num="13" name="D13/LED/SCK/I2SRX" type="BiDi"/>
+        <pin num="14" name="D14/A0/SCKB" type="BiDi"/>
+        <pin num="15" name="D15/A1/TOUCH/CSB" type="BiDi"/>
+        <pin num="16" name="D16/A2/TOUCH" type="BiDi"/>
+        <pin num="17" name="D17/A3/TOUCH" type="BiDi"/>
+        <pin num="18" name="D18/A4/SDA0/TOUCH" type="BiDi"/>
+        <pin num="19" name="D19/A5/SCL0/TOUCH" type="BiDi"/>
+        <pin num="20" name="D20/A6/PWM/CSB" type="BiDi"/>
+        <pin num="21" name="D21/A7/PWM/RX1B/CSB" type="BiDi"/>
+        <pin num="22" name="D22/A8/TOUCH/PWM/ICP/I2STX" type="BiDi"/>
+        <pin num="23" name="D23/A9/TOUCH/PWM/ICP/I2SLRCLK" type="BiDi"/>
+        <pin num="24" name="D24/ICP/I2SBCLKB" type="BiDi"/>
+        <pin num="25" name="D25/PWM/TOUCH/I2SLRCLK2" type="BiDi"/>
+        <pin num="28" name="D28/A17/I2SMCLKB" type="BiDi"/>
+        <pin num="29" name="D29/A18/SCL1" type="BiDi"/>
+        <pin num="30" name="D30/A19/SDA1" type="BiDi"/>
+        <pin num="3V3" name="3.3v_(250_mA_max)" type="passive"/>
+        <pin num="AGND" name="AGND" type="passive"/>
+        <pin num="AREF" name="AREF" type="passive"/>
+        <pin num="DAC" name="A14/DAC" type="BiDi"/>
+        <pin num="GND" name="GND" type="passive"/>
+        <pin num="VDD" name="VDD_(+9-42VDC)" type="passive"/>
+        <pin num="VEE" name="VEE_(+4-5VDC)" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="SPST_SLIDE_AS">
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SPST_SLIDE_AS</field>
+        <field name="Footprint">stepper_controller_teensy:SPST_SLIDE_AS</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">360-2610-ND</field>
+        <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="TLE7230R">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">TLE7230R</field>
+        <field name="Footprint">stepper_controller_teensy:PG-DSO-36</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">TLE7230RCT-ND</field>
+        <field name="Description">IC SW SMART OCTAL LOWSIDE PDSO36</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="4" name="OUT1" type="BiDi"/>
+        <pin num="5" name="OUT2" type="BiDi"/>
+        <pin num="6" name="IN1" type="passive"/>
+        <pin num="7" name="IN2" type="passive"/>
+        <pin num="8" name="VS" type="power_in"/>
+        <pin num="9" name="RST" type="BiDi"/>
+        <pin num="10" name="CS" type="BiDi"/>
+        <pin num="11" name="PRG" type="BiDi"/>
+        <pin num="12" name="IN3" type="passive"/>
+        <pin num="13" name="IN4" type="passive"/>
+        <pin num="14" name="OUT3" type="BiDi"/>
+        <pin num="15" name="OUT4" type="BiDi"/>
+        <pin num="18" name="GND" type="power_in"/>
+        <pin num="19" name="GND" type="power_in"/>
+        <pin num="22" name="OUT5" type="BiDi"/>
+        <pin num="23" name="OUT6" type="BiDi"/>
+        <pin num="25" name="VDO" type="power_in"/>
+        <pin num="26" name="Fault" type="BiDi"/>
+        <pin num="27" name="SO" type="BiDi"/>
+        <pin num="28" name="SCLK" type="BiDi"/>
+        <pin num="29" name="SI" type="BiDi"/>
+        <pin num="32" name="OUT7" type="BiDi"/>
+        <pin num="33" name="OUT8" type="BiDi"/>
+        <pin num="36" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="components">
+      <uri>/home/polidorop/git/kicad/kicad-libraries/components.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="VDD">
+      <node ref="P1" pin="15"/>
+      <node ref="C1" pin="1"/>
+      <node ref="MDT1" pin="VDD"/>
+      <node ref="P1" pin="9"/>
+      <node ref="P1" pin="11"/>
+      <node ref="P1" pin="13"/>
+      <node ref="P1" pin="7"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="P1" pin="5"/>
+      <node ref="P1" pin="1"/>
+      <node ref="P1" pin="3"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="L1" pin="2"/>
+      <node ref="U1" pin="19"/>
+      <node ref="U1" pin="18"/>
+      <node ref="MDT1" pin="GND"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U1" pin="36"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="3" name="/OUT7">
+      <node ref="P1" pin="16"/>
+      <node ref="U1" pin="33"/>
+      <node ref="L9" pin="2"/>
+    </net>
+    <net code="4" name="/OUT3">
+      <node ref="U1" pin="15"/>
+      <node ref="P1" pin="8"/>
+      <node ref="L5" pin="2"/>
+    </net>
+    <net code="5" name="/LED_PWR">
+      <node ref="L6" pin="1"/>
+      <node ref="L7" pin="1"/>
+      <node ref="L5" pin="1"/>
+      <node ref="L4" pin="1"/>
+      <node ref="L2" pin="1"/>
+      <node ref="L8" pin="1"/>
+      <node ref="L3" pin="1"/>
+      <node ref="L9" pin="1"/>
+      <node ref="L1" pin="1"/>
+      <node ref="SW1" pin="3"/>
+    </net>
+    <net code="6" name="VEE">
+      <node ref="MDT1" pin="VEE"/>
+      <node ref="U1" pin="6"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="7"/>
+      <node ref="U1" pin="25"/>
+      <node ref="U1" pin="8"/>
+      <node ref="U1" pin="12"/>
+    </net>
+    <net code="7" name="/PWM">
+      <node ref="MDT1" pin="3"/>
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="8" name="/RESET">
+      <node ref="U1" pin="9"/>
+      <node ref="MDT1" pin="2"/>
+    </net>
+    <net code="9" name="Net-(MDT1-Pad25)">
+      <node ref="MDT1" pin="25"/>
+    </net>
+    <net code="10" name="Net-(MDT1-Pad6)">
+      <node ref="MDT1" pin="6"/>
+    </net>
+    <net code="11" name="Net-(MDT1-Pad22)">
+      <node ref="MDT1" pin="22"/>
+    </net>
+    <net code="12" name="Net-(MDT1-Pad21)">
+      <node ref="MDT1" pin="21"/>
+    </net>
+    <net code="13" name="Net-(MDT1-Pad30)">
+      <node ref="MDT1" pin="30"/>
+    </net>
+    <net code="14" name="Net-(MDT1-Pad20)">
+      <node ref="MDT1" pin="20"/>
+    </net>
+    <net code="15" name="Net-(MDT1-Pad9)">
+      <node ref="MDT1" pin="9"/>
+    </net>
+    <net code="16" name="Net-(MDT1-Pad23)">
+      <node ref="MDT1" pin="23"/>
+    </net>
+    <net code="17" name="Net-(MDT1-Pad5)">
+      <node ref="MDT1" pin="5"/>
+    </net>
+    <net code="18" name="Net-(MDT1-Pad4)">
+      <node ref="MDT1" pin="4"/>
+    </net>
+    <net code="19" name="Net-(MDT1-Pad19)">
+      <node ref="MDT1" pin="19"/>
+    </net>
+    <net code="20" name="Net-(MDT1-PadAREF)">
+      <node ref="MDT1" pin="AREF"/>
+    </net>
+    <net code="21" name="Net-(MDT1-PadAGND)">
+      <node ref="MDT1" pin="AGND"/>
+    </net>
+    <net code="22" name="Net-(MDT1-PadDAC)">
+      <node ref="MDT1" pin="DAC"/>
+    </net>
+    <net code="23" name="Net-(MDT1-Pad3V3)">
+      <node ref="MDT1" pin="3V3"/>
+    </net>
+    <net code="24" name="Net-(MDT1-Pad29)">
+      <node ref="MDT1" pin="29"/>
+    </net>
+    <net code="25" name="Net-(MDT1-Pad28)">
+      <node ref="MDT1" pin="28"/>
+    </net>
+    <net code="26" name="Net-(MDT1-Pad18)">
+      <node ref="MDT1" pin="18"/>
+    </net>
+    <net code="27" name="Net-(MDT1-Pad17)">
+      <node ref="MDT1" pin="17"/>
+    </net>
+    <net code="28" name="Net-(MDT1-Pad16)">
+      <node ref="MDT1" pin="16"/>
+    </net>
+    <net code="29" name="Net-(MDT1-Pad15)">
+      <node ref="MDT1" pin="15"/>
+    </net>
+    <net code="30" name="Net-(MDT1-Pad24)">
+      <node ref="MDT1" pin="24"/>
+    </net>
+    <net code="31" name="Net-(MDT1-Pad14)">
+      <node ref="MDT1" pin="14"/>
+    </net>
+    <net code="32" name="/OUT5">
+      <node ref="L7" pin="2"/>
+      <node ref="U1" pin="23"/>
+      <node ref="P1" pin="12"/>
+    </net>
+    <net code="33" name="/OUT4">
+      <node ref="U1" pin="22"/>
+      <node ref="L6" pin="2"/>
+      <node ref="P1" pin="10"/>
+    </net>
+    <net code="34" name="/OUT2">
+      <node ref="U1" pin="14"/>
+      <node ref="L4" pin="2"/>
+      <node ref="P1" pin="6"/>
+    </net>
+    <net code="35" name="/OUT1">
+      <node ref="U1" pin="5"/>
+      <node ref="L3" pin="2"/>
+      <node ref="P1" pin="4"/>
+    </net>
+    <net code="36" name="/OUT0">
+      <node ref="L2" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="P1" pin="2"/>
+    </net>
+    <net code="37" name="/OUT6">
+      <node ref="P1" pin="14"/>
+      <node ref="U1" pin="32"/>
+      <node ref="L8" pin="2"/>
+    </net>
+    <net code="38" name="/SCK">
+      <node ref="U1" pin="28"/>
+      <node ref="MDT1" pin="13"/>
+    </net>
+    <net code="39" name="/MISO">
+      <node ref="U1" pin="27"/>
+      <node ref="MDT1" pin="12"/>
+    </net>
+    <net code="40" name="/MOSI">
+      <node ref="MDT1" pin="11"/>
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="41" name="/CS">
+      <node ref="MDT1" pin="10"/>
+      <node ref="U1" pin="10"/>
+    </net>
+    <net code="42" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
+    </net>
+    <net code="43" name="Net-(U1-Pad26)">
+      <node ref="U1" pin="26"/>
+    </net>
+  </nets>
+</export>
