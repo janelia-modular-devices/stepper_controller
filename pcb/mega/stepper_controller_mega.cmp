@@ -21,7 +21,7 @@ TimeStamp = 54BEE58E
 Path = /54BEEA7F
 Reference = P2;
 ValeurCmp = HEADER_01X03;
-IdModule  = footprints:Header_3_Pin;
+IdModule  = stepper_controller_mega:Header_3_Pin;
 EndCmp
 
 BeginCmp
