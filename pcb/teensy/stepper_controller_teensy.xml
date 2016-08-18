@@ -46,7 +46,7 @@
     </comp>
     <comp ref="P1">
       <value>TERM_BLK_ANG_4_PIN_0.2_PITCH</value>
-      <footprint>footprints:TERM_BLK_ANG_4_PIN_0.2_PITCH</footprint>
+      <footprint>stepper_controller_teensy:TERM_BLK_ANG_4_PIN_0.2_PITCH</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A98350-ND</field>
@@ -58,7 +58,7 @@
     </comp>
     <comp ref="T1">
       <value>TERM_BLK_2_PIN_0.1_PITCH</value>
-      <footprint>footprints:TERM_BLK_2_PIN_0.1_PITCH</footprint>
+      <footprint>stepper_controller_teensy:TERM_BLK_2_PIN_0.1_PITCH</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A98333-ND</field>
@@ -70,7 +70,7 @@
     </comp>
     <comp ref="SW3">
       <value>KT_SWITCH</value>
-      <footprint>footprints:KT_SWITCH</footprint>
+      <footprint>stepper_controller_teensy:KT_SWITCH</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CKN1860CT-ND</field>
@@ -82,7 +82,7 @@
     </comp>
     <comp ref="U2">
       <value>MAX6817</value>
-      <footprint>footprints:MAX6817</footprint>
+      <footprint>stepper_controller_teensy:MAX6817</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">MAX6817EUT+TCT-ND</field>
@@ -94,7 +94,7 @@
     </comp>
     <comp ref="SW2">
       <value>SPST_PUSH_LIGHTS</value>
-      <footprint>footprints:KP_SWITCH</footprint>
+      <footprint>stepper_controller_teensy:KP_SWITCH</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2461-ND</field>
@@ -106,7 +106,7 @@
     </comp>
     <comp ref="C3">
       <value>0.1uF</value>
-      <footprint>footprints:SM1210</footprint>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
@@ -118,7 +118,7 @@
     </comp>
     <comp ref="R1">
       <value>143</value>
-      <footprint>footprints:SM1210</footprint>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P143AACT-ND</field>
@@ -130,7 +130,7 @@
     </comp>
     <comp ref="R2">
       <value>39.2</value>
-      <footprint>footprints:SM1210</footprint>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P39.2AACT-ND</field>
@@ -142,7 +142,7 @@
     </comp>
     <comp ref="S1">
       <value>HEADER_01X02_SHR</value>
-      <footprint>footprints:Header_Shrouded_2_Pin</footprint>
+      <footprint>stepper_controller_teensy:Header_Shrouded_2_Pin</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">WM4800-ND</field>
@@ -154,7 +154,7 @@
     </comp>
     <comp ref="C2">
       <value>47uF_2917_POL</value>
-      <footprint>footprints:SM2917_POL</footprint>
+      <footprint>stepper_controller_teensy:SM2917_POL</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">399-3821-1-ND</field>
@@ -166,7 +166,7 @@
     </comp>
     <comp ref="C1">
       <value>0.1uF</value>
-      <footprint>footprints:SM1210</footprint>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
@@ -178,7 +178,7 @@
     </comp>
     <comp ref="P2">
       <value>PWR_JACK_2.5x5.5</value>
-      <footprint>footprints:DCJACK_2PIN_HIGHCURRENT</footprint>
+      <footprint>stepper_controller_teensy:DCJACK_2PIN_HIGHCURRENT</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
@@ -190,7 +190,7 @@
     </comp>
     <comp ref="D1">
       <value>diode_schottky_45V_10A</value>
-      <footprint>footprints:CFP15</footprint>
+      <footprint>stepper_controller_teensy:CFP15</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">568-11697-1-ND</field>
@@ -202,7 +202,7 @@
     </comp>
     <comp ref="U1">
       <value>L6470</value>
-      <footprint>footprints:POWERSO-36</footprint>
+      <footprint>stepper_controller_teensy:POWERSO-36</footprint>
       <fields>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">497-16432-1-ND</field>
@@ -223,7 +223,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">0.1uF</field>
-        <field name="Footprint">footprints:SM1210</field>
+        <field name="Footprint">stepper_controller_teensy:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
@@ -244,7 +244,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">143</field>
-        <field name="Footprint">footprints:SM1210</field>
+        <field name="Footprint">stepper_controller_teensy:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P143AACT-ND</field>
         <field name="Description">RES SMD 143 OHM 1% 1/2W 1210</field>
@@ -265,7 +265,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">39.2</field>
-        <field name="Footprint">footprints:SM1210</field>
+        <field name="Footprint">stepper_controller_teensy:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P39.2AACT-ND</field>
         <field name="Description">RES SMD 39.2 OHM 1% 1/2W 1210</field>
@@ -287,7 +287,7 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">47uF_2917_POL</field>
-        <field name="Footprint">footprints:SM2917_POL</field>
+        <field name="Footprint">stepper_controller_teensy:SM2917_POL</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">399-3821-1-ND</field>
         <field name="Description">CAP TANT 47UF 35V 10% 2917</field>
@@ -307,7 +307,7 @@
       <fields>
         <field name="Reference">S</field>
         <field name="Value">HEADER_01X02_SHR</field>
-        <field name="Footprint">footprints:Header_Shrouded_2_Pin</field>
+        <field name="Footprint">stepper_controller_teensy:Header_Shrouded_2_Pin</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">WM4800-ND</field>
         <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
@@ -321,7 +321,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">KT_SWITCH</field>
-        <field name="Footprint">footprints:KT_SWITCH</field>
+        <field name="Footprint">stepper_controller_teensy:KT_SWITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CKN1860CT-ND</field>
         <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
@@ -335,7 +335,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">L6470</field>
-        <field name="Footprint">footprints:POWERSO-36</field>
+        <field name="Footprint">stepper_controller_teensy:POWERSO-36</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">497-16432-1-ND</field>
         <field name="Description">Bipolar Motor Driver DMOS SPI PowerSO-36</field>
@@ -384,7 +384,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MAX6817</field>
-        <field name="Footprint">footprints:MAX6817</field>
+        <field name="Footprint">stepper_controller_teensy:MAX6817</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">MAX6817EUT+TCT-ND</field>
         <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
@@ -402,7 +402,7 @@
       <fields>
         <field name="Reference">MDT</field>
         <field name="Value">MODULAR_DEVICE_TEENSY_MALE</field>
-        <field name="Footprint">footprints:MODULAR_DEVICE_TEENSY_MALE</field>
+        <field name="Footprint">stepper_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S1011E-16-ND</field>
         <field name="Description">16 Position Header Through Hole Male Pins</field>
@@ -453,7 +453,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">PWR_JACK_2.5x5.5</field>
-        <field name="Footprint">footprints:DCJACK_2PIN_HIGHCURRENT</field>
+        <field name="Footprint">stepper_controller_teensy:DCJACK_2PIN_HIGHCURRENT</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CP-063BH-ND</field>
         <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
@@ -467,7 +467,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_PUSH_LIGHTS</field>
-        <field name="Footprint">footprints:KP_SWITCH</field>
+        <field name="Footprint">stepper_controller_teensy:KP_SWITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2461-ND</field>
         <field name="Description">Pushbutton Switch SPST-NO Standard Illuminated Through Hole</field>
@@ -484,7 +484,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_SLIDE_AS</field>
-        <field name="Footprint">footprints:SPST_SLIDE_AS</field>
+        <field name="Footprint">stepper_controller_teensy:SPST_SLIDE_AS</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2610-ND</field>
         <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
@@ -504,7 +504,7 @@
       <fields>
         <field name="Reference">T</field>
         <field name="Value">TERM_BLK_2_PIN_0.1_PITCH</field>
-        <field name="Footprint">footprints:TERM_BLK_2_PIN_0.1_PITCH</field>
+        <field name="Footprint">stepper_controller_teensy:TERM_BLK_2_PIN_0.1_PITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A98333-ND</field>
         <field name="Description">TERM BLOCK 2POS SIDE ENT 2.54MM</field>
@@ -525,7 +525,7 @@
       <fields>
         <field name="Reference">P</field>
         <field name="Value">TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
-        <field name="Footprint">footprints:TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
+        <field name="Footprint">stepper_controller_teensy:TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A98350-ND</field>
         <field name="Description">TERM BLOCK 4POS 35DEG 5.08MM</field>
@@ -548,7 +548,7 @@
       <fields>
         <field name="Reference">D</field>
         <field name="Value">diode_schottky_45V_10A</field>
-        <field name="Footprint">footprints:CFP15</field>
+        <field name="Footprint">stepper_controller_teensy:CFP15</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">568-11697-1-ND</field>
         <field name="Description">DIODE SCHOTTKY 45V 10A CFP15</field>
