@@ -1096,11 +1096,6 @@ F 6 "CAP TANT 10UF 35V 10% 2917" H 6510 2620 60  0001 C CNN "Description"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 2350 4050 2350
-Text Label 4050 2350 0    60   ~ 0
-DAC
-Wire Wire Line
 	6550 3850 6250 3850
-Text Label 6250 3850 0    60   ~ 0
-DAC
+NoConn ~ 3850 2350
 $EndSCHEMATC

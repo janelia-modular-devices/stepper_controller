@@ -22,7 +22,7 @@ ENDDEF
 DEF 0.1uF C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
 F1 "0.1uF" 0 0 30 H V C CNN
-F2 "stepper_controller_teensy:SM1210" 38 -150 30 H I C CNN
+F2 "footprints:SM1210" 38 -150 30 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "478-3586-1-ND" 200 300 60 H I C CNN "PartNumber"
@@ -45,7 +45,7 @@ ENDDEF
 DEF 0.22uF C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
 F1 "0.22uF" 0 0 30 H V C CNN
-F2 "stepper_controller_teensy:SM1210" 38 -150 30 H I C CNN
+F2 "footprints:SM1210" 38 -150 30 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "399-11615-1-ND" 200 300 60 H I C CNN "PartNumber"
@@ -68,7 +68,7 @@ ENDDEF
 DEF 100uF_POL C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
 F1 "100uF_POL" 0 0 30 H V C CNN
-F2 "stepper_controller_teensy:C_ELEC_12.5" -90 -30 60 H I C CNN
+F2 "footprints:C_ELEC_12.5" -90 -30 60 H I C CNN
 F3 "" 10 70 60 H I C CNN
 F4 "digikey" 110 170 60 H I C CNN "Vendor"
 F5 "565-2511-1-ND" 210 270 60 H I C CNN "PartNumber"
@@ -96,7 +96,7 @@ ENDDEF
 DEF 10nF C 0 10 N Y 1 F N
 F0 "C" 0 100 40 H V L CNN
 F1 "10nF" 0 0 30 H V C CNN
-F2 "stepper_controller_teensy:SM1210" 38 -150 30 H I C CNN
+F2 "footprints:SM1210" 38 -150 30 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "399-11960-1-ND" 200 300 60 H I C CNN "PartNumber"
@@ -119,7 +119,7 @@ ENDDEF
 DEF 10uF_2917_POL C 0 10 N N 1 F N
 F0 "C" 10 70 50 H V L CNN
 F1 "10uF_2917_POL" 0 0 30 H V C CNN
-F2 "stepper_controller_teensy:SM2917_POL" -90 -30 60 H I C CNN
+F2 "footprints:SM2917_POL" -90 -30 60 H I C CNN
 F3 "" 10 70 60 H I C CNN
 F4 "digikey" 110 170 60 H I C CNN "Vendor"
 F5 "399-8527-1-ND" 210 270 60 H I C CNN "PartNumber"
@@ -147,7 +147,7 @@ ENDDEF
 DEF 143 R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
 F1 "143" 7 1 40 V V C CNN
-F2 "stepper_controller_teensy:SM1210" -70 0 30 V I C CNN
+F2 "footprints:SM1210" -70 0 30 V I C CNN
 F3 "" 0 0 30 H V C CNN
 F4 "digikey" 180 100 60 V I C CNN "Vendor"
 F5 "P143AACT-ND" 280 200 60 V I C CNN "PartNumber"
@@ -171,7 +171,7 @@ ENDDEF
 DEF 39.2 R 0 0 N Y 1 F N
 F0 "R" 80 0 40 V V C CNN
 F1 "39.2" 7 1 40 V V C CNN
-F2 "stepper_controller_teensy:SM1210" -70 0 30 V I C CNN
+F2 "footprints:SM1210" -70 0 30 V I C CNN
 F3 "" 0 0 30 H V C CNN
 F4 "digikey" 180 100 60 V I C CNN "Vendor"
 F5 "P39.2AACT-ND" 280 200 60 V I C CNN "PartNumber"
@@ -195,7 +195,7 @@ ENDDEF
 DEF BAV99T U 0 40 Y Y 1 F N
 F0 "U" -250 0 60 V V C CNN
 F1 "BAV99T" 250 0 60 V V C CNN
-F2 "stepper_controller_teensy:SOT-523" -350 -100 60 V I C CNN
+F2 "footprints:SOT-523" -350 -100 60 V I C CNN
 F3 "" -250 0 60 V I C CNN
 F4 "digikey" -150 100 60 V I C CNN "Vendor"
 F5 "BAV99TCT-ND" -50 200 60 V I C CNN "PartNumber"
@@ -238,7 +238,7 @@ ENDDEF
 DEF HEADER_01X02_SHR S 0 40 Y N 1 F N
 F0 "S" 0 150 50 H V C CNN
 F1 "HEADER_01X02_SHR" 100 0 50 V V C CNN
-F2 "stepper_controller_teensy:Header_Shrouded_2_Pin" -100 50 60 H I C CNN
+F2 "footprints:Header_Shrouded_2_Pin" -100 50 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "WM4800-ND" 200 350 60 H I C CNN "PartNumber"
@@ -263,7 +263,7 @@ ENDDEF
 DEF KT_SWITCH SW 0 0 N Y 1 F N
 F0 "SW" 0 -50 40 H V C CNN
 F1 "KT_SWITCH" 0 100 40 H V C CNN
-F2 "stepper_controller_teensy:KT_SWITCH" -100 -200 60 H I C CNN
+F2 "footprints:KT_SWITCH" -100 -200 60 H I C CNN
 F3 "" 0 -50 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "CKN1860CT-ND" 200 300 60 H I C CNN "PartNumber"
@@ -282,7 +282,7 @@ ENDDEF
 DEF L6470 U 0 40 Y Y 1 F N
 F0 "U" 500 -900 60 H V C CNN
 F1 "L6470" -400 -900 60 H V C CNN
-F2 "stepper_controller_teensy:POWERSO-36" 0 1650 60 H I C CNN
+F2 "footprints:POWERSO-36" 0 1650 60 H I C CNN
 F3 "" 400 500 60 H V C CNN
 F4 "digikey" 0 1550 60 H I C CNN "Vendor"
 F5 "497-16432-1-ND" 0 1750 60 H I C CNN "PartNumber"
@@ -334,7 +334,7 @@ ENDDEF
 DEF MAX6817 U 0 40 Y Y 1 F N
 F0 "U" 250 -250 60 H V C CNN
 F1 "MAX6817" 0 600 60 H V C CNN
-F2 "stepper_controller_teensy:MAX6817" 150 -350 60 H I C CNN
+F2 "footprints:MAX6817" 150 -350 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 350 -150 60 H I C CNN "Vendor"
 F5 "MAX6817EUT+TCT-ND" 450 -50 60 H I C CNN "PartNumber"
@@ -355,7 +355,7 @@ ENDDEF
 DEF MODULAR_DEVICE_TEENSY_MALE MDT 0 40 Y Y 1 F N
 F0 "MDT" 900 850 60 H V C CNN
 F1 "MODULAR_DEVICE_TEENSY_MALE" 0 850 60 H V C CNN
-F2 "stepper_controller_teensy:MODULAR_DEVICE_TEENSY_MALE" 0 1050 60 H I C CNN
+F2 "footprints:MODULAR_DEVICE_TEENSY_MALE" 0 1050 60 H I C CNN
 F3 "" 50 2750 60 H V C CNN
 F4 "digikey" 0 1150 60 H I C CNN "Vendor"
 F5 "S1011E-16-ND" 0 1250 60 H I C CNN "PartNumber"
@@ -416,7 +416,7 @@ ENDDEF
 DEF PWR_JACK_2.5x5.5 P 0 40 Y N 1 F N
 F0 "P" 0 150 50 H V C CNN
 F1 "PWR_JACK_2.5x5.5" 100 0 50 V V C CNN
-F2 "stepper_controller_teensy:DCJACK_2PIN_HIGHCURRENT" -100 50 60 H I C CNN
+F2 "footprints:DCJACK_2PIN_HIGHCURRENT" -100 50 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "CP-063BH-ND" 200 350 60 H I C CNN "PartNumber"
@@ -441,7 +441,7 @@ ENDDEF
 DEF SPST_PUSH_LIGHTS SW 0 40 Y Y 1 F N
 F0 "SW" 0 -250 60 H V C CNN
 F1 "SPST_PUSH_LIGHTS" 0 250 60 H V C CNN
-F2 "stepper_controller_teensy:KP_SWITCH" -100 -350 60 H I C CNN
+F2 "footprints:KP_SWITCH" -100 -350 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 F4 "digikey" 100 -150 60 H I C CNN "Vendor"
 F5 "360-2461-ND" 200 -50 60 H I C CNN "PartNumber"
@@ -472,7 +472,7 @@ ENDDEF
 DEF SPST_SLIDE_AS SW 0 0 N Y 1 F N
 F0 "SW" 0 -50 40 H V C CNN
 F1 "SPST_SLIDE_AS" 0 100 40 H V C CNN
-F2 "stepper_controller_teensy:SPST_SLIDE_AS" -100 -200 60 H I C CNN
+F2 "footprints:SPST_SLIDE_AS" -100 -200 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 200 60 H I C CNN "Vendor"
 F5 "360-2610-ND" 200 300 60 H I C CNN "PartNumber"
@@ -491,7 +491,7 @@ ENDDEF
 DEF TERM_BLK_2_PIN_0.1_PITCH T 0 40 Y N 1 F N
 F0 "T" 0 150 50 H V C CNN
 F1 "TERM_BLK_2_PIN_0.1_PITCH" 100 0 50 V V C CNN
-F2 "stepper_controller_teensy:TERM_BLK_2_PIN_0.1_PITCH" -100 50 60 H I C CNN
+F2 "footprints:TERM_BLK_2_PIN_0.1_PITCH" -100 50 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 F4 "digikey" 100 250 60 H I C CNN "Vendor"
 F5 "A98333-ND" 200 350 60 H I C CNN "PartNumber"
@@ -516,7 +516,7 @@ ENDDEF
 DEF TERM_BLK_ANG_4_PIN_0.2_PITCH P 0 40 Y N 1 F N
 F0 "P" 0 250 50 H V C CNN
 F1 "TERM_BLK_ANG_4_PIN_0.2_PITCH" 100 0 50 V V C CNN
-F2 "stepper_controller_teensy:TERM_BLK_ANG_4_PIN_0.2_PITCH" -100 150 50 H I C CNN
+F2 "footprints:TERM_BLK_ANG_4_PIN_0.2_PITCH" -100 150 50 H I C CNN
 F3 "" 0 0 50 H V C CNN
 F4 "digikey" 100 350 60 H I C CNN "Vendor"
 F5 "A98350-ND" 200 450 60 H I C CNN "PartNumber"
@@ -573,7 +573,7 @@ ENDDEF
 DEF ~diode_schottky_45V_10A D 0 10 N N 1 F N
 F0 "D" -50 80 50 H V L CNN
 F1 "diode_schottky_45V_10A" -280 -80 50 H I L CNN
-F2 "stepper_controller_teensy:CFP15" -150 -20 60 H I C CNN
+F2 "footprints:CFP15" -150 -20 60 H I C CNN
 F3 "" -50 80 60 H I C CNN
 F4 "digikey" 50 180 60 H I C CNN "Vendor"
 F5 "568-11697-1-ND" 150 280 60 H I C CNN "PartNumber"
