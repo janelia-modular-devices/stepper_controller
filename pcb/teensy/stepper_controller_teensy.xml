@@ -2,8 +2,8 @@
 <export version="D">
   <design>
     <source>/home/polidorop/git/modular-devices/stepper_controller/pcb/teensy/stepper_controller_teensy.sch</source>
-    <date>Thu 11 Aug 2016 01:56:57 PM EDT</date>
-    <tool>Eeschema 4.1.0-alpha+201608101232+7015~46~ubuntu16.04.1-product</tool>
+    <date>Wed 24 Aug 2016 11:54:57 AM EDT</date>
+    <tool>Eeschema 4.1.0-alpha+201608161231+7059~46~ubuntu16.04.1-product</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>stepper_controller_teensy</title>
@@ -44,30 +44,6 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57A8C92C</tstamp>
     </comp>
-    <comp ref="P1">
-      <value>TERM_BLK_ANG_4_PIN_0.2_PITCH</value>
-      <footprint>stepper_controller_teensy:TERM_BLK_ANG_4_PIN_0.2_PITCH</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">A98350-ND</field>
-        <field name="Description">TERM BLOCK 4POS 35DEG 5.08MM</field>
-      </fields>
-      <libsource lib="components" part="TERM_BLK_ANG_4_PIN_0.2_PITCH"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57AA5C55</tstamp>
-    </comp>
-    <comp ref="T1">
-      <value>TERM_BLK_2_PIN_0.1_PITCH</value>
-      <footprint>stepper_controller_teensy:TERM_BLK_2_PIN_0.1_PITCH</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">A98333-ND</field>
-        <field name="Description">TERM BLOCK 2POS SIDE ENT 2.54MM</field>
-      </fields>
-      <libsource lib="components" part="TERM_BLK_2_PIN_0.1_PITCH"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57AB3CB0</tstamp>
-    </comp>
     <comp ref="SW3">
       <value>KT_SWITCH</value>
       <footprint>stepper_controller_teensy:KT_SWITCH</footprint>
@@ -80,7 +56,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57AB5A65</tstamp>
     </comp>
-    <comp ref="U2">
+    <comp ref="U4">
       <value>MAX6817</value>
       <footprint>stepper_controller_teensy:MAX6817</footprint>
       <fields>
@@ -104,7 +80,7 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57AB858A</tstamp>
     </comp>
-    <comp ref="C3">
+    <comp ref="C9">
       <value>0.1uF</value>
       <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
@@ -153,18 +129,6 @@
       <tstamp>57AC9B12</tstamp>
     </comp>
     <comp ref="C2">
-      <value>47uF_2917_POL</value>
-      <footprint>stepper_controller_teensy:SM2917_POL</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">399-3821-1-ND</field>
-        <field name="Description">CAP TANT 47UF 35V 10% 2917</field>
-      </fields>
-      <libsource lib="components" part="47uF_2917_POL"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57ACB334</tstamp>
-    </comp>
-    <comp ref="C1">
       <value>0.1uF</value>
       <footprint>stepper_controller_teensy:SM1210</footprint>
       <fields>
@@ -175,30 +139,6 @@
       <libsource lib="components" part="0.1uF"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57ACB444</tstamp>
-    </comp>
-    <comp ref="P2">
-      <value>PWR_JACK_2.5x5.5</value>
-      <footprint>stepper_controller_teensy:DCJACK_2PIN_HIGHCURRENT</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">CP-063BH-ND</field>
-        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
-      </fields>
-      <libsource lib="components" part="PWR_JACK_2.5x5.5"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57ACBD3B</tstamp>
-    </comp>
-    <comp ref="D1">
-      <value>diode_schottky_45V_10A</value>
-      <footprint>stepper_controller_teensy:CFP15</footprint>
-      <fields>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">568-11697-1-ND</field>
-        <field name="Description">DIODE SCHOTTKY 45V 10A CFP15</field>
-      </fields>
-      <libsource lib="components" part="diode_schottky_45V_10A"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamp>57ACCDCC</tstamp>
     </comp>
     <comp ref="U1">
       <value>L6470</value>
@@ -212,6 +152,186 @@
       <sheetpath names="/" tstamps="/"/>
       <tstamp>57ACE8D8</tstamp>
     </comp>
+    <comp ref="C6">
+      <value>10nF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-11960-1-ND</field>
+        <field name="Description">10000pF 100V Ceramic Capacitor C0G NP0 1210</field>
+      </fields>
+      <libsource lib="components" part="10nF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B49BE4</tstamp>
+    </comp>
+    <comp ref="C7">
+      <value>0.22uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-11615-1-ND</field>
+        <field name="Description">0.22µF 100V Ceramic Capacitor X7R 1210</field>
+      </fields>
+      <libsource lib="components" part="0.22uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B49D3D</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>0.22uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-11615-1-ND</field>
+        <field name="Description">0.22µF 100V Ceramic Capacitor X7R 1210</field>
+      </fields>
+      <libsource lib="components" part="0.22uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B49FA3</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>100uF_POL</value>
+      <footprint>stepper_controller_teensy:C_ELEC_12.5</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">565-2511-1-ND</field>
+        <field name="Description">100µF 100V Aluminum Capacitors Radial Can SMD</field>
+      </fields>
+      <libsource lib="components" part="100uF_POL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B4B5B4</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>BAV99T</value>
+      <footprint>stepper_controller_teensy:SOT-523</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">BAV99TCT-ND</field>
+        <field name="Description">DIODE DUAL 85V 75MA SOT-523</field>
+      </fields>
+      <libsource lib="components" part="BAV99T"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B4EA1C</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>0.1uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="components" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B5C88A</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10uF_2917_POL</value>
+      <footprint>stepper_controller_teensy:SM2917_POL</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-8527-1-ND</field>
+        <field name="Description">CAP TANT 10UF 35V 10% 2917</field>
+      </fields>
+      <libsource lib="components" part="10uF_2917_POL"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57B5CD96</tstamp>
+    </comp>
+    <comp ref="T1">
+      <value>TERM_BLK_ANG_4_PIN_0.2_PITCH</value>
+      <footprint>footprints:TERM_BLK_ANG_4_PIN_0.2_PITCH</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A98350-ND</field>
+        <field name="Description">TERM BLOCK 4POS 35DEG 5.08MM</field>
+      </fields>
+      <libsource lib="components" part="TERM_BLK_ANG_4_PIN_0.2_PITCH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC844F</tstamp>
+    </comp>
+    <comp ref="T2">
+      <value>TERM_BLK_ANG_2_PIN_0.2_PITCH</value>
+      <footprint>footprints:TERM_BLK_ANG_2_PIN_0.2_PITCH</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">A98348-ND</field>
+        <field name="Description">TERM BLOCK 2POS 35DEG 5.08MM</field>
+      </fields>
+      <libsource lib="components" part="TERM_BLK_ANG_2_PIN_0.2_PITCH"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC84BA</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>CUR_SEN_+/-5A</value>
+      <footprint>footprints:SOIC_8_LC</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">620-1634-1-ND</field>
+        <field name="Description">Current Sensor 5A 1 Channel Hall Effect Open Loop Bidirectional 8-SOIC</field>
+      </fields>
+      <libsource lib="components" part="CUR_SEN_+/-5A"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BC9A43</tstamp>
+    </comp>
+    <comp ref="C8">
+      <value>0.1uF</value>
+      <footprint>stepper_controller_teensy:SM1210</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">478-3586-1-ND</field>
+        <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <libsource lib="components" part="0.1uF"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BCB793</tstamp>
+    </comp>
+    <comp ref="TP2">
+      <value>TESTPOINT_BLK</value>
+      <footprint>footprints:TESTPOINT_THRU</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5011-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE BLK</field>
+      </fields>
+      <libsource lib="components" part="TESTPOINT_BLK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BDC9A3</tstamp>
+    </comp>
+    <comp ref="TP4">
+      <value>TESTPOINT_BLK</value>
+      <footprint>footprints:TESTPOINT_THRU</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5011-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE BLK</field>
+      </fields>
+      <libsource lib="components" part="TESTPOINT_BLK"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BDCD0B</tstamp>
+    </comp>
+    <comp ref="TP1">
+      <value>TESTPOINT_RED</value>
+      <footprint>footprints:TESTPOINT_THRU</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5010-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE RED</field>
+      </fields>
+      <libsource lib="components" part="TESTPOINT_RED"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BDD0C7</tstamp>
+    </comp>
+    <comp ref="TP3">
+      <value>TESTPOINT_WHT</value>
+      <footprint>footprints:TESTPOINT_THRU</footprint>
+      <fields>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5012-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE WHT</field>
+      </fields>
+      <libsource lib="components" part="TESTPOINT_WHT"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>57BDE013</tstamp>
+    </comp>
   </components>
   <libparts>
     <libpart lib="components" part="0.1uF">
@@ -223,10 +343,92 @@
       <fields>
         <field name="Reference">C</field>
         <field name="Value">0.1uF</field>
-        <field name="Footprint">stepper_controller_teensy:SM1210</field>
+        <field name="Footprint">footprints:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">478-3586-1-ND</field>
         <field name="Description">CAP CER 0.1UF 50V 10% X7R 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="0.22uF">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">0.22uF</field>
+        <field name="Footprint">footprints:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-11615-1-ND</field>
+        <field name="Description">0.22µF 100V Ceramic Capacitor X7R 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="100uF_POL">
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">100uF_POL</field>
+        <field name="Footprint">footprints:C_ELEC_12.5</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">565-2511-1-ND</field>
+        <field name="Description">100µF 100V Aluminum Capacitors Radial Can SMD</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="10nF">
+      <footprints>
+        <fp>SM*</fp>
+        <fp>C?</fp>
+        <fp>C1-1</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10nF</field>
+        <field name="Footprint">footprints:SM1210</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-11960-1-ND</field>
+        <field name="Description">10000pF 100V Ceramic Capacitor C0G NP0 1210</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="10uF_2917_POL">
+      <footprints>
+        <fp>CP*</fp>
+        <fp>Elko*</fp>
+        <fp>TantalC*</fp>
+        <fp>C*elec</fp>
+        <fp>c_elec*</fp>
+        <fp>SMD*_Pol</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">10uF_2917_POL</field>
+        <field name="Footprint">footprints:SM2917_POL</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">399-8527-1-ND</field>
+        <field name="Description">CAP TANT 10UF 35V 10% 2917</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
@@ -244,7 +446,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">143</field>
-        <field name="Footprint">stepper_controller_teensy:SM1210</field>
+        <field name="Footprint">footprints:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P143AACT-ND</field>
         <field name="Description">RES SMD 143 OHM 1% 1/2W 1210</field>
@@ -265,7 +467,7 @@
       <fields>
         <field name="Reference">R</field>
         <field name="Value">39.2</field>
-        <field name="Footprint">stepper_controller_teensy:SM1210</field>
+        <field name="Footprint">footprints:SM1210</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">P39.2AACT-ND</field>
         <field name="Description">RES SMD 39.2 OHM 1% 1/2W 1210</field>
@@ -275,26 +477,39 @@
         <pin num="2" name="~" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="components" part="47uF_2917_POL">
-      <footprints>
-        <fp>CP*</fp>
-        <fp>Elko*</fp>
-        <fp>TantalC*</fp>
-        <fp>C*elec</fp>
-        <fp>c_elec*</fp>
-        <fp>SMD*_Pol</fp>
-      </footprints>
+    <libpart lib="components" part="BAV99T">
       <fields>
-        <field name="Reference">C</field>
-        <field name="Value">47uF_2917_POL</field>
-        <field name="Footprint">stepper_controller_teensy:SM2917_POL</field>
+        <field name="Reference">U</field>
+        <field name="Value">BAV99T</field>
+        <field name="Footprint">footprints:SOT-523</field>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">399-3821-1-ND</field>
-        <field name="Description">CAP TANT 47UF 35V 10% 2917</field>
+        <field name="PartNumber">BAV99TCT-ND</field>
+        <field name="Description">DIODE DUAL 85V 75MA SOT-523</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="passive"/>
         <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="CUR_SEN_+/-5A">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CUR_SEN_+/-5A</field>
+        <field name="Footprint">footprints:SOIC_8_LC</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">620-1634-1-ND</field>
+        <field name="Description">Current Sensor 5A 1 Channel Hall Effect Open Loop Bidirectional 8-SOIC</field>
+      </fields>
+      <pins>
+        <pin num="1" name="IP+" type="passive"/>
+        <pin num="2" name="IP+" type="passive"/>
+        <pin num="3" name="IP-" type="passive"/>
+        <pin num="4" name="IP-" type="passive"/>
+        <pin num="5" name="GND" type="power_in"/>
+        <pin num="6" name="BW_SEL" type="input"/>
+        <pin num="7" name="VIOUT" type="output"/>
+        <pin num="8" name="VCC" type="power_in"/>
       </pins>
     </libpart>
     <libpart lib="components" part="HEADER_01X02_SHR">
@@ -307,7 +522,7 @@
       <fields>
         <field name="Reference">S</field>
         <field name="Value">HEADER_01X02_SHR</field>
-        <field name="Footprint">stepper_controller_teensy:Header_Shrouded_2_Pin</field>
+        <field name="Footprint">footprints:Header_Shrouded_2_Pin</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">WM4800-ND</field>
         <field name="Description">CONN HEADER 2POS .100 VERT GOLD</field>
@@ -321,7 +536,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">KT_SWITCH</field>
-        <field name="Footprint">stepper_controller_teensy:KT_SWITCH</field>
+        <field name="Footprint">footprints:KT_SWITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">CKN1860CT-ND</field>
         <field name="Description">SWITCH TACTILE SPST-NO 1VA 32V</field>
@@ -335,7 +550,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">L6470</field>
-        <field name="Footprint">stepper_controller_teensy:POWERSO-36</field>
+        <field name="Footprint">footprints:POWERSO-36</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">497-16432-1-ND</field>
         <field name="Description">Bipolar Motor Driver DMOS SPI PowerSO-36</field>
@@ -384,7 +599,7 @@
       <fields>
         <field name="Reference">U</field>
         <field name="Value">MAX6817</field>
-        <field name="Footprint">stepper_controller_teensy:MAX6817</field>
+        <field name="Footprint">footprints:MAX6817</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">MAX6817EUT+TCT-ND</field>
         <field name="Description">IC DEBOUNCER SWITCH DUAL SOT23-6</field>
@@ -402,7 +617,7 @@
       <fields>
         <field name="Reference">MDT</field>
         <field name="Value">MODULAR_DEVICE_TEENSY_MALE</field>
-        <field name="Footprint">stepper_controller_teensy:MODULAR_DEVICE_TEENSY_MALE</field>
+        <field name="Footprint">footprints:MODULAR_DEVICE_TEENSY_MALE</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">S1011E-16-ND</field>
         <field name="Description">16 Position Header Through Hole Male Pins</field>
@@ -443,31 +658,11 @@
         <pin num="VEE" name="VEE_(+4-5VDC)" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="components" part="PWR_JACK_2.5x5.5">
-      <footprints>
-        <fp>Pin_Header_Straight_1X02</fp>
-        <fp>Pin_Header_Angled_1X02</fp>
-        <fp>Socket_Strip_Straight_1X02</fp>
-        <fp>Socket_Strip_Angled_1X02</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">PWR_JACK_2.5x5.5</field>
-        <field name="Footprint">stepper_controller_teensy:DCJACK_2PIN_HIGHCURRENT</field>
-        <field name="Vendor">digikey</field>
-        <field name="PartNumber">CP-063BH-ND</field>
-        <field name="Description">CONN PWR JACK DC 2.5X5.5 8A T/H</field>
-      </fields>
-      <pins>
-        <pin num="1" name="P1" type="passive"/>
-        <pin num="2" name="P2" type="passive"/>
-      </pins>
-    </libpart>
     <libpart lib="components" part="SPST_PUSH_LIGHTS">
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_PUSH_LIGHTS</field>
-        <field name="Footprint">stepper_controller_teensy:KP_SWITCH</field>
+        <field name="Footprint">footprints:KP_SWITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2461-ND</field>
         <field name="Description">Pushbutton Switch SPST-NO Standard Illuminated Through Hole</field>
@@ -484,7 +679,7 @@
       <fields>
         <field name="Reference">SW</field>
         <field name="Value">SPST_SLIDE_AS</field>
-        <field name="Footprint">stepper_controller_teensy:SPST_SLIDE_AS</field>
+        <field name="Footprint">footprints:SPST_SLIDE_AS</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">360-2610-ND</field>
         <field name="Description">SWITCH SLIDE SPST 0.4VA 28V</field>
@@ -494,7 +689,7 @@
         <pin num="3" name="3" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="components" part="TERM_BLK_2_PIN_0.1_PITCH">
+    <libpart lib="components" part="TERM_BLK_ANG_2_PIN_0.2_PITCH">
       <footprints>
         <fp>Pin_Header_Straight_1X02</fp>
         <fp>Pin_Header_Angled_1X02</fp>
@@ -503,11 +698,11 @@
       </footprints>
       <fields>
         <field name="Reference">T</field>
-        <field name="Value">TERM_BLK_2_PIN_0.1_PITCH</field>
-        <field name="Footprint">stepper_controller_teensy:TERM_BLK_2_PIN_0.1_PITCH</field>
+        <field name="Value">TERM_BLK_ANG_2_PIN_0.2_PITCH</field>
+        <field name="Footprint">footprints:TERM_BLK_ANG_2_PIN_0.2_PITCH</field>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">A98333-ND</field>
-        <field name="Description">TERM BLOCK 2POS SIDE ENT 2.54MM</field>
+        <field name="PartNumber">A98348-ND</field>
+        <field name="Description">TERM BLOCK 2POS 35DEG 5.08MM</field>
       </fields>
       <pins>
         <pin num="1" name="P1" type="passive"/>
@@ -523,9 +718,9 @@
         <fp>Socket_Strip_Angled_1X04</fp>
       </footprints>
       <fields>
-        <field name="Reference">P</field>
+        <field name="Reference">T</field>
         <field name="Value">TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
-        <field name="Footprint">stepper_controller_teensy:TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
+        <field name="Footprint">footprints:TERM_BLK_ANG_4_PIN_0.2_PITCH</field>
         <field name="Vendor">digikey</field>
         <field name="PartNumber">A98350-ND</field>
         <field name="Description">TERM BLOCK 4POS 35DEG 5.08MM</field>
@@ -537,25 +732,46 @@
         <pin num="4" name="P4" type="passive"/>
       </pins>
     </libpart>
-    <libpart lib="components" part="diode_schottky_45V_10A">
-      <footprints>
-        <fp>Diode_*</fp>
-        <fp>D-Pak_TO252AA</fp>
-        <fp>*SingleDiode</fp>
-        <fp>*SingleDiode*</fp>
-        <fp>*_Diode_*</fp>
-      </footprints>
+    <libpart lib="components" part="TESTPOINT_BLK">
+      <description>point</description>
       <fields>
-        <field name="Reference">D</field>
-        <field name="Value">diode_schottky_45V_10A</field>
-        <field name="Footprint">stepper_controller_teensy:CFP15</field>
+        <field name="Reference">TP</field>
+        <field name="Value">TESTPOINT_BLK</field>
+        <field name="Footprint">footprints:TESTPOINT_THRU</field>
         <field name="Vendor">digikey</field>
-        <field name="PartNumber">568-11697-1-ND</field>
-        <field name="Description">DIODE SCHOTTKY 45V 10A CFP15</field>
+        <field name="PartNumber">36-5011-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE BLK</field>
       </fields>
       <pins>
-        <pin num="1" name="K" type="passive"/>
-        <pin num="2" name="A" type="passive"/>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="TESTPOINT_RED">
+      <description>point</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TESTPOINT_RED</field>
+        <field name="Footprint">footprints:TESTPOINT_THRU</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5010-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE RED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="components" part="TESTPOINT_WHT">
+      <description>point</description>
+      <fields>
+        <field name="Reference">TP</field>
+        <field name="Value">TESTPOINT_WHT</field>
+        <field name="Footprint">footprints:TESTPOINT_THRU</field>
+        <field name="Vendor">digikey</field>
+        <field name="PartNumber">36-5012-ND</field>
+        <field name="Description">TEST POINT PC MULTI PURPOSE WHT</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
       </pins>
     </libpart>
   </libparts>
@@ -565,209 +781,230 @@
     </library>
   </libraries>
   <nets>
-    <net code="1" name="/ACTION">
-      <node ref="U2" pin="4"/>
-      <node ref="MDT1" pin="5"/>
+    <net code="1" name="Net-(U1-Pad11)">
+      <node ref="U1" pin="11"/>
     </net>
-    <net code="2" name="/LED_RED">
-      <node ref="MDT1" pin="16"/>
-      <node ref="R1" pin="2"/>
+    <net code="2" name="Net-(U1-Pad10)">
+      <node ref="U1" pin="10"/>
     </net>
-    <net code="3" name="/LED_GREEN">
-      <node ref="R2" pin="2"/>
-      <node ref="MDT1" pin="17"/>
-    </net>
-    <net code="4" name="/L2">
-      <node ref="R2" pin="1"/>
-      <node ref="SW2" pin="L2"/>
-    </net>
-    <net code="5" name="/L1">
-      <node ref="R1" pin="1"/>
-      <node ref="SW2" pin="L1"/>
-    </net>
-    <net code="6" name="/SW_B">
+    <net code="3" name="VDD">
+      <node ref="TP1" pin="1"/>
+      <node ref="C7" pin="1"/>
+      <node ref="C5" pin="1"/>
       <node ref="U2" pin="1"/>
-      <node ref="T1" pin="1"/>
-      <node ref="SW2" pin="1"/>
-    </net>
-    <net code="7" name="Net-(U1-Pad15)">
       <node ref="U1" pin="16"/>
-      <node ref="U1" pin="4"/>
+      <node ref="U1" pin="5"/>
       <node ref="U1" pin="15"/>
       <node ref="U1" pin="34"/>
       <node ref="U1" pin="33"/>
       <node ref="U1" pin="23"/>
-      <node ref="U1" pin="5"/>
       <node ref="U1" pin="22"/>
-    </net>
-    <net code="8" name="/ACTION_B">
-      <node ref="U2" pin="3"/>
-      <node ref="SW3" pin="2"/>
-      <node ref="S1" pin="1"/>
-    </net>
-    <net code="9" name="/MOSI">
-      <node ref="U1" pin="27"/>
-      <node ref="MDT1" pin="11"/>
-    </net>
-    <net code="10" name="/BUSY">
-      <node ref="U1" pin="29"/>
-      <node ref="MDT1" pin="4"/>
-    </net>
-    <net code="11" name="/OUT1B">
-      <node ref="U1" pin="18"/>
-      <node ref="P1" pin="3"/>
-      <node ref="U1" pin="17"/>
-    </net>
-    <net code="12" name="/OUT2A">
-      <node ref="U1" pin="35"/>
-      <node ref="P1" pin="2"/>
-      <node ref="U1" pin="36"/>
-    </net>
-    <net code="13" name="/OUT1A">
-      <node ref="P1" pin="1"/>
-      <node ref="U1" pin="2"/>
-      <node ref="U1" pin="3"/>
-    </net>
-    <net code="14" name="/SW">
-      <node ref="U2" pin="6"/>
-      <node ref="U1" pin="7"/>
-    </net>
-    <net code="15" name="/CP">
-      <node ref="U1" pin="13"/>
-    </net>
-    <net code="16" name="/FLAG">
-      <node ref="U1" pin="31"/>
-      <node ref="MDT1" pin="3"/>
-    </net>
-    <net code="17" name="/RESET">
-      <node ref="MDT1" pin="2"/>
-      <node ref="U1" pin="6"/>
-    </net>
-    <net code="18" name="/OUT2B">
-      <node ref="P1" pin="4"/>
-      <node ref="U1" pin="21"/>
-      <node ref="U1" pin="20"/>
-    </net>
-    <net code="19" name="Net-(U1-Pad11)">
-      <node ref="U1" pin="11"/>
-    </net>
-    <net code="20" name="Net-(U1-Pad10)">
-      <node ref="U1" pin="10"/>
-    </net>
-    <net code="21" name="Net-(U1-Pad8)">
-      <node ref="U1" pin="8"/>
-    </net>
-    <net code="22" name="VDD">
-      <node ref="D1" pin="1"/>
       <node ref="MDT1" pin="VDD"/>
+      <node ref="U1" pin="4"/>
+      <node ref="C4" pin="2"/>
     </net>
-    <net code="23" name="VAA">
-      <node ref="P2" pin="1"/>
-      <node ref="D1" pin="2"/>
+    <net code="4" name="Net-(C6-Pad2)">
+      <node ref="C6" pin="2"/>
+      <node ref="U2" pin="3"/>
     </net>
-    <net code="24" name="/MISO">
-      <node ref="U1" pin="25"/>
-      <node ref="MDT1" pin="12"/>
+    <net code="5" name="/ACTION_B">
+      <node ref="S1" pin="1"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="U4" pin="3"/>
     </net>
-    <net code="25" name="Net-(U1-Pad14)">
-      <node ref="U1" pin="14"/>
+    <net code="6" name="/ACTION">
+      <node ref="MDT1" pin="5"/>
+      <node ref="U4" pin="4"/>
     </net>
-    <net code="26" name="GND">
-      <node ref="S1" pin="2"/>
-      <node ref="C3" pin="2"/>
-      <node ref="U1" pin="32"/>
-      <node ref="U1" pin="37"/>
-      <node ref="U1" pin="28"/>
-      <node ref="U1" pin="19"/>
-      <node ref="U1" pin="1"/>
-      <node ref="U1" pin="12"/>
-      <node ref="SW2" pin="1a"/>
-      <node ref="C2" pin="2"/>
-      <node ref="U2" pin="2"/>
-      <node ref="MDT1" pin="GND"/>
-      <node ref="P2" pin="2"/>
-      <node ref="T1" pin="2"/>
-      <node ref="C1" pin="2"/>
-      <node ref="SW3" pin="3"/>
+    <net code="7" name="/LED_RED">
+      <node ref="MDT1" pin="16"/>
+      <node ref="R1" pin="2"/>
     </net>
-    <net code="27" name="+3V3">
-      <node ref="U2" pin="5"/>
+    <net code="8" name="/LED_GREEN">
+      <node ref="R2" pin="2"/>
+      <node ref="MDT1" pin="17"/>
+    </net>
+    <net code="9" name="/L2">
+      <node ref="R2" pin="1"/>
+      <node ref="SW2" pin="L2"/>
+    </net>
+    <net code="10" name="/L1">
+      <node ref="SW2" pin="L1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="11" name="+3V3">
       <node ref="C3" pin="1"/>
-      <node ref="MDT1" pin="3V3"/>
-      <node ref="C2" pin="1"/>
       <node ref="C1" pin="1"/>
+      <node ref="C9" pin="1"/>
       <node ref="U1" pin="24"/>
+      <node ref="U3" pin="6"/>
       <node ref="SW1" pin="1"/>
+      <node ref="MDT1" pin="3V3"/>
       <node ref="U1" pin="9"/>
+      <node ref="U4" pin="5"/>
+      <node ref="C8" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U3" pin="8"/>
     </net>
-    <net code="28" name="Net-(MDT1-Pad18)">
-      <node ref="MDT1" pin="18"/>
+    <net code="12" name="/CP">
+      <node ref="U1" pin="13"/>
+      <node ref="C6" pin="1"/>
     </net>
-    <net code="29" name="Net-(MDT1-PadAREF)">
-      <node ref="MDT1" pin="AREF"/>
-    </net>
-    <net code="30" name="Net-(MDT1-PadAGND)">
-      <node ref="MDT1" pin="AGND"/>
-    </net>
-    <net code="31" name="Net-(MDT1-PadVEE)">
-      <node ref="MDT1" pin="VEE"/>
-    </net>
-    <net code="32" name="Net-(MDT1-PadDAC)">
-      <node ref="MDT1" pin="DAC"/>
-    </net>
-    <net code="33" name="Net-(MDT1-Pad29)">
-      <node ref="MDT1" pin="29"/>
-    </net>
-    <net code="34" name="Net-(MDT1-Pad19)">
-      <node ref="MDT1" pin="19"/>
-    </net>
-    <net code="35" name="Net-(MDT1-Pad28)">
-      <node ref="MDT1" pin="28"/>
-    </net>
-    <net code="36" name="Net-(MDT1-Pad25)">
-      <node ref="MDT1" pin="25"/>
-    </net>
-    <net code="37" name="Net-(MDT1-Pad15)">
-      <node ref="MDT1" pin="15"/>
-    </net>
-    <net code="38" name="Net-(MDT1-Pad24)">
-      <node ref="MDT1" pin="24"/>
-    </net>
-    <net code="39" name="Net-(MDT1-Pad14)">
+    <net code="13" name="/VIOUT">
+      <node ref="TP3" pin="1"/>
+      <node ref="U3" pin="7"/>
       <node ref="MDT1" pin="14"/>
     </net>
-    <net code="40" name="Net-(MDT1-Pad23)">
-      <node ref="MDT1" pin="23"/>
+    <net code="14" name="/OUT1A">
+      <node ref="T1" pin="1"/>
+      <node ref="U3" pin="3"/>
+      <node ref="U3" pin="4"/>
     </net>
-    <net code="41" name="Net-(MDT1-Pad22)">
-      <node ref="MDT1" pin="22"/>
+    <net code="15" name="/OUT1A_0">
+      <node ref="U1" pin="3"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U3" pin="2"/>
+      <node ref="U3" pin="1"/>
     </net>
-    <net code="42" name="Net-(MDT1-Pad21)">
-      <node ref="MDT1" pin="21"/>
+    <net code="16" name="/VBOOT">
+      <node ref="U2" pin="2"/>
+      <node ref="C7" pin="2"/>
+      <node ref="U1" pin="14"/>
     </net>
-    <net code="43" name="/CS">
+    <net code="17" name="GND">
+      <node ref="U4" pin="2"/>
+      <node ref="U1" pin="12"/>
+      <node ref="C2" pin="2"/>
+      <node ref="SW3" pin="3"/>
+      <node ref="TP4" pin="1"/>
+      <node ref="C5" pin="2"/>
+      <node ref="T2" pin="2"/>
+      <node ref="U3" pin="5"/>
+      <node ref="U1" pin="37"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C4" pin="1"/>
+      <node ref="U1" pin="19"/>
+      <node ref="U1" pin="28"/>
+      <node ref="C8" pin="2"/>
+      <node ref="TP2" pin="1"/>
+      <node ref="SW2" pin="1a"/>
+      <node ref="U1" pin="8"/>
+      <node ref="MDT1" pin="GND"/>
+      <node ref="S1" pin="2"/>
+      <node ref="C9" pin="2"/>
+      <node ref="U1" pin="32"/>
+      <node ref="C1" pin="2"/>
+      <node ref="C3" pin="2"/>
+    </net>
+    <net code="18" name="Net-(MDT1-PadDAC)">
+      <node ref="MDT1" pin="DAC"/>
+    </net>
+    <net code="19" name="/SW">
+      <node ref="U1" pin="7"/>
+      <node ref="U4" pin="6"/>
+    </net>
+    <net code="20" name="/FLAG">
+      <node ref="MDT1" pin="3"/>
+      <node ref="U1" pin="31"/>
+    </net>
+    <net code="21" name="/RESET">
+      <node ref="U1" pin="6"/>
+      <node ref="MDT1" pin="2"/>
+    </net>
+    <net code="22" name="/CS">
       <node ref="U1" pin="30"/>
       <node ref="MDT1" pin="10"/>
     </net>
-    <net code="44" name="/SCK">
-      <node ref="MDT1" pin="13"/>
+    <net code="23" name="/SCK">
       <node ref="U1" pin="26"/>
+      <node ref="MDT1" pin="13"/>
     </net>
-    <net code="45" name="Net-(MDT1-Pad6)">
-      <node ref="MDT1" pin="6"/>
+    <net code="24" name="/MOSI">
+      <node ref="U1" pin="27"/>
+      <node ref="MDT1" pin="11"/>
     </net>
-    <net code="46" name="Net-(MDT1-Pad20)">
-      <node ref="MDT1" pin="20"/>
+    <net code="25" name="/MISO">
+      <node ref="MDT1" pin="12"/>
+      <node ref="U1" pin="25"/>
     </net>
-    <net code="47" name="Net-(MDT1-Pad9)">
+    <net code="26" name="Net-(MDT1-PadAREF)">
+      <node ref="MDT1" pin="AREF"/>
+    </net>
+    <net code="27" name="Net-(MDT1-PadAGND)">
+      <node ref="MDT1" pin="AGND"/>
+    </net>
+    <net code="28" name="Net-(MDT1-PadVEE)">
+      <node ref="MDT1" pin="VEE"/>
+    </net>
+    <net code="29" name="/SW_B">
+      <node ref="U4" pin="1"/>
+      <node ref="T2" pin="1"/>
+      <node ref="SW2" pin="1"/>
+    </net>
+    <net code="30" name="Net-(MDT1-Pad29)">
+      <node ref="MDT1" pin="29"/>
+    </net>
+    <net code="31" name="Net-(MDT1-Pad9)">
       <node ref="MDT1" pin="9"/>
     </net>
-    <net code="48" name="Net-(MDT1-Pad30)">
-      <node ref="MDT1" pin="30"/>
-    </net>
-    <net code="49" name="/LED_PWR">
+    <net code="32" name="/LED_PWR">
       <node ref="SW2" pin="COM"/>
       <node ref="SW1" pin="3"/>
+    </net>
+    <net code="33" name="Net-(MDT1-Pad25)">
+      <node ref="MDT1" pin="25"/>
+    </net>
+    <net code="34" name="Net-(MDT1-Pad18)">
+      <node ref="MDT1" pin="18"/>
+    </net>
+    <net code="35" name="Net-(MDT1-Pad19)">
+      <node ref="MDT1" pin="19"/>
+    </net>
+    <net code="36" name="Net-(MDT1-Pad20)">
+      <node ref="MDT1" pin="20"/>
+    </net>
+    <net code="37" name="Net-(MDT1-Pad21)">
+      <node ref="MDT1" pin="21"/>
+    </net>
+    <net code="38" name="Net-(MDT1-Pad22)">
+      <node ref="MDT1" pin="22"/>
+    </net>
+    <net code="39" name="Net-(MDT1-Pad23)">
+      <node ref="MDT1" pin="23"/>
+    </net>
+    <net code="40" name="Net-(MDT1-Pad28)">
+      <node ref="MDT1" pin="28"/>
+    </net>
+    <net code="41" name="Net-(MDT1-Pad30)">
+      <node ref="MDT1" pin="30"/>
+    </net>
+    <net code="42" name="Net-(MDT1-Pad6)">
+      <node ref="MDT1" pin="6"/>
+    </net>
+    <net code="43" name="Net-(MDT1-Pad24)">
+      <node ref="MDT1" pin="24"/>
+    </net>
+    <net code="44" name="Net-(MDT1-Pad15)">
+      <node ref="MDT1" pin="15"/>
+    </net>
+    <net code="45" name="/BUSY">
+      <node ref="MDT1" pin="4"/>
+      <node ref="U1" pin="29"/>
+    </net>
+    <net code="46" name="/OUT2B">
+      <node ref="U1" pin="20"/>
+      <node ref="T1" pin="4"/>
+      <node ref="U1" pin="21"/>
+    </net>
+    <net code="47" name="/OUT1B">
+      <node ref="U1" pin="17"/>
+      <node ref="T1" pin="3"/>
+      <node ref="U1" pin="18"/>
+    </net>
+    <net code="48" name="/OUT2A">
+      <node ref="U1" pin="35"/>
+      <node ref="U1" pin="36"/>
+      <node ref="T1" pin="2"/>
     </net>
   </nets>
 </export>
