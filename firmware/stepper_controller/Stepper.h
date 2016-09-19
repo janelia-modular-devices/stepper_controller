@@ -61,8 +61,8 @@ private:
   uint8_t dir_bit_mask_;
   uint8_t step_port_;
   uint8_t dir_port_;
-  volatile uint8_t *dir_port_reg_;
-  volatile uint8_t *step_port_reg_;
+  volatile uint8_t * dir_port_reg_;
+  volatile uint8_t * step_port_reg_;
 
   volatile bool running_;
   volatile long current_pos_;   // Steps

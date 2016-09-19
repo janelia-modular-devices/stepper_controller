@@ -58,76 +58,76 @@ void Controller::setup()
                                               constants::waypoint_repeat_period_default);
 
   // Parameters
-  ModularDevice::Parameter& waypoint_count_parameter = globals::modular_server.createParameter(constants::waypoint_count_parameter_name);
+  ModularDevice::Parameter & waypoint_count_parameter = globals::modular_server.createParameter(constants::waypoint_count_parameter_name);
   waypoint_count_parameter.setRange(constants::waypoint_count_min,constants::waypoint_count_max);
 
-  ModularDevice::Parameter& waypoint_travel_duration_parameter = globals::modular_server.createParameter(constants::waypoint_travel_duration_parameter_name);
+  ModularDevice::Parameter & waypoint_travel_duration_parameter = globals::modular_server.createParameter(constants::waypoint_travel_duration_parameter_name);
   waypoint_travel_duration_parameter.setRange(constants::waypoint_travel_duration_min,constants::waypoint_travel_duration_max);
   waypoint_travel_duration_parameter.setUnits(constants::duration_parameter_units);
 
-  ModularDevice::Parameter& tone_frequency_parameter = globals::modular_server.createParameter(constants::tone_frequency_parameter_name);
+  ModularDevice::Parameter & tone_frequency_parameter = globals::modular_server.createParameter(constants::tone_frequency_parameter_name);
   tone_frequency_parameter.setRange(constants::tone_frequency_min,constants::tone_frequency_max);
   tone_frequency_parameter.setUnits(constants::frequency_parameter_units);
 
-  ModularDevice::Parameter& tone_duration_parameter = globals::modular_server.createParameter(constants::tone_duration_parameter_name);
+  ModularDevice::Parameter & tone_duration_parameter = globals::modular_server.createParameter(constants::tone_duration_parameter_name);
   tone_duration_parameter.setRange(constants::tone_duration_min,constants::tone_duration_max);
   tone_duration_parameter.setUnits(constants::duration_parameter_units);
 
-  ModularDevice::Parameter& play_tone_before_move_parameter = globals::modular_server.createParameter(constants::play_tone_before_move_parameter_name);
+  ModularDevice::Parameter & play_tone_before_move_parameter = globals::modular_server.createParameter(constants::play_tone_before_move_parameter_name);
   play_tone_before_move_parameter.setTypeBool();
 
-  ModularDevice::Parameter& waypoint_repeat_parameter = globals::modular_server.createParameter(constants::waypoint_repeat_parameter_name);
+  ModularDevice::Parameter & waypoint_repeat_parameter = globals::modular_server.createParameter(constants::waypoint_repeat_parameter_name);
   waypoint_repeat_parameter.setTypeBool();
 
-  ModularDevice::Parameter& waypoint_repeat_period_parameter = globals::modular_server.createParameter(constants::waypoint_repeat_period_parameter_name);
+  ModularDevice::Parameter & waypoint_repeat_period_parameter = globals::modular_server.createParameter(constants::waypoint_repeat_period_parameter_name);
   waypoint_repeat_period_parameter.setRange(constants::waypoint_repeat_period_min,constants::waypoint_repeat_period_max);
   waypoint_repeat_period_parameter.setUnits(constants::duration_parameter_units);
 
   // Methods
-  ModularDevice::Method& enable_method = globals::modular_server.createMethod(constants::enable_method_name);
+  ModularDevice::Method & enable_method = globals::modular_server.createMethod(constants::enable_method_name);
   enable_method.attachCallback(callbacks::enableCallback);
 
-  ModularDevice::Method& disable_method = globals::modular_server.createMethod(constants::disable_method_name);
+  ModularDevice::Method & disable_method = globals::modular_server.createMethod(constants::disable_method_name);
   disable_method.attachCallback(callbacks::disableCallback);
 
-  ModularDevice::Method& stop_method = globals::modular_server.createMethod(constants::stop_method_name);
+  ModularDevice::Method & stop_method = globals::modular_server.createMethod(constants::stop_method_name);
   stop_method.attachCallback(callbacks::stopCallback);
 
-  ModularDevice::Method& get_controller_info_method = globals::modular_server.createMethod(constants::get_controller_info_method_name);
+  ModularDevice::Method & get_controller_info_method = globals::modular_server.createMethod(constants::get_controller_info_method_name);
   get_controller_info_method.attachCallback(callbacks::getControllerInfoCallback);
   get_controller_info_method.setReturnTypeObject();
 
-  ModularDevice::Method& move_method = globals::modular_server.createMethod(constants::move_method_name);
+  ModularDevice::Method & move_method = globals::modular_server.createMethod(constants::move_method_name);
   move_method.attachCallback(callbacks::moveCallback);
 
-  ModularDevice::Method& play_tone_method = globals::modular_server.createMethod(constants::play_tone_method_name);
+  ModularDevice::Method & play_tone_method = globals::modular_server.createMethod(constants::play_tone_method_name);
   play_tone_method.attachCallback(callbacks::playToneCallback);
 
-  ModularDevice::Method& set_tone_frequency_method = globals::modular_server.createMethod(constants::set_tone_frequency_method_name);
+  ModularDevice::Method & set_tone_frequency_method = globals::modular_server.createMethod(constants::set_tone_frequency_method_name);
   set_tone_frequency_method.addParameter(tone_frequency_parameter);
   set_tone_frequency_method.attachCallback(callbacks::setToneFrequencyCallback);
 
-  ModularDevice::Method& set_tone_duration_method = globals::modular_server.createMethod(constants::set_tone_duration_method_name);
+  ModularDevice::Method & set_tone_duration_method = globals::modular_server.createMethod(constants::set_tone_duration_method_name);
   set_tone_duration_method.addParameter(tone_duration_parameter);
   set_tone_duration_method.attachCallback(callbacks::setToneDurationCallback);
 
-  ModularDevice::Method& set_play_tone_before_move_method = globals::modular_server.createMethod(constants::set_play_tone_before_move_method_name);
+  ModularDevice::Method & set_play_tone_before_move_method = globals::modular_server.createMethod(constants::set_play_tone_before_move_method_name);
   set_play_tone_before_move_method.addParameter(play_tone_before_move_parameter);
   set_play_tone_before_move_method.attachCallback(callbacks::setPlayToneBeforeMoveCallback);
 
-  ModularDevice::Method& set_waypoint_count_method = globals::modular_server.createMethod(constants::set_waypoint_count_method_name);
+  ModularDevice::Method & set_waypoint_count_method = globals::modular_server.createMethod(constants::set_waypoint_count_method_name);
   set_waypoint_count_method.addParameter(waypoint_count_parameter);
   set_waypoint_count_method.attachCallback(callbacks::setWaypointCountCallback);
 
-  ModularDevice::Method& set_waypoint_travel_duration_method = globals::modular_server.createMethod(constants::set_waypoint_travel_duration_method_name);
+  ModularDevice::Method & set_waypoint_travel_duration_method = globals::modular_server.createMethod(constants::set_waypoint_travel_duration_method_name);
   set_waypoint_travel_duration_method.addParameter(waypoint_travel_duration_parameter);
   set_waypoint_travel_duration_method.attachCallback(callbacks::setWaypointTravelDurationCallback);
 
-  ModularDevice::Method& set_waypoint_repeat_method = globals::modular_server.createMethod(constants::set_waypoint_repeat_method_name);
+  ModularDevice::Method & set_waypoint_repeat_method = globals::modular_server.createMethod(constants::set_waypoint_repeat_method_name);
   set_waypoint_repeat_method.addParameter(waypoint_repeat_parameter);
   set_waypoint_repeat_method.attachCallback(callbacks::setWaypointRepeatCallback);
 
-  ModularDevice::Method& set_waypoint_repeat_period_method = globals::modular_server.createMethod(constants::set_waypoint_repeat_period_method_name);
+  ModularDevice::Method & set_waypoint_repeat_period_method = globals::modular_server.createMethod(constants::set_waypoint_repeat_period_method_name);
   set_waypoint_repeat_period_method.addParameter(waypoint_repeat_period_parameter);
   set_waypoint_repeat_period_method.attachCallback(callbacks::setWaypointRepeatPeriodCallback);
 
