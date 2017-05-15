@@ -1,0 +1,3 @@
+[submodule "firmware/StepperController"]
+	path = firmware/StepperController
+	url = https://github.com/janelia-arduino/StepperController.git
