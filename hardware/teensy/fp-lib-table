@@ -1,4 +1,0 @@
-(fp_lib_table
-  (lib (name footprints)(type KiCad)(uri /home/polidorop/git/kicad/kicad-libraries/footprints.pretty)(options "")(descr ""))
-  (lib (name stepper_controller_teensy)(type KiCad)(uri ${KIPRJMOD}/stepper_controller_teensy.pretty)(options "")(descr ""))
-)
