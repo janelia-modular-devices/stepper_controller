@@ -1,3 +1,9 @@
 [submodule "firmware/StepperController"]
 	path = firmware/StepperController
 	url = https://github.com/janelia-arduino/StepperController.git
+[submodule "hardware/stepper_controller_3x2"]
+	path = hardware/stepper_controller_3x2
+	url = https://github.com/janelia-kicad/stepper_controller_3x2.git
+[submodule "hardware/stepper_controller_5x3"]
+	path = hardware/stepper_controller_5x3
+	url = https://github.com/janelia-kicad/stepper_controller_5x3.git
